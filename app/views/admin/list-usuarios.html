@@ -1,0 +1,79 @@
+<div class="main-content">
+    <div class="main-content-inner">
+        <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    <i class="ace-icon fa fa-home home-icon"></i>
+                    <a href="#">Inicio</a>
+                </li>
+                <li class="active">Dashboard</li>
+            </ul><!-- /.breadcrumb -->
+
+            <div class="nav-search" id="nav-search">
+                <form class="form-search">
+                                <span class="input-icon">
+                                    <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+                                    <i class="ace-icon fa fa-search nav-search-icon"></i>
+                                </span>
+                </form>
+            </div><!-- /.nav-search -->
+        </div>
+
+        <div class="page-content">
+
+
+            <div class="page-header">
+                <h1>
+                    Dashboard
+                    <small>
+                        <i class="ace-icon fa fa-angle-double-right"></i>
+                        Usuarios &amp; Lista de Usuarios
+                    </small>
+                </h1>
+            </div><!-- /.page-header -->
+            <!-- form inicio-->
+            <div class="tabela">
+
+                <table class="table  table-responsive usuarios">
+                    <thead class="px-10">
+                    <tr >
+                        <th scope="col">#Cod</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Apelido</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col">Contacto</th>
+                        <th scope="col">Accoes</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {loop="$listaUsers"}
+                    <tr>
+                        <th >{$value.id_usuario}</th>
+                        <td>{$value.nome_usuario}</td>
+                        <td>{$value.apelido_usuario}</td>
+                        <td>{$value.email_usuario}</td>
+                        <td>{$value.celular_usuario}</td>
+                        <td>
+
+
+                                {if="$value.usuario_status=='activo'"}
+                            <a href="/admin/usuarios/list-usuarios/{$value.id_usuario}/bloquear" class="btn btn-danger btn-sm">Bloqueiar<i class="fa fa-lock "></i></a>
+                                {else}
+                            <a href="/admin/usuarios/list-usuarios/{$value.id_usuario}/desbloquear" class="btn btn-primary btn-sm">Desbloquear<i class="fa fa-lock "></i></a>
+                                {/if}
+
+
+                        </td>
+                    </tr>
+                    {/loop}
+                    </tbody>
+                </table>
+            </div>
+            <!-- /form -->
+
+            <!-- PAGE CONTENT ENDS -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+</div><!-- /.page-content -->
+</div>
+</div><!-- /.main-content -->

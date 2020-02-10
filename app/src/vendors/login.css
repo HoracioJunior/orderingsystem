@@ -1,0 +1,41 @@
+{
+    background-color: #F2F2F2;
+}
+
+.card-header{
+    background-color: #008F95 !important;
+    color: #fff !important;
+}
+.button-box{
+    margin: 10px 25%;
+    border-radius: 1px;
+
+}
+.btn-secondary {
+    color: #fff;
+    background-color: #008f95 !important;
+    border-color: #008f95 !important;
+}
+
+.social-media{
+    text-align: center;
+}
+.fa-facebook{
+ color: #008F95;
+}
+.fa-google{
+    color: #008F95;
+}
+.social-media span{
+    margin-left: 10px;
+    cursor: pointer;
+}
+#formLogin{
+    left: 50px;
+}
+#formRegistar{
+    left: 450px;
+}
+.esconder{
+    display: none;
+}

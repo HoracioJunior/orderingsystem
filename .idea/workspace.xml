@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="79e2c214-2980-4ae1-b4b5-315b41479f2f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/libs/composer" />
+      <path value="$PROJECT_DIR$/libs/rain/raintpl" />
+      <path value="$PROJECT_DIR$/libs/slim/slim" />
+      <path value="$PROJECT_DIR$/libs/phpmailer/phpmailer" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1XJFbrgDJZFLgYMxdxQuONfF7yg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/views" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ordering\app\views" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ordering\app\src\vendors" />
+      <recent name="C:\wamp64\www\ordering\app\src\assets\css" />
+      <recent name="C:\wamp64\www\ordering" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="79e2c214-2980-4ae1-b4b5-315b41479f2f" name="Default Changelist" comment="" />
+      <created>1580756364550</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580756364550</updated>
+      <workItem from="1580756366833" duration="16372000" />
+      <workItem from="1580855294291" duration="11713000" />
+      <workItem from="1581123179347" duration="24217000" />
+      <workItem from="1581213585096" duration="3830000" />
+      <workItem from="1581272312242" duration="9545000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="232" y="40" key="#Composer" timestamp="1580788424008">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="232" y="40" key="#Composer/0.0.1280.760@0.0.1280.760" timestamp="1580788424008" />
+    <state x="427" y="97" key="#com.intellij.ide.util.MemberChooser" timestamp="1580865843139">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="427" y="97" key="#com.intellij.ide.util.MemberChooser/0.0.1280.760@0.0.1280.760" timestamp="1580865843139" />
+    <state x="431" y="197" key="NewPhpClassDialog" timestamp="1581278521035">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="431" y="197" key="NewPhpClassDialog/0.0.1280.760@0.0.1280.760" timestamp="1581278521035" />
+    <state x="454" y="305" key="NewPhpFileDialog" timestamp="1580787909541">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="454" y="305" key="NewPhpFileDialog/0.0.1280.760@0.0.1280.760" timestamp="1580787909541" />
+    <state x="310" y="0" width="795" height="760" key="find.popup" timestamp="1580783709211">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="310" y="0" width="795" height="760" key="find.popup/0.0.1280.760@0.0.1280.760" timestamp="1580783709211" />
+    <state x="296" y="170" width="672" height="677" key="run.anything.popup" timestamp="1580763588781">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="296" y="170" width="672" height="677" key="run.anything.popup/0.0.1280.760@0.0.1280.760" timestamp="1580763588781" />
+  </component>
+</project>
