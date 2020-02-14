@@ -1,5 +1,5 @@
 .bg-nav {
-    background-color: #e8511c !important;
+    background-color: #008F95 !important;
     color: #fff !important;
 }
 .navbar-brand{
@@ -17,14 +17,20 @@
   color: #fff;
 }
 .card-bg {
-    background-color: #e8511c !important;
+    background-color: #008F95 !important;
 }
 
+.caixa{
+  color: #fff;
+}
+.butoes{
+  margin-top: 20px;
+}
 /*------------------------------------
   Member area
 ------------------------------------*/
 .sidebar-item.active, .sidebar-item:hover {
-  background-color: #e8511c;
+  background-color: #008F95;
   border: 1px solid #e6e7e9;
   border-right: 0;
   margin-right: -1px;
@@ -37,7 +43,7 @@
   border-right: 1px solid #e6e7e9;
   padding-bottom: 1rem;
   padding-top: 1rem;
-  background-color:  #e8511c;
+  background-color:  #008F95;
 }
 
 .sidebar-item {
@@ -50,11 +56,14 @@
 }
 
 .sidebar-item.active:hover {
-  background-color:#e8511c;
+  background-color:#008F95;
 }
 
 .card .icon-big {
   font-size: 3rem;
+}
+.teste{
+  color: #fff;
 }
 
 .card .icon-big .notif {

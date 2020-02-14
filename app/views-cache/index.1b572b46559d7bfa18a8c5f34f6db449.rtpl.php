@@ -25,66 +25,38 @@
         <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit</small>
     </div>
     <div class="container owl-carousel owl-theme popularSlider">
+        <?php $counter1=-1;  if( isset($produto) && ( is_array($produto) || $produto instanceof Traversable ) && sizeof($produto) ) foreach( $produto as $key1 => $value1 ){ $counter1++; ?>
         <div class="item">
             <div class="card" >
-                <img src="./app/src/img/heroimg.jpg" class="card-img-top" alt="...">
+                <img src="/app/uploads/<?php echo htmlspecialchars( $value1["img_item"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"  class="card-img-top" alt="<?php echo htmlspecialchars( $value1["nome_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                 <div class="card-body card-corpo">
-                    <h5 class="card-title">1/4 Frango Frito</h5>
-                    <p class="card-text"><small>Com batata frita</small></p>
-                    <p>
-                        <span class="preco text-muted">150.00 MZN</span>
-                        <button type="submit" class="btn btn-outline-primary btn-addcart">peça agora</button>
-                    </p>
+                    <h5 class="card-title"><?php echo htmlspecialchars( $value1["nome_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h5>
+                    <p class="card-text"><small><?php echo htmlspecialchars( $value1["descricao_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?></small></p>
+
+                        <di class="row">
+                            <div class="col-md-6"><span class="preco text-muted"><?php echo formatarPreco($value1["preco_produto"]); ?> MZN</span></div>
+                            <div class="col-md-6">
+
+                                    <?php if( $value1["produto_status"]=='indisponivel' ){ ?>
+                                        <button class="btn btn-danger disabled float-right">Indisponível</button>
+                                    <?php }else{ ?>
+                                        <form action="" method="post">
+                                            <input type="hidden" name="id_produto" value="<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+                                            <button type="submit" class="btn btn-outline-primary btn-addcart">Peça agora</button>
+                                        </form>
+                                    <?php } ?>
+                            </div>
+                        </di>
+
+
                 </div>
                 <div class="card-footer text-muted">
                 </div>
             </div>
         </div>
-        <div class="item">
-            <div class="card" >
-                <img src="./app/src/img/heroimg.jpg" class="card-img-top" alt="...">
-                <div class="card-body card-corpo">
-                    <h5 class="card-title">1/4 Frango Frito</h5>
-                    <p class="card-text"><small>Com batata frita</small></p>
-                    <p>
-                        <span class="preco text-muted">150.00 MZN</span>
-                        <button type="submit" class="btn btn-outline-primary btn-addcart">peça agora</button>
-                    </p>
-                </div>
-                <div class="card-footer text-muted">
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="card" >
-                <img src="./app/src/img/heroimg.jpg" class="card-img-top" alt="...">
-                <div class="card-body card-corpo">
-                    <h5 class="card-title">1/4 Frango Frito</h5>
-                    <p class="card-text"><small>Com batata frita</small></p>
-                    <p>
-                        <span class="preco text-muted">150.00 MZN</span>
-                        <button type="submit" class="btn btn-outline-primary btn-addcart">peça agora</button>
-                    </p>
-                </div>
-                <div class="card-footer text-muted">
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="card" >
-                <img src="./app/src/img/heroimg.jpg" class="card-img-top" alt="...">
-                <div class="card-body card-corpo">
-                    <h5 class="card-title">1/4 Frango Frito</h5>
-                    <p class="card-text"><small>Com batata frita</small></p>
-                    <p>
-                        <span class="preco text-muted">150.00 MZN</span>
-                        <button type="submit" class="btn btn-outline-primary btn-addcart">peça agora</button>
-                    </p>
-                </div>
-                <div class="card-footer text-muted">
-                </div>
-            </div>
-        </div>
+
+        <?php } ?>
+
     </div>
 </section>
 
@@ -94,39 +66,4 @@
         <hr class="separator"/>
     </div>
 </section>
-
-<div class="testimonial1 py-5 bg-light">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8 text-center">
-                <h4 class="my-3">Veja o que nossos clientes estão dizendo</h4>
-                <h6 class="subtitle font-weight-normal">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h6>
-            </div>
-        </div>
-        <!-- Row  -->
-        <div class="owl-carousel owl-theme testi1 mt-4">
-            <!-- item -->
-            <div class="item">
-                <div class="card card-shadow border-0 mb-4">
-                    <div class="card-body">
-                        <div class="position-relative thumb bg-success-gradiant d-inline-block text-white mb-4"><img src="./app/src/img/22.jpg" alt="wrapkit" class="thumb-img position-absolute rounded-circle" /> Michelle B</div>
-                        <h5 class="font-weight-light">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
-                        <span class="devider d-inline-block my-3"></span>
-                        <h6 class="font-weight-normal">Managing Director, Theme Designer</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card card-shadow border-0 mb-4">
-                    <div class="card-body">
-                        <div class="position-relative thumb bg-success-gradiant d-inline-block text-white mb-4"><img src="./app/src/img/22.jpg" alt="wrapkit" class="thumb-img position-absolute rounded-circle" /> Michelle B</div>
-                        <h5 class="font-weight-light">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
-                        <span class="devider d-inline-block my-3"></span>
-                        <h6 class="font-weight-normal">Managing Director, Theme Designer</h6>
-                    </div>
-                </div>
-            </div>
-            <!-- item -->
-        </div>
-    </div>
-</div>
+<?php require $this->checkTemplate("testemunhos");?>

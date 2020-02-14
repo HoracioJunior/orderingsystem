@@ -17,6 +17,7 @@
 
     </div>
 </section>
+
 <section class="steps">
     <div class="container">
         <dinv class="row">
@@ -46,188 +47,77 @@
         </div>
         <div  id="grid-menu">
             <div class="row">
+                {loop="$produto"}
                 <div  class="col-md-4 col-sm-6 col-xs-12 menu-card ">
                     <div class="card" >
-                        <img src="./app/src/img/heroimg.jpg" class="card-img-top" alt="...">
+                        <img src="/app/uploads/{$value.img_item}"  class="card-img-top" alt="{$value.nome_produto}">
                         <div class="card-body card-corpo">
-                            <h5 class="card-title">1/4 Frango Frito</h5>
-                            <p class="card-text"><small>Com batata frita</small></p>
-                            <p>
-                                <span class="preco text-muted">150.00 MZN</span>
-                                <button type="submit" class="btn btn-outline-primary btn-addcart">peça agora</button>
-                            </p>
-                        </div>
-                        <div class="card-footer text-muted">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 menu-card">
-                    <div class="card" >
-                        <img src="./app/src/img/heroimg.jpg" class="card-img-top" alt="...">
-                        <div class="card-body card-corpo">
-                            <h5 class="card-title">1/4 Frango Frito</h5>
-                            <p class="card-text"><small>Com batata frita</small></p>
-                            <p>
-                                <span class="preco text-muted">150.00 MZN</span>
-                                <button type="submit" class="btn btn-outline-primary btn-addcart">peça agora</button>
-                            </p>
-                        </div>
-                        <div class="card-footer text-muted">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 menu-card">
-                    <div class="card" >
-                        <img src="./app/src/img/heroimg.jpg" class="card-img-top" alt="...">
-                        <div class="card-body card-corpo">
-                            <h5 class="card-title">1/4 Frango Frito</h5>
-                            <p class="card-text"><small>Com batata frita</small></p>
-                            <p>
-                                <span class="preco text-muted">150.00 MZN</span>
-                                <button type="submit" class="btn btn-outline-primary btn-addcart">peça agora</button>
-                            </p>
-                        </div>
-                        <div class="card-footer text-muted">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 menu-card">
-                    <div class="card" >
-                        <img src="./app/src/img/heroimg.jpg" class="card-img-top" alt="...">
-                        <div class="card-body card-corpo">
-                            <h5 class="card-title">1/4 Frango Frito</h5>
-                            <p class="card-text"><small>Com batata frita</small></p>
-                            <p>
-                                <span class="preco text-muted">150.00 MZN</span>
-                                <button type="submit" class="btn btn-outline-primary btn-addcart">peça agora</button>
-                            </p>
-                        </div>
-                        <div class="card-footer text-muted">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 menu-card">
-                    <div class="card" >
-                        <img src="./app/src/img/heroimg.jpg" class="card-img-top" alt="...">
-                        <div class="card-body card-corpo">
-                            <h5 class="card-title">1/4 Frango Frito</h5>
-                            <p class="card-text"><small>Com batata frita</small></p>
-                            <p>
-                                <span class="preco text-muted">150.00 MZN</span>
-                                <button type="submit" class="btn btn-outline-primary btn-addcart">peça agora</button>
-                            </p>
-                        </div>
-                        <div class="card-footer text-muted">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 menu-card">
-                    <div class="card" >
-                        <img src="./app/src/img/heroimg.jpg" class="card-img-top" alt="...">
-                        <div class="card-body card-corpo">
-                            <h5 class="card-title">1/4 Frango Frito</h5>
-                            <p class="card-text"><small>Com batata frita</small></p>
-                            <p>
-                                <span class="preco text-muted">150.00 MZN</span>
-                                <button type="submit" class="btn btn-outline-primary btn-addcart">peça agora</button>
-                            </p>
-                        </div>
-                        <div class="card-footer text-muted">
-                        </div>
-                    </div>
-                </div>
+                        <h5 class="card-title">{$value.nome_produto}</h5>
+                        <p class="card-text"><small>{$value.descricao_produto}</small></p>
 
+                        <di class="row">
+                            <div class="col-md-6"><span class="preco text-muted">{function="formatarPreco($value.preco_produto)"} MZN</span></div>
+                            <div class="col-md-6">
+
+                                {if="$value.produto_status=='indisponivel'"}
+                                <button class="btn btn-danger disabled float-right">Indisponível</button>
+                                {else}
+                                <form action="" method="post">
+                                    <input type="hidden" name="id_produto" value="{$value.id_produto}">
+                                    <button type="submit" class="btn btn-outline-primary btn-addcart">Peça agora</button>
+                                </form>
+                                {/if}
+                            </div>
+                        </di>
+                    </div>
+                        <div class="card-footer text-muted">
+                        </div>
+                    </div>
+                </div>
+                {/loop}
             </div>
         </div>
 
-        <div id="list-menu" class="p_recype_item_main ">
-            <div class="row p_recype_item_active">
-                <div class="col-md-6 break snacks">
-                    <div class="media">
-                        <div class="media-left">
-                            <img src="./app/src/img/heroimg.jpg">
-                        </div>
-                        <div class="media-body">
-                            <a href="#"><h3>Vegetable Flavour</h3></a>
-                            <h4>$32</h4>
-                            <p>Lorem ipsum dolor sit amets, consectetur adipiscing </p>
-                            <a class="read_mor_btn" href="#">Add To Cart</a>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                <li><a href="#"><i class="fa fa-star-half-o"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 break coffee">
-                    <div class="media">
-                        <div class="media-left">
-                            <img src="./app/src/img/heroimg.jpg">
-                        </div>
-                        <div class="media-body">
-                            <a href="#"><h3>Vegetable Flavour</h3></a>
-                            <h4>$32</h4>
-                            <p>Lorem ipsum dolor sit amets, consectetur adipiscing </p>
-                            <a class="read_mor_btn" href="#">Add To Cart</a>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                <li><a href="#"><i class="fa fa-star-half-o"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 lunch coffee">
-                    <div class="media">
-                        <div class="media-left">
-                            <img src="./app/src/img/heroimg.jpg">
-                        </div>
-                        <div class="media-body">
-                            <a href="#"><h3>Vegetable Flavour</h3></a>
-                            <h4>$32</h4>
-                            <p>Lorem ipsum dolor sit amets, consectetur adipiscing </p>
-                            <a class="read_mor_btn" href="#">Add To Cart</a>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                <li><a href="#"><i class="fa fa-star-half-o"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-md-6 dinner coffee">
-                    <div class="media">
-                        <div class="media-left">
-                            <img src="./app/src/img/heroimg.jpg">
-                        </div>
-                        <div class="media-body">
-                            <a href="#"><h3>Vegetable Flavour</h3></a>
-                            <h4>$32</h4>
-                            <p>Lorem ipsum dolor sit amets, consectetur adipiscing </p>
-                            <a class="read_mor_btn" href="#">Add To Cart</a>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                <li><a href="#"><i class="fa fa-star-half-o"></i></a></li>
-                            </ul>
+        <div class="container mb-3"  id="list-menu">
+            <div class="row">
+                {loop="$produto"}
+                <div class="col-md-6 mt-3">
+                    <div class="card list-card">
+                        <div class="card-horizontal">
+                            <div class="img-square-wrapper">
+                                <img src="/app/uploads/{$value.img_item}" style="width: 200px; height: 168px" alt="Cardimagecap">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">{$value.nome_produto}</h5>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card-text">{$value.descricao_produto}</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 mt-3">
+                                        <h6>{function="formatarPreco($value.preco_produto)"} MZN</h6>
+                                    </div>
+                                    <div class="col-6 mt-3">
+                                        {if="$value.produto_status=='indisponivel'"}
+                                        <button class="btn btn-danger disabled float-right">Indisponível</button>
+                                        {else}
+                                        <form action="" method="post">
+                                            <input type="hidden" name="id_produto" value="{$value.id_produto}">
+                                            <button type="submit" class="btn btn-outline-primary btn-addcart">Peça agora</button>
+                                        </form>
+                                        {/if}
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
-
-
+                {/loop}
             </div>
         </div>
-
         <div class="paginacao">
             <nav>
                 <ul class="pagination justify-content-center">
@@ -246,3 +136,36 @@
 
     </div>
 </section>
+
+
+
+
+<!--<div id="list-menu" class="p_recype_item_main ">
+    <div class="row p_recype_item_active">
+        {loop="$produto"}
+        <div class="col-md-6">
+            <div class="media">
+                <div class="media-left">
+                    <img src="/app/uploads/{$value.img_item}" style="width: 150px; height: 159px">
+                </div>
+                <div class="media-body">
+                    <a href="#"><h3>{$value.nome_produto}</h3></a>
+                    <h4>{function="formatarPreco($value.preco_produto)"} MZN</h4>
+                    <p>{$value.descricao_produto} </p>
+                    <a class="read_mor_btn" href="#">Add To Cart</a>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        {/loop}
+
+
+    </div>
+</div>-->

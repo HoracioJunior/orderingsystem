@@ -13,7 +13,8 @@ $email_usuario,
 $senha_usuario,
 $celular_usuario,
 $usuario_status,
-$nivel_acesso;
+$nivel_acesso,
+$senha_antiga;
 
 
     public function getIdUsuario()
@@ -110,4 +111,17 @@ $nivel_acesso;
     {
         $this->nivel_acesso = $nivel_acesso;
     }
+
+
+    public function getSenhaAntiga()
+    {
+        return $this->senha_antiga;
+    }
+
+
+    public function setSenhaAntiga($senha_antiga)
+    {
+        $this->senha_antiga = password_hash($senha_antiga, PASSWORD_DEFAULT);
+    }
+
 }

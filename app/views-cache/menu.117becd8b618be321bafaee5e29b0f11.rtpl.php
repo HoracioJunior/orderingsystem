@@ -51,14 +51,16 @@
                     <?php $counter1=-1;  if( isset($produto) && ( is_array($produto) || $produto instanceof Traversable ) && sizeof($produto) ) foreach( $produto as $key1 => $value1 ){ $counter1++; ?>
                     <tr>
                         <th ><?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?></th>
-                        <td><?php echo htmlspecialchars( $value1["img_item"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                        <td>
+                            <img src="/app/uploads/<?php echo htmlspecialchars( $value1["img_item"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" style="width: 150px; height: 100px;" alt="imagem do produto">
+                        </td>
                         <td><?php echo htmlspecialchars( $value1["nome_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                         <td><?php echo htmlspecialchars( $value1["descricao_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                         <td><?php echo htmlspecialchars( $value1["preco_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                         <td>
-                            <a href="/admin/categoria/<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/editar-item"  >Editar <i class="fa fa-edit "></i>
+                            <a href="/admin/menu/<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/editar-item"  >Editar <i class="fa fa-edit "></i>
                                 </a>
-                            <a href="/admin/categoria/<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/eliminar-eliminar" class="text-danger ml-2">Eliminar <i class="fa fa-trash"></i></a>
+                            <a href="/admin/menu/<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/eliminar-item" class="text-danger ml-2">Eliminar <i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
                     <?php } ?>

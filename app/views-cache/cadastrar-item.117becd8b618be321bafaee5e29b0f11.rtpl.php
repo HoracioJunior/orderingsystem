@@ -33,7 +33,7 @@
             </div><!-- /.page-header -->
 
             <!-- form inicio-->
-            <form action="/admin/menu/cadastrar-item" method="post">
+            <form action="/admin/menu/cadastrar-item" method="post" enctype="multipart/form-data">
                 <div class="row row-formatacao">
                     <div class="col-md-4 col-formatacao">
                         <label >Nome do Item</label>
@@ -74,7 +74,7 @@
                         <label >Foto do item</label>
                         <div class="input-group">
                             <span class="input-group-addon" id="basic-addon1 "><i class="fa fa-camera"></i></span>
-                            <input type="file" class="form-control" name="img_produto" placeholder="Imagem ou Foto do produto" aria-describedby="basic-addon1">
+                            <input type="file" class="form-control" name="img" placeholder="Imagem ou Foto do produto" aria-describedby="basic-addon1">
                         </div>
                     </div>
 

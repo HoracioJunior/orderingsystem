@@ -27,7 +27,7 @@ class Categoria
        $conn = new Conexao();
        $conn ->select("Update tb_produto_ctg set nome_categoria = :nome where id_produto_ctg = :id", array(
            ":nome"=>$categoria->getNomeCategoria(),
-           "id"=>$categoria->getIdCategoria()
+           ":id"=>$categoria->getIdCategoria()
        ));
 
     }

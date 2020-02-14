@@ -4,19 +4,42 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Ordering SYS</title>
-	<link rel="stylesheet" href="./app/src/vendors/main.css">
-	<link rel="stylesheet" href="./app/src/vendors/bootstrap/css/bootstrap.css">
-	<link rel="stylesheet" href="./app/src/vendors/fontawesome/css/all.css">
-	<link rel="stylesheet" href="./app/src/vendors/owlcarousel/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="./app/src/vendors/owlcarousel/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="/app/src/vendors/main.css">
+	<link rel="stylesheet" href="/app/src/vendors/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="/app/src/vendors/fontawesome/css/all.css">
+	<link rel="stylesheet" href="/app/src/vendors/owlcarousel/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/app/src/vendors/owlcarousel/css/owl.theme.default.min.css">
 
 </head>
 <body>
 <section class="preheader ">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">first</div>
-			<div class="col-md-6">second</div>
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-6">
+						<span><i class="fa fa-envelope"></i> info@ordering.store</span>
+					</div>
+					<div class="col-md-6">
+						<span><i class="fa fa-1x fa-phone"></i> +258 8483 96068/8483 96068 </span>
+					</div>
+				</div>
+
+			</div>
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-6 ">
+						<a href="/cliente" class="float-right btn btn-secondary btn-header">
+							<i class="fa fa-user"></i>&nbsp;Minha Conta
+						</a>
+					</div>
+					<div class="col-md-6">
+						<a href="" class="float-right btn btn-secondary btn-header">
+							<i class="fa fa-user"></i>&nbsp;Tornar-se Deliver
+						</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
@@ -35,7 +58,7 @@
 					<a class="nav-link" href="/menu">Menu</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Sobre</a>
+					<a class="nav-link" href="/contacto">Sobre</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="/carrinho">
@@ -46,7 +69,10 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Cadastro/Entrar</a>
+					<a class="nav-link" href="/login">Cadastra-se</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/login">Entrar</a>
 				</li>
 
 

@@ -52,7 +52,7 @@
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
                         <img class="nav-user-photo" src="/app/src/assets/images/avatars/user.jpg" alt="foto de usuario" />
                         <span class="user-info">
-									<small>Benvindo,</small>
+									<small>Benvindo</small>
                                     <?php echo htmlspecialchars( $dados["nome_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?>
 								</span>
 
@@ -61,7 +61,7 @@
 
                     <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                         <li>
-                            <a href="">
+                            <a href="/admin/perfil/editar-perfil">
                                 <i class="ace-icon fa fa-edit"></i>
                                 Meu Perfil
                             </a>
@@ -307,13 +307,13 @@
                 <b class="arrow"></b>
                 <ul class="submenu">
                     <li class="">
-                        <a href="faq.html"><i class="menu-icon fa fa-caret-right"></i>
+                        <a href="/admin/perfil/editar-perfil"><i class="menu-icon fa fa-caret-right"></i>
                             Meu Perfil
                         </a>
                         <b class="arrow"></b>
                     </li>
                     <li class="">
-                        <a href="faq.html"><i class="menu-icon fa fa-caret-right"></i>
+                        <a href="/admin/perfil/mudar-senha"><i class="menu-icon fa fa-caret-right"></i>
                             Mudar Senha
                         </a>
                         <b class="arrow"></b>

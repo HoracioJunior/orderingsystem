@@ -5,13 +5,16 @@ namespace controllers;
 
 use models\Conexao;
 use models\Usuario as UsuarioM;
+use Rain\Tpl;
+
 
 class Usuario
 {
+
     public static function iniciar_sessao(string $email, string $senha){
         $con = new Conexao();
 
-        $res = $con->select("SELECT * FROM tb_usuarios WHERE email_usuario = :email", array
+        $res = $con->select("SELECT * FROM tb_usuarios WHERE email_usuario = :email AND usuario_status ='activo'", array
             ("email"=>$email)
             );
         if(count($res)>0){
@@ -24,12 +27,15 @@ class Usuario
                 header("Location: /admin/login");
             }
         } else{
+
             header("Location: /admin/login");
         }
     }
     public static function logout()
     {
         session_unset( $_SESSION["usuario"]);
+        session_destroy();
+
 
     }
     public  function cadastrar_usuario(UsuarioM $usuario){
@@ -45,14 +51,29 @@ class Usuario
                 ":fk_id_nivel_acesso"=>$usuario->getNivelAcesso()
             )
         );
-
-
     }
+    public  function updatePerfil(UsuarioM $usuario)
+    {
+        $con = new Conexao();
+
+        $con->query("Update tb_usuarios set nome_usuario = :nome,apelido_usuario=:apelido, email_usuario=:email, celular_usuario=:celular where id_usuario=:id",
+            array(
+                ":id"=>$usuario->getIdUsuario(),
+                ":nome"=>$usuario->getNomeUsuario(),
+                ":apelido"=>$usuario->getApelidoUsuario(),
+                ":email"=>$usuario->getEmailUsuario(),
+                ":celular"=>$usuario->getCelularUsuario()
+            )
+        );
+            Usuario::logout();
+    }
+
     public static  function listNiveis()
     {
         $con = new Conexao();
         return $con->select("select * from tb_nivel_acesso");
     }
+
     public static  function ListarUsuarios()
     {
         $con = new Conexao();
@@ -70,6 +91,14 @@ class Usuario
         ));
 
     }
+    public static function eliminar(UsuarioM $usuario)
+    {
+        $con = new Conexao();
+        $con ->query("UPDATE tb_usuarios set usuario_status='inativo' where id_usuario = :id", array(
+            ":id"=>$usuario->getIdUsuario()
+        ));
+
+    }
     public static function statusDesbloquear(int $id)
     {
         $con = new Conexao();
@@ -78,17 +107,39 @@ class Usuario
         ));
 
     }
+    public static function changeSenha(UsuarioM $usuario, string $senhaAntiga)
+    {
 
-    public static function verficarSessao(int $tipoUsuario){
+        $con = new Conexao();
+       $result= $con->select("select * from tb_usuarios where id_usuario = :id", array(
+            ":id"=>$usuario->getIdUsuario()
+        ));
+        if (count($result>0)){
+            if(password_verify($senhaAntiga,$result[0]["senha_usuario"])){
+                $con ->query("UPDATE tb_usuarios set senha_usuario=:senha where id_usuario = :id", array(
+                    ":id"=>$usuario->getIdUsuario(),
+                    ":senha"=>$usuario->getSenhaUsuario()
+                ));
+
+            }else{
+                echo"errado";
+            }
+        }
+
+
+    }
+
+    public static function verficarSessao(int $tipoUsuario)
+    {
         if(isset($_SESSION["usuario"]) and $_SESSION["usuario"] != null and $_SESSION["usuario"]!=0 ){
                 if($tipoUsuario == 1 and $_SESSION["usuario"]["fk_id_nivel_acesso"]!=1){
-                    header("Location: /");
+                    header("Location: /pagina");
                     exit();
                 } elseif($tipoUsuario == 2 and $_SESSION["usuario"]["fk_id_nivel_acesso"]!=2){
-                    header("Location: /");
+                    header("Location: /pagina");
                     exit();
                 } elseif($tipoUsuario == 3 and $_SESSION["usuario"]["fk_id_nivel_acesso"]!=3){
-                    header("Location: /");
+                    header("Location: /pagina");
                     exit();
                 }
         }else{

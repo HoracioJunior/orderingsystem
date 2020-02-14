@@ -44,24 +44,46 @@ body{
 }
 .separator{
     width: 150px;
-    color: #e8511c;
+    color: #008F95;
     margin: auto auto 1em auto;
     border: solid 2.5px #1f1f1f;
-    border-color: #e8511c;
+    border-color: #008F95;
 }
 .titulo{text-transform: uppercase;}
 @media (min-width: 992px) {
   .container {
     max-width: 96% ;
 }
+.navbar-toggler{
+    color: #fff !important;
+}
 }
 .preheader{
-    background-color: #c0a830;
+    padding: 7px 20px;
+    background-color: rgba(1, 17, 13, 0.82);
+    color: #ffffff;
 
+}
+.btn-header{
+    background-color: #008F95 !important;
+    border-color: #008F95 !important;
+}
+.btn-header:hover{
+    background-color: #008F95 !important;
+    border-color: #008F95 !important;
+    color: #fff !important;
+    transition: 0.3s;
+}
+.preheader a{
+    color: #fff;
+}
+.preheader a:hover{
+    text-decoration: none;
+    color: #008F95;
 }
 /*=================NAVBAR INICIO========================================*/
 header{
-   background-color: #015249!important;
+   background-color: #008F95 !important;
 }
 nav .ml-auto{
     margin-right: 5% !important;
@@ -85,6 +107,8 @@ nav .ml-auto{
 }
 .nav-item a:hover{
     color: #fff !important;
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
 }
 #header{
  position: relative;
@@ -102,7 +126,7 @@ nav .ml-auto{
 /*=================HERO INICIO========================================*/
 
 .hero-section{
-    height: 550px;
+    height: 450px;
     background-image: url(../img/2.jpg);
     background-size: cover;
     background-position: center;
@@ -111,7 +135,7 @@ nav .ml-auto{
     text-align: center;
 }
 .conteudo {
-    padding: 180px 60px;
+    padding: 150px 60px;
 
 
 }
@@ -142,7 +166,7 @@ nav .ml-auto{
     height: 60px;
 }
 .bnt-search{
-    background-color: #e8511c !important;
+    background-color: #008F95 !important;
     border:none !important;
 }    
 /*=================HERO FIM========================================*/
@@ -155,17 +179,21 @@ nav .ml-auto{
     margin-bottom: 40px;
 }
 .card{
-    border-color:  #e8511c !important; 
+    border-color:  #008F95 !important;
 }
 .card-corpo{
     background-color: #fbfbf9;
-    border-color:  #e8511c !important; 
+    border-color:  #008F95 !important;
+}
+.card-img-top{
+    width: auto;
+    height: 220px;
 }
 .btn-addcart{
     float: right;
     border-style: dashed !important ;
-    border-color:  #e8511c !important; 
-    color: #e8511c !important;
+    border-color:  #008F95 !important;
+    color: #008F95 !important;
 }
 .btn-addcart:hover{
  background-color: transparent !important;
@@ -173,7 +201,7 @@ nav .ml-auto{
 }
 
 .preco{
-    font-size: 25px;
+    font-size: 20px;
 }
 /*=================POPULAR FIM========================================*/
 
@@ -250,12 +278,12 @@ nav .ml-auto{
 }
 
 .testimonial1 .bg-success-gradiant {
-  background: #e8511c;
-  background: -webkit-linear-gradient(legacy-direction(to right),#e8511c 0%, #F51125 100%);
-  background: -webkit-gradient(linear, left top, right top, from(#e8511c), to(#F51125));
-  background: -webkit-linear-gradient(left, #e8511c 0%, #F51125 100%);
-  background: -o-linear-gradient(left, #e8511c 0%, #F51125 100%);
-  background: linear-gradient(to right, #e8511c 0%, #F51125 100%);
+  background: #008F95;
+  background: -webkit-linear-gradient(legacy-direction(to right),#008F95 0%, #015249  100%);
+  background: -webkit-gradient(linear, left top, right top, from(#008F95), to(#015249 ));
+  background: -webkit-linear-gradient(left, #008F95 0%, #015249 100%);
+  background: -o-linear-gradient(left, #008F95 0%, #015249  100%);
+  background: linear-gradient(to right, #008F95 0%, #015249 100%);
 }
 
 .testimonial1 .card.card-shadow {
@@ -273,7 +301,7 @@ nav .ml-auto{
 /*=================fOOTER INICIO========================================*/
 footer.nb-footer {
     background: #222;
-    border-top: 4px solid  #e8511c;
+    border-top: 4px solid  #008F95;
 }
 
 footer.nb-footer .about {
@@ -300,14 +328,14 @@ footer.nb-footer .about .social-media ul li a {
     line-height: 45px;
     border-radius: 50%;
     font-size: 16px;
-    color:  #e8511c;
+    color:  #008F95;
     border: 1px solid #fff;
 }
 
 footer.nb-footer .about .social-media ul li a:hover {
-    background:  #F51125;
+    background:  #015249;
     color: #fff;
-    border-color:  #fff;
+    border-color:  #015249;
 }
 
 footer.nb-footer .footer-info-single {
@@ -318,7 +346,7 @@ footer.nb-footer .footer-info-single .title {
     color: #aaa;
     text-transform: uppercase;
     font-size: 16px;
-    border-left: 4px solid  #e8511c;
+    border-left: 4px solid #008F95;
     padding-left: 5px; 
 }
 
@@ -329,7 +357,7 @@ footer.nb-footer .footer-info-single ul li a {
 }
 
 footer.nb-footer .footer-info-single ul li a:hover {
-    color:  #e8511c;
+    color:  #008F95;
 }
 
 footer.nb-footer .footer-info-single p {
@@ -362,7 +390,7 @@ footer.nb-footer .copyright p {
   }
 
   .nr{
-    background-color: #e8511c;
+    background-color: #008F95;
 
     padding: 5px 10px;
     color: #fff;
@@ -374,7 +402,7 @@ footer.nb-footer .copyright p {
  position: relative;
  float: right;
  font-size: 25px;
- color:  #e8511c !important;
+ color:  #008F95 !important;
  margin-right: 10px;
 }
 .menu{
@@ -389,13 +417,13 @@ nav .pagination li a{
 }
 nav .page-item.active .page-link {
 
-    background-color:  #e8511c !important;
-    border-color: #e8511c !important;
+    background-color:  #008F95 !important;
+    border-color: #008F95 !important;
 }
 nav .page-item .page-link:hover {
 
-    background-color:  #e8511c !important;
-    border-color: #e8511c !important;
+    background-color:  #008F95 !important;
+    border-color: #008F95 !important;
     color: #fff !important;
 }
 /*=================Pagina Menu Fim========================================*/
@@ -407,7 +435,7 @@ nav .page-item .page-link:hover {
     max-height: 350px;
 }
 .titulo-filter{
-    background-color: #e8511c !important;
+    background-color: #008F95 !important;
     text-transform: uppercase;
     color: #fff;
     padding: 15px 15px;
@@ -417,15 +445,15 @@ nav .page-item .page-link:hover {
 }
 .color-style.btn-secondary {
     color: #fff;
-    background-color: #e8511c;
-    border-color: #e8511c;
+    background-color: #008F95;
+    border-color: #008F95;
 }
 
 /*=================Pagina Menu-filter Fim========================================*/
 
 /*=================Pagina cart inicio========================================*/
 .pagamento{
-    background-color: #999;
+    background-color: #008F95;
     padding:  10px 10px;
     border-radius: 3px;
     color: #fff;
@@ -433,7 +461,10 @@ nav .page-item .page-link:hover {
     font-size: 20px;
 }
 .box-pagamento {
-   border: 1px solid  #999;
+    margin-left: 5px !important;
+   border-bottom:  2px dashed  #008F95;
+   border-left:  2px dashed  #008F95;
+   border-right:  2px dashed  #008F95;
    max-height: 350px;
 }
 .subtotal{
@@ -461,7 +492,7 @@ nav .page-item .page-link:hover {
   font-size: 15px;  
 }
 .itens-cart{
-    background-color: #e8511c;
+    background-color: #008F95;
     padding: 10px 10px;
     border-radius: 3px;
     color: #fff;
@@ -474,14 +505,14 @@ nav .page-item .page-link:hover {
 }
 
  .table thead th {
-    border-bottom: 2px solid #e8511c !important;
+    border-bottom: 2px solid #008F95 !important;
 }
 
 .tabela th, td{
     padding-top: 0px !important;
     padding-bottom: 0px !important;
     vertical-align: baseline !important;
-    border-bottom: 2px solid #e8511c;
+    border-bottom: 2px solid #008F95;
 
 }
 /*=================Pagina cart Fim========================================*/
@@ -498,7 +529,7 @@ nav .page-item .page-link:hover {
     width: 70%;
 }
 .contact-form .form-control{
-    border-radius:1rem;
+    border-radius:.5rem;
 }
 .contact-image{
     text-align: center;
@@ -519,14 +550,14 @@ nav .page-item .page-link:hover {
     margin-bottom: 8%;
     margin-top: -10%;
     text-align: center;
-    color: #e8511c;
+    color: #008F95;
 }
 .contact-form .btnContact {
     width: 50%;
     border: none;
-    border-radius: 1rem;
+    border-radius: .5rem;
     padding: 1.5%;
-    background: #e8511c;
+    background: #008F95;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
@@ -537,13 +568,11 @@ nav .page-item .page-link:hover {
     border-radius: 1rem;
     padding: 1.5%;
     color: #fff;
-    background-color: #e8511c;
+    background-color: #008F95;
     border: none;
     cursor: pointer;
 }
 /*=================Pagina contact fim========================================*/
-
-
 
 
 
@@ -561,12 +590,8 @@ nav .page-item .page-link:hover {
   padding-right: 0;
 }
 
-.p_recype_item_main img{
-    width: 150px;
-    height: 159px;
-}
  .p_recype_item_main .media .media-body {
-  border: 1px solid #b10400;
+  border: 1px solid #015249;
   padding-left: 15px;
   border-left: 0px;
   padding-right: 15px;
@@ -623,6 +648,7 @@ nav .page-item .page-link:hover {
  .p_recype_item_main .media:hover .media-body h3 {
   color: #b10400;
 }
+
 .menu_list_page {
   background: #fff;
 }
@@ -636,6 +662,25 @@ nav .page-item .page-link:hover {
   margin-top: 30px;
 }
 
+.depoimento-caixa{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.card-horizontal{
+    display:flex;
+    flex:11 auto;
+}
+.list-card{
+    max-width: 525px !important;
+    max-height: 170px;
+}
+.card-text{
+    max-width: 300px;
+}
+.img-square-wrapper img{
+border-image: round;
+}
 
 
 

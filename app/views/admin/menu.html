@@ -51,14 +51,16 @@
                     {loop="$produto"}
                     <tr>
                         <th >{$value.id_produto}</th>
-                        <td>{$value.img_item}</td>
+                        <td>
+                            <img src="/app/uploads/{$value.img_item}" style="width: 150px; height: 100px;" alt="imagem do produto">
+                        </td>
                         <td>{$value.nome_produto}</td>
                         <td>{$value.descricao_produto}</td>
                         <td>{$value.preco_produto}</td>
                         <td>
-                            <a href="/admin/categoria/{$value.id_produto}/editar-item"  >Editar <i class="fa fa-edit "></i>
+                            <a href="/admin/menu/{$value.id_produto}/editar-item"  >Editar <i class="fa fa-edit "></i>
                                 </a>
-                            <a href="/admin/categoria/{$value.id_produto}/eliminar-eliminar" class="text-danger ml-2">Eliminar <i class="fa fa-trash"></i></a>
+                            <a href="/admin/menu/{$value.id_produto}/eliminar-item" class="text-danger ml-2">Eliminar <i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
                     {/loop}

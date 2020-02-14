@@ -25,66 +25,38 @@
         <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit</small>
     </div>
     <div class="container owl-carousel owl-theme popularSlider">
+        {loop="$produto"}
         <div class="item">
             <div class="card" >
-                <img src="./app/src/img/heroimg.jpg" class="card-img-top" alt="...">
+                <img src="/app/uploads/{$value.img_item}"  class="card-img-top" alt="{$value.nome_produto}">
                 <div class="card-body card-corpo">
-                    <h5 class="card-title">1/4 Frango Frito</h5>
-                    <p class="card-text"><small>Com batata frita</small></p>
-                    <p>
-                        <span class="preco text-muted">150.00 MZN</span>
-                        <button type="submit" class="btn btn-outline-primary btn-addcart">peça agora</button>
-                    </p>
+                    <h5 class="card-title">{$value.nome_produto}</h5>
+                    <p class="card-text"><small>{$value.descricao_produto}</small></p>
+
+                        <di class="row">
+                            <div class="col-md-6"><span class="preco text-muted">{function="formatarPreco($value.preco_produto)"} MZN</span></div>
+                            <div class="col-md-6">
+
+                                    {if="$value.produto_status=='indisponivel'"}
+                                        <button class="btn btn-danger disabled float-right">Indisponível</button>
+                                    {else}
+                                        <form action="" method="post">
+                                            <input type="hidden" name="id_produto" value="{$value.id_produto}">
+                                            <button type="submit" class="btn btn-outline-primary btn-addcart">Peça agora</button>
+                                        </form>
+                                    {/if}
+                            </div>
+                        </di>
+
+
                 </div>
                 <div class="card-footer text-muted">
                 </div>
             </div>
         </div>
-        <div class="item">
-            <div class="card" >
-                <img src="./app/src/img/heroimg.jpg" class="card-img-top" alt="...">
-                <div class="card-body card-corpo">
-                    <h5 class="card-title">1/4 Frango Frito</h5>
-                    <p class="card-text"><small>Com batata frita</small></p>
-                    <p>
-                        <span class="preco text-muted">150.00 MZN</span>
-                        <button type="submit" class="btn btn-outline-primary btn-addcart">peça agora</button>
-                    </p>
-                </div>
-                <div class="card-footer text-muted">
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="card" >
-                <img src="./app/src/img/heroimg.jpg" class="card-img-top" alt="...">
-                <div class="card-body card-corpo">
-                    <h5 class="card-title">1/4 Frango Frito</h5>
-                    <p class="card-text"><small>Com batata frita</small></p>
-                    <p>
-                        <span class="preco text-muted">150.00 MZN</span>
-                        <button type="submit" class="btn btn-outline-primary btn-addcart">peça agora</button>
-                    </p>
-                </div>
-                <div class="card-footer text-muted">
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="card" >
-                <img src="./app/src/img/heroimg.jpg" class="card-img-top" alt="...">
-                <div class="card-body card-corpo">
-                    <h5 class="card-title">1/4 Frango Frito</h5>
-                    <p class="card-text"><small>Com batata frita</small></p>
-                    <p>
-                        <span class="preco text-muted">150.00 MZN</span>
-                        <button type="submit" class="btn btn-outline-primary btn-addcart">peça agora</button>
-                    </p>
-                </div>
-                <div class="card-footer text-muted">
-                </div>
-            </div>
-        </div>
+
+        {/loop}
+
     </div>
 </section>
 
@@ -94,39 +66,4 @@
         <hr class="separator"/>
     </div>
 </section>
-
-<div class="testimonial1 py-5 bg-light">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8 text-center">
-                <h4 class="my-3">Veja o que nossos clientes estão dizendo</h4>
-                <h6 class="subtitle font-weight-normal">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h6>
-            </div>
-        </div>
-        <!-- Row  -->
-        <div class="owl-carousel owl-theme testi1 mt-4">
-            <!-- item -->
-            <div class="item">
-                <div class="card card-shadow border-0 mb-4">
-                    <div class="card-body">
-                        <div class="position-relative thumb bg-success-gradiant d-inline-block text-white mb-4"><img src="./app/src/img/22.jpg" alt="wrapkit" class="thumb-img position-absolute rounded-circle" /> Michelle B</div>
-                        <h5 class="font-weight-light">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
-                        <span class="devider d-inline-block my-3"></span>
-                        <h6 class="font-weight-normal">Managing Director, Theme Designer</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card card-shadow border-0 mb-4">
-                    <div class="card-body">
-                        <div class="position-relative thumb bg-success-gradiant d-inline-block text-white mb-4"><img src="./app/src/img/22.jpg" alt="wrapkit" class="thumb-img position-absolute rounded-circle" /> Michelle B</div>
-                        <h5 class="font-weight-light">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
-                        <span class="devider d-inline-block my-3"></span>
-                        <h6 class="font-weight-normal">Managing Director, Theme Designer</h6>
-                    </div>
-                </div>
-            </div>
-            <!-- item -->
-        </div>
-    </div>
-</div>
+{include="testemunhos"}

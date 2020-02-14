@@ -38,6 +38,7 @@
                 <button type="button" class="btn btn-primary btn-lg " data-toggle="modal" data-target="#myModal">
                     Adicionar Categoria
                 </button>
+
                 <table class="table  table-responsive usuarios">
                     <thead class="px-10">
                     <tr >
