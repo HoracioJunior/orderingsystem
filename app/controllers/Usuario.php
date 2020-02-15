@@ -24,12 +24,14 @@ class Usuario
 
                 $_SESSION["usuario"] = $res[0];
                 $id = $_SESSION["usuario"]["id_usuario"];
-                $sessionId = session_id("usuario");
+                $sessionId = mt_rand();
                 $con->query("insert into tb_logs (ipaddress,fk_id_usuario, sessionId) VALUES (:ip, :id, :sessao)", array(
                     ":ip"=>$ipadd,
                     ":id"=>$id,
                     ":sessao"=>$sessionId
                 ));
+                var_dump($con);
+                exit();
                 header("Location: /admin");
             }   else{
                 header("Location: /admin/login");
@@ -41,14 +43,18 @@ class Usuario
     }
     public static function logout()
     {
-        $_SESSION["usuario"];
-        $sessionId = session_id("usuario");
-
-
+        /*$id = $_SESSION["usuario"]["id_usuario"];
         $con = new Conexao();
+        $result= $con->select("select tb_logs.sessionId from tb_logs where fk_id_usuario=$id");
+        return $result;
+
+        $sessionId =$result[0]["sessionId"];
+        var_dump($sessionId);
+        exit();
+
         $con->query("update tb_logs set fim_sessao=now() where sessionId = :session ", array(
             ":session"=>$sessionId
-        ));
+        ));*/
         session_unset( $_SESSION["usuario"]);
         session_destroy();
 
