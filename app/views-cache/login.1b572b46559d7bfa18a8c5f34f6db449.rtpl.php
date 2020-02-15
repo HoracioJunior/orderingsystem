@@ -82,7 +82,6 @@
                                 <div class="form-group">
                                     <input type="checkbox" id="termos" required>
                                     <label for="termos">Concordo com os <a href="/termos">Termos e Condições de Uso</a> </label>
-
                                 </div>
                                 <button type="submit" class="btn btn-secondary btn-md" id="btnRegistar">Cadastrar-se</button>
                             </form>

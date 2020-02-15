@@ -11,7 +11,7 @@ use Rain\Tpl;
 class Usuario
 {
 
-    public static function iniciar_sessao(string $email, string $senha){
+    public static function iniciar_sessao(string $email, string $senha, $ipadd){
         $con = new Conexao();
 
         $res = $con->select("SELECT * FROM tb_usuarios WHERE email_usuario = :email AND usuario_status ='activo'", array
@@ -21,7 +21,15 @@ class Usuario
 
             if(password_verify($senha,$res[0]["senha_usuario"]))
             {
+
                 $_SESSION["usuario"] = $res[0];
+                $id = $_SESSION["usuario"]["id_usuario"];
+                $sessionId = session_id("usuario");
+                $con->query("insert into tb_logs (ipaddress,fk_id_usuario, sessionId) VALUES (:ip, :id, :sessao)", array(
+                    ":ip"=>$ipadd,
+                    ":id"=>$id,
+                    ":sessao"=>$sessionId
+                ));
                 header("Location: /admin");
             }   else{
                 header("Location: /admin/login");
@@ -33,6 +41,14 @@ class Usuario
     }
     public static function logout()
     {
+        $_SESSION["usuario"];
+        $sessionId = session_id("usuario");
+
+
+        $con = new Conexao();
+        $con->query("update tb_logs set fim_sessao=now() where sessionId = :session ", array(
+            ":session"=>$sessionId
+        ));
         session_unset( $_SESSION["usuario"]);
         session_destroy();
 

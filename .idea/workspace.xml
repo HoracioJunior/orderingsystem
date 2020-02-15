@@ -2,64 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79e2c214-2980-4ae1-b4b5-315b41479f2f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/Depoimento.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/Depoimento.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/pages/PageCliente.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/uploads/5e45689069482.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/uploads/5e4568e174def.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/uploads/5e45692f9e6a6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views-cache/contacto.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views-cache/depoimentos.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views-cache/testemunhos.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admin/editar-item.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/cliente/eliminar-conta.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/cliente/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/cliente/header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/cliente/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/cliente/meu-perfil.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/cliente/minhas-ordens.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/cliente/mudar-senha.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/contacto.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/denied.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/depoimentos.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/testemunhos.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rotas/administrador.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rotas/cliente.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rotas/funcoes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rotas/produto.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Categoria.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Categoria.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Produto.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Usuario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Usuario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/vendors/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/vendors/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/vendors/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/vendors/profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/cadastrar-item.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/cadastrar-item.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/carrinho.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/carrinho.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/categorias.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/categorias.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/footer.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/footer.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/header.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/header.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/header.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/header.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/index.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/index.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/login.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/login.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/menu.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/menu.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/menu.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/menu.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/cadastrar-item.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/cadastrar-item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/categorias.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/categorias.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/carrinho.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/carrinho.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/libs/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/libs/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/site.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/login.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/login.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rotas/administrador.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/administrador.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rotas/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/site.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +102,8 @@
       <workItem from="1581381500926" duration="11834000" />
       <workItem from="1581438372614" duration="8888000" />
       <workItem from="1581525257553" duration="27762000" />
-      <workItem from="1581606405069" duration="22558000" />
+      <workItem from="1581606405069" duration="23017000" />
+      <workItem from="1581720103554" duration="8634000" />
     </task>
     <servers />
   </component>
