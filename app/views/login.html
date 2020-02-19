@@ -34,11 +34,13 @@
                            
 
                             <form  role="form" autocomplete="off" id="formLogin" novalidate="" method="POST" action="/login">
+
                                 <div class="form-group">
                                     <label for="uname1">E-mail do Usuario</label>
                                     <input type="email" class="form-control form-control-lg rounded-2" name="username" id="uname1" required="">
                                     <div class="invalid-feedback">intruduza o seu e-mail</div>
                                 </div>
+
                                 <div class="form-group">
                                     <label>Senha do Usuario</label>
                                     <input type="password" class="form-control form-control-lg rounded-2" name="userpass" id="pwd1" required="" autocomplete="new-password">
@@ -48,6 +50,7 @@
                             </form>
 
                             <form role="form" autocomplete="off" id="cadastrar" novalidate="" method="POST" action="/cliente/usuario/cadastrar-usuario">
+
                                 <div class="form-group">
                                     <label for="nome_usuario">Nome do Usuario</label>
                                     <input type="text" class="form-control form-control-lg rounded-2" id="nome_usuario" name="nome_usuario" required="">
@@ -137,6 +140,23 @@
             form.addClass('was-validated');
         });
 
+    </script>
+    <script>
+        function viewPassword()
+{
+  var passwordInput = document.getElementById('password-field');
+  var passStatus = document.getElementById('pass-status');
+ 
+  if (passwordInput.type == 'password'){
+    passwordInput.type='text';
+    passStatus.className='fa fa-eye-slash';
+    
+  }
+  else{
+    passwordInput.type='password';
+    passStatus.className='fa fa-eye';
+  }
+}
     </script>
 </body>
 </html>

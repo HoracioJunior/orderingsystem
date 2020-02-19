@@ -29,16 +29,42 @@
                     <small>
                         <i class="ace-icon fa fa-angle-double-right"></i>
                         Categorias &amp; Lista de Categorias
+
                     </small>
                 </h1>
             </div><!-- /.page-header -->
 
-            <!-- form inicio-->
-            <div class="tabela">
-                <button type="button" class="btn btn-primary btn-lg " data-toggle="modal" data-target="#myModal">
-                    Adicionar Categoria
-                </button>
 
+                <div class="row">
+                    <di class="col-md-5">
+                        <button type="button" class="btn btn-primary btn-lg " data-toggle="modal" data-target="#myModal">
+                            Adicionar Categoria
+                        </button>
+                    </di>
+                    <div class="col-md-7">
+                        <?php if( $sucesso != '' ){ ?>
+                        <div class="alert alert-success" role="alert">
+                            <b><?php echo htmlspecialchars( $sucesso, ENT_COMPAT, 'UTF-8', FALSE ); ?></b>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <?php } ?>
+
+                        <?php if( $existe != '' ){ ?>
+                        <div class="alert alert-danger" role="alert">
+                            <b><?php echo htmlspecialchars( $existe, ENT_COMPAT, 'UTF-8', FALSE ); ?></b>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <?php } ?>
+                    </div>
+                </div>
+
+
+            <!-- form inicio-->
+            <div class="tabela mt-3">
                 <table class="table  table-responsive usuarios">
                     <thead class="px-10">
                     <tr >

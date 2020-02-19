@@ -6,6 +6,7 @@
       <path value="$PROJECT_DIR$/libs/rain/raintpl" />
       <path value="$PROJECT_DIR$/libs/slim/slim" />
       <path value="$PROJECT_DIR$/libs/phpmailer/phpmailer" />
+      <path value="$PROJECT_DIR$/libs/coffeecode/paginator" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7" />

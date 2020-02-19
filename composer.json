@@ -10,7 +10,7 @@
     	"phpmailer/phpmailer":"5.2.22",
     	"slim/slim":"2.0",
     	"rain/raintpl":"3.0.0",
-		"coffeecode/uploader":"1.0.7",
+		"coffeecode/paginator": "1.0,*",
       "ext-json": "*"
     },
     "config":{

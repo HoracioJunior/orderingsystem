@@ -29,16 +29,42 @@
                     <small>
                         <i class="ace-icon fa fa-angle-double-right"></i>
                         Categorias &amp; Lista de Categorias
+
                     </small>
                 </h1>
             </div><!-- /.page-header -->
 
-            <!-- form inicio-->
-            <div class="tabela">
-                <button type="button" class="btn btn-primary btn-lg " data-toggle="modal" data-target="#myModal">
-                    Adicionar Categoria
-                </button>
 
+                <div class="row">
+                    <di class="col-md-5">
+                        <button type="button" class="btn btn-primary btn-lg " data-toggle="modal" data-target="#myModal">
+                            Adicionar Categoria
+                        </button>
+                    </di>
+                    <div class="col-md-7">
+                        {if="$sucesso != ''"}
+                        <div class="alert alert-success" role="alert">
+                            <b>{$sucesso}</b>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        {/if}
+
+                        {if="$existe != ''"}
+                        <div class="alert alert-danger" role="alert">
+                            <b>{$existe}</b>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        {/if}
+                    </div>
+                </div>
+
+
+            <!-- form inicio-->
+            <div class="tabela mt-3">
                 <table class="table  table-responsive usuarios">
                     <thead class="px-10">
                     <tr >

@@ -14,7 +14,9 @@ $app->get('/admin/menu/categorias', function() {
     $categoriaM = CategoriaC::selectCategorias();
     $pageAdmin = new PageAdmin();
     $pageAdmin->setTpl("categorias", array(
-        "categoria"=>$categoriaM
+        "categoria"=>$categoriaM,
+        "sucesso" => CategoriaC::getSucesso(),
+        "existe"=>CategoriaC::getExiste()
     ));
 });
 
@@ -22,7 +24,6 @@ $app->post('/admin/menu/categorias/add', function() {
     UsuarioC::verficarSessao(1);
     $categoriaM = new CategoriaM();
     $categoriaM -> setNomeCategoria($_POST["nome_categoria"]);
-
     $categoriaC = new CategoriaC();
     $categoriaC ->cadastrar_categoria($categoriaM);
     header("Location: /admin/menu/categorias");

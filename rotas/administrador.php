@@ -11,6 +11,8 @@ $app->get('/admin/login', function() {
         "header" => false,
         "footer" => false]);
         $pageAdmin->setTpl("login");
+
+
 });
 $app->post('/admin/login', function() {
     function get_client_ip() {

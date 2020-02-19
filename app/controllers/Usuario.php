@@ -10,9 +10,12 @@ use Rain\Tpl;
 
 class Usuario
 {
+    const ERROR_REGISTER = "UsuarioErrorRegister";
+    const ERROR = "UsuarioError";
 
     public static function iniciar_sessao(string $email, string $senha, $ipadd){
         $con = new Conexao();
+        $tpl = new Tpl();
 
         $res = $con->select("SELECT * FROM tb_usuarios WHERE email_usuario = :email AND usuario_status ='activo'", array
             ("email"=>$email)
@@ -21,7 +24,6 @@ class Usuario
 
             if(password_verify($senha,$res[0]["senha_usuario"]))
             {
-
                 $_SESSION["usuario"] = $res[0];
                 $id = $_SESSION["usuario"]["id_usuario"];
                 $sessionId = mt_rand();
@@ -30,14 +32,15 @@ class Usuario
                     ":id"=>$id,
                     ":sessao"=>$sessionId
                 ));
-                var_dump($con);
-                exit();
                 header("Location: /admin");
             }   else{
+
+                $_SESSION["erroLogin"] = "tramado222";
+
+
                 header("Location: /admin/login");
             }
         } else{
-
             header("Location: /admin/login");
         }
     }
@@ -55,8 +58,9 @@ class Usuario
         $con->query("update tb_logs set fim_sessao=now() where sessionId = :session ", array(
             ":session"=>$sessionId
         ));*/
-        session_unset( $_SESSION["usuario"]);
-        session_destroy();
+        //session_unset( $_SESSION["usuario"]);
+        //session_destroy();
+        $_SESSION["usuario"]=NULL;
 
 
     }
@@ -173,5 +177,57 @@ class Usuario
                 exit();
             }
         }
+    }
+//ERROS
+    public static function setErrorRegister($msg)
+    {
+
+        $_SESSION[Usuario::ERROR_REGISTER] = $msg;
+
+    }
+
+    public static function getErrorRegister()
+    {
+
+        $msg = (isset($_SESSION[Usuario::ERROR_REGISTER]) && $_SESSION[Usuario::ERROR_REGISTER]) ? $_SESSION[Usuario::ERROR_REGISTER] : '';
+
+        Usuario::clearErrorRegister();
+
+        return $msg;
+
+    }
+
+    public static function clearErrorRegister()
+    {
+
+        $_SESSION[Usuario::ERROR_REGISTER] = NULL;
+
+    }
+
+    //login
+
+    public static function setError($msg)
+    {
+
+        $_SESSION[Usuario::ERROR] = $msg;
+
+    }
+
+    public static function getError()
+    {
+
+        $msg = (isset($_SESSION[Usuario::ERROR]) && $_SESSION[Usuario::ERROR]) ? $_SESSION[Usuario::ERROR] : '';
+
+        Usuario::clearError();
+
+        return $msg;
+
+    }
+
+    public static function clearError()
+    {
+
+        $_SESSION[Usuario::ERROR] = NULL;
+
     }
 }
