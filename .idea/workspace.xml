@@ -2,35 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79e2c214-2980-4ae1-b4b5-315b41479f2f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/libs/coffeecode/paginator/CONTRIBUTING.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/coffeecode/paginator/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/coffeecode/paginator/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/coffeecode/paginator/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/coffeecode/paginator/example/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/coffeecode/paginator/example/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/coffeecode/paginator/src/Paginator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ordering.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ordering.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/Cliente.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/404.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Categoria.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Categoria.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Usuario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/css/ace.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/assets/css/ace.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/vendors/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/vendors/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/categorias.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/categorias.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views-cache/login.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/login.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views-cache/login.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/login.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/categorias.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/categorias.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/admin/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/libs/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/libs/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/libs/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/libs/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rotas/administrador.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/administrador.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rotas/cliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/cliente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rotas/produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/produto.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rotas/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/site.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,9 +34,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -83,22 +67,24 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/template" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\ordering\app\src\img" />
-      <recent name="C:\wamp64\www\ordering\app\models\pages" />
-      <recent name="C:\wamp64\www\ordering\app\views" />
-      <recent name="C:\wamp64\www\ordering\app\views\admin" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\ordering\rotas" />
       <recent name="C:\wamp64\www\ordering\app\src\vendors" />
       <recent name="C:\wamp64\www\ordering\app\src\assets\css" />
       <recent name="C:\wamp64\www\ordering" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ordering\template" />
+      <recent name="C:\wamp64\www\ordering\app\src\img" />
+      <recent name="C:\wamp64\www\ordering\app\models\pages" />
+      <recent name="C:\wamp64\www\ordering\app\views" />
+      <recent name="C:\wamp64\www\ordering\app\views\admin" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -135,7 +121,8 @@
       <workItem from="1581720103554" duration="11466000" />
       <workItem from="1581811058426" duration="7596000" />
       <workItem from="1581868492651" duration="14221000" />
-      <workItem from="1582042711403" duration="8541000" />
+      <workItem from="1582042711403" duration="8744000" />
+      <workItem from="1582157703248" duration="8793000" />
     </task>
     <servers />
   </component>
@@ -150,18 +137,18 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="232" y="40" key="#Composer/0.0.1280.760@0.0.1280.760" timestamp="1580788424008" />
-    <state x="427" y="97" key="#com.intellij.ide.util.MemberChooser" timestamp="1581615826601">
+    <state x="427" y="97" key="#com.intellij.ide.util.MemberChooser" timestamp="1582165551209">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="427" y="97" key="#com.intellij.ide.util.MemberChooser/0.0.1280.760@0.0.1280.760" timestamp="1581615826601" />
-    <state x="370" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1581531078684">
+    <state x="427" y="97" key="#com.intellij.ide.util.MemberChooser/0.0.1280.760@0.0.1280.760" timestamp="1582165551209" />
+    <state x="370" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582165474077">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="370" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.760@0.0.1280.760" timestamp="1581531078684" />
-    <state x="431" y="197" key="NewPhpClassDialog" timestamp="1581615866935">
+    <state x="370" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.760@0.0.1280.760" timestamp="1582165474077" />
+    <state x="431" y="197" key="NewPhpClassDialog" timestamp="1582165355333">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="431" y="197" key="NewPhpClassDialog/0.0.1280.760@0.0.1280.760" timestamp="1581615866935" />
+    <state x="431" y="197" key="NewPhpClassDialog/0.0.1280.760@0.0.1280.760" timestamp="1582165355333" />
     <state x="454" y="305" key="NewPhpFileDialog" timestamp="1581609583890">
       <screen x="0" y="0" width="1280" height="760" />
     </state>

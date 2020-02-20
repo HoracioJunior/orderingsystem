@@ -24,7 +24,14 @@
                         </div>
                         <div class="card-body form-box">
 
-                            <p></p>
+                            <?php if( $erroLogin != '' ){ ?>
+                            <div class="alert alert-danger" role="alert">
+                                <b><?php echo htmlspecialchars( $erroLogin, ENT_COMPAT, 'UTF-8', FALSE ); ?></b>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <?php } ?>
 
                             <form  role="form" autocomplete="off" id="formLogin" novalidate="" method="POST" action="/admin/login">
                                 <div class="form-group">

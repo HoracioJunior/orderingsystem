@@ -86,23 +86,3 @@ $app->get('/cliente/perfil/editar-endereco', function() {
     ));
 });
 
-$app->post('/cliente/usuario/cadastrar-usuario', function() {
-    $userM = new UsuarioM();
-
-    if(!isset($_POST["nome_usuario"]) || $_POST["nome_usuario"] =''){
-        UsuarioC::setErrorRegister("Preencha o campo nome do usuario");
-        header("Location: /login");
-        exit();
-    }
-    $userM ->setNomeUsuario($_POST["nome_usuario"]);
-    $userM ->setApelidoUsuario($_POST["apelido_usuario"]);
-    $userM ->setEmailUsuario($_POST["email_usuario"]);
-    $userM ->setSenhaUsuario($_POST["senha_usuario"]);
-    $userM -> setCelularUsuario($_POST["celular_usuario"]);
-    $userM ->setNivelAcesso($_POST["fk_nivel_acesso"]);
-    $UserC = new UsuarioC();
-    $UserC->cadastrar_usuario($userM);
-    header("Location: /login");
-    exit();
-
-});

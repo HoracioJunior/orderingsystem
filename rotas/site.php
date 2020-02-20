@@ -5,6 +5,8 @@ use models\Usuario as UsuarioM;
 use controllers\Produto as ProdutoC;
 use models\Depoimento as DepoimentoM;
 use controllers\Depoimento as DepoimentoC;
+Use controllers\Cliente;
+
 $app->get('/', function() {
     $page = new Page();
     $produto = ProdutoC::listProduto();
@@ -20,7 +22,9 @@ $app->get('/login', function() {
         "header" => false,
         "footer" => false
     ]);
-    $page->setTpl("login");
+    $page->setTpl("login", array(
+        "erroLogin"=>Cliente::getLoginErro()
+    ));
 
 });
 $app->get('/pagina', function() {
@@ -32,30 +36,28 @@ $app->get('/pagina', function() {
 
 });
 $app->post('/login', function() {
+    function get_client_ip() {
+        $ipaddress = '';
+        if (getenv('HTTP_CLIENT_IP'))
+            $ipaddress = getenv('HTTP_CLIENT_IP');
+        else if(getenv('HTTP_X_FORWARDED_FOR'))
+            $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
+        else if(getenv('HTTP_X_FORWARDED'))
+            $ipaddress = getenv('HTTP_X_FORWARDED');
+        else if(getenv('HTTP_FORWARDED_FOR'))
+            $ipaddress = getenv('HTTP_FORWARDED_FOR');
+        else if(getenv('HTTP_FORWARDED'))
+            $ipaddress = getenv('HTTP_FORWARDED');
+        else if(getenv('REMOTE_ADDR'))
+            $ipaddress = getenv('REMOTE_ADDR');
+        else
+            $ipaddress = 'UNKNOWN';
+        return $ipaddress;
+    }
+    $ipaddress= get_client_ip();
 
-            $ipaddress = '';
-            if (getenv('HTTP_CLIENT_IP'))
-                $ipaddress = getenv('HTTP_CLIENT_IP');
-            else if(getenv('HTTP_X_FORWARDED_FOR'))
-                $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
-            else if(getenv('HTTP_X_FORWARDED'))
-                $ipaddress = getenv('HTTP_X_FORWARDED');
-            else if(getenv('HTTP_FORWARDED_FOR'))
-                $ipaddress = getenv('HTTP_FORWARDED_FOR');
-            else if(getenv('HTTP_FORWARDED'))
-                $ipaddress = getenv('HTTP_FORWARDED');
-            else if(getenv('REMOTE_ADDR'))
-                $ipaddress = getenv('REMOTE_ADDR');
-            else
-                $ipaddress = 'UNKNOWN';
-            return $ipaddress;
-
-        $ipaddress= get_client_ip();
-        UsuarioC::iniciar_sessao($_POST["username"], $_POST["userpass"],$ipaddress);
-
-        UsuarioC::setError($e->getMessage());
-
-
+        Cliente::iniciar_sessao($_POST["username"], $_POST["userpass"],$ipaddress);
+        var_dump(  Cliente::iniciar_sessao($_POST["username"], $_POST["userpass"],$ipaddress));
     header("Location: /");
     exit;
 });
@@ -114,4 +116,51 @@ $app->post('/depoimentos', function() {
     $dc->salvar($depoimentoM);
     //header("location: /depoimentos");
     //exit();
+});
+$app->get('/cadastrar-usuario', function() {
+    $page = new Page([
+        "header" => false,
+        "footer" => false
+    ]);
+    $page->setTpl("cadastrar", array(
+            "emailError" =>UsuarioC::getExiste()
+    ));
+});
+
+$app->post('/cadastrar-usuario', function() {
+    $userM = new UsuarioM();
+
+    /*if(!isset($_POST["nome_usuario"]) || $_POST["nome_usuario"] =''){
+        UsuarioC::setErrorRegister("Preencha o campo nome do usuario");
+        header("Location: /login");
+        exit();
+    }*/
+    $userM ->setNomeUsuario($_POST["nome_usuario"]);
+    $userM ->setApelidoUsuario($_POST["apelido_usuario"]);
+    $userM ->setEmailUsuario($_POST["email_usuario"]);
+    $userM ->setSenhaUsuario($_POST["senha_usuario"]);
+    $userM -> setCelularUsuario($_POST["celular_usuario"]);
+    $userM ->setNivelAcesso($_POST["fk_nivel_acesso"]);
+    $UserC = new UsuarioC();
+    $UserC->cadastrar_usuario($userM);
+    header("Location: /login");
+    exit();
+
+});
+
+$app->get('/recuperar-senha', function() {
+    $page = new Page([
+        "header" => false,
+        "footer" => false
+    ]);
+    $page->setTpl("recuperar-senha");
+
+});
+$app->get('/token-check', function() {
+    $page = new Page([
+        "header" => false,
+        "footer" => false
+    ]);
+    $page->setTpl("token-check");
+
 });

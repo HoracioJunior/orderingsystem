@@ -10,7 +10,9 @@ $app->get('/admin/login', function() {
     $pageAdmin = new PageAdmin([
         "header" => false,
         "footer" => false]);
-        $pageAdmin->setTpl("login");
+        $pageAdmin->setTpl("login",array(
+            "erroLogin" => UsuarioC::getLoginErro()
+        ));
 
 
 });

@@ -10,12 +10,10 @@ use Rain\Tpl;
 
 class Usuario
 {
-    const ERROR_REGISTER = "UsuarioErrorRegister";
-    const ERROR = "UsuarioError";
+
 
     public static function iniciar_sessao(string $email, string $senha, $ipadd){
         $con = new Conexao();
-        $tpl = new Tpl();
 
         $res = $con->select("SELECT * FROM tb_usuarios WHERE email_usuario = :email AND usuario_status ='activo'", array
             ("email"=>$email)
@@ -33,50 +31,63 @@ class Usuario
                     ":sessao"=>$sessionId
                 ));
                 header("Location: /admin");
-            }   else{
-
-                $_SESSION["erroLogin"] = "tramado222";
-
-
+            }else{
+                $msg = "Email ou senha do usuario forncedo estão errado";
+                Usuario::setLoginErro($msg);
                 header("Location: /admin/login");
+                exit();
+
             }
         } else{
+            $msg = "Email ou senha do usuario forncedo estão errado";
+            Usuario::setLoginErro($msg);
             header("Location: /admin/login");
+            exit();
         }
     }
     public static function logout()
     {
-        /*$id = $_SESSION["usuario"]["id_usuario"];
-        $con = new Conexao();
-        $result= $con->select("select tb_logs.sessionId from tb_logs where fk_id_usuario=$id");
-        return $result;
 
-        $sessionId =$result[0]["sessionId"];
-        var_dump($sessionId);
-        exit();
-
-        $con->query("update tb_logs set fim_sessao=now() where sessionId = :session ", array(
-            ":session"=>$sessionId
-        ));*/
-        //session_unset( $_SESSION["usuario"]);
-        //session_destroy();
         $_SESSION["usuario"]=NULL;
 
 
     }
     public  function cadastrar_usuario(UsuarioM $usuario){
-        $con = new Conexao();
+        $emails = Usuario::getEmail();
+        if(in_array($usuario->getEmailUsuario(),$emails)){
+            $msg = "O email que forneceste já está sendo usado com outro usuario";
+            Usuario::setExiste($msg);
+            header("Location: /cadastrar-usuario");
+            exit();
+        }else{
+            $con = new Conexao();
+            $con->query("INSERT INTO tb_usuarios(nome_usuario, apelido_usuario, email_usuario, senha_usuario, celular_usuario, fk_id_nivel_acesso) VALUES(:nome_usuario, :apelido_usuario, :email_usuario, :senha_usuario, :celular_usuario, :fk_id_nivel_acesso) ",
+                array(
+                    ":nome_usuario"=>$usuario->getNomeUsuario(),
+                    ":apelido_usuario"=>$usuario->getApelidoUsuario(),
+                    ":email_usuario"=>$usuario->getEmailUsuario(),
+                    ":senha_usuario"=>$usuario->getSenhaUsuario(),
+                    ":celular_usuario"=>$usuario->getCelularUsuario(),
+                    ":fk_id_nivel_acesso"=>$usuario->getNivelAcesso()
+                )
+            );
+        }
 
-        $con->query("INSERT INTO tb_usuarios(nome_usuario, apelido_usuario, email_usuario, senha_usuario, celular_usuario, fk_id_nivel_acesso) VALUES(:nome_usuario, :apelido_usuario, :email_usuario, :senha_usuario, :celular_usuario, :fk_id_nivel_acesso) ",
-            array(
-                ":nome_usuario"=>$usuario->getNomeUsuario(),
-                ":apelido_usuario"=>$usuario->getApelidoUsuario(),
-                ":email_usuario"=>$usuario->getEmailUsuario(),
-                ":senha_usuario"=>$usuario->getSenhaUsuario(),
-                ":celular_usuario"=>$usuario->getCelularUsuario(),
-                ":fk_id_nivel_acesso"=>$usuario->getNivelAcesso()
-            )
-        );
+
+    }
+    public static function getEmail(){
+        $conn = new Conexao();
+        $result = $conn ->select("SELECT tb_usuarios.email_usuario FROM tb_usuarios");
+
+        $emails = [];
+        foreach ($result as $data)
+        {
+            foreach ($data as $index => $email){
+
+                array_push($emails,$email);
+            }
+        }
+        return $emails;
     }
     public  function updatePerfil(UsuarioM $usuario)
     {
@@ -154,7 +165,55 @@ class Usuario
 
 
     }
+    //Seccao de erros
+    public static function setExiste($msg)
+    {
 
+        $_SESSION["emailError"] = $msg;
+
+    }
+    public static function getExiste()
+    {
+
+        $msg = (isset($_SESSION["emailError"]) && $_SESSION["emailError"]) ? $_SESSION["emailError"] : '';
+
+        Usuario::clearExiste();
+
+        return $msg;
+
+    }
+
+    public static function clearExiste()
+    {
+
+        $_SESSION["emailError"] = NULL;
+
+    }
+//Loginerror
+    public static function setLoginErro($msg)
+    {
+
+        $_SESSION["loginErro"] = $msg;
+
+    }
+    public static function getLoginErro()
+    {
+
+        $msg = (isset($_SESSION["loginErro"]) && $_SESSION["loginErro"]) ? $_SESSION["loginErro"] : '';
+
+        Usuario::clearLoginErro();
+
+        return $msg;
+
+    }
+
+    public static function clearLoginErro()
+    {
+
+        $_SESSION["loginErro"] = NULL;
+
+    }
+// Fim seccao de erros
     public static function verficarSessao(int $tipoUsuario)
     {
         if(isset($_SESSION["usuario"]) and $_SESSION["usuario"] != null and $_SESSION["usuario"]!=0 ){
@@ -178,56 +237,6 @@ class Usuario
             }
         }
     }
-//ERROS
-    public static function setErrorRegister($msg)
-    {
 
-        $_SESSION[Usuario::ERROR_REGISTER] = $msg;
 
-    }
-
-    public static function getErrorRegister()
-    {
-
-        $msg = (isset($_SESSION[Usuario::ERROR_REGISTER]) && $_SESSION[Usuario::ERROR_REGISTER]) ? $_SESSION[Usuario::ERROR_REGISTER] : '';
-
-        Usuario::clearErrorRegister();
-
-        return $msg;
-
-    }
-
-    public static function clearErrorRegister()
-    {
-
-        $_SESSION[Usuario::ERROR_REGISTER] = NULL;
-
-    }
-
-    //login
-
-    public static function setError($msg)
-    {
-
-        $_SESSION[Usuario::ERROR] = $msg;
-
-    }
-
-    public static function getError()
-    {
-
-        $msg = (isset($_SESSION[Usuario::ERROR]) && $_SESSION[Usuario::ERROR]) ? $_SESSION[Usuario::ERROR] : '';
-
-        Usuario::clearError();
-
-        return $msg;
-
-    }
-
-    public static function clearError()
-    {
-
-        $_SESSION[Usuario::ERROR] = NULL;
-
-    }
 }
