@@ -5,6 +5,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <title>Iniciar Sessão</title>
       <link rel="stylesheet" href="../app/src/vendors/login.css">
+      <link rel="stylesheet" href="../app/src/vendors/flutuante.css">
       <link rel="stylesheet" href="../app/src/vendors/bootstrap/css/bootstrap.css">
       <link rel="stylesheet" href="../app/src/vendors/fontawesome/css/all.css">
       <link rel="stylesheet" href="../app/src/vendors/owlcarousel/css/owl.carousel.min.css">
@@ -98,6 +99,8 @@
       <!--/row-->
       </div>
       <!--/containe-->
+
+
       <script src="../app/src/vendors/jquery/jquery.min.js" ></script>
       <script src="../app/src/vendors/bootstrap/js/bootstrap.js"></script>
       <script src="../app/src/vendors/fontawesome/js/all.js"></script>
@@ -134,6 +137,10 @@
          }
          });
          });
+      </script>
+
+      <script>
+
       </script>
    </body>
 </html>

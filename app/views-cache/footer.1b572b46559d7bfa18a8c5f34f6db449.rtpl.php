@@ -1,4 +1,7 @@
-<?php if(!class_exists('Rain\Tpl')){exit;}?><footer class="nb-footer">
+<?php if(!class_exists('Rain\Tpl')){exit;}?>
+
+
+<footer class="nb-footer">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -73,6 +76,7 @@
 <script src="/app/src/vendors/owlcarousel/js/owl.carousel.min.js"></script>
 <script src="/app/src/vendors/owlcarousel/js/owl.costum.js"></script>
 <script src="/app/src/vendors/grid-list.js"></script>
+<script src="/app/src/vendors/flutuante.js"></script>
 
 </body>
 </html>

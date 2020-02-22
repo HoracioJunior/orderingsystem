@@ -3,7 +3,6 @@ use models\pages\PageCliente;
 use controllers\Usuario as UsuarioC;
 use models\Usuario as UsuarioM;
 
-
 $app->get('/cliente', function() {
     UsuarioC::verficarSessao(3);
     $pageCliente = new PageCliente();

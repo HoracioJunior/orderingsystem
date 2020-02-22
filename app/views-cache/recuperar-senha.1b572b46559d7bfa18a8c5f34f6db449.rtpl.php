@@ -28,6 +28,14 @@
                           </button>
                         </div>
                         <div class="card-body form-box">
+                           <?php if( $naoExiste != '' ){ ?>
+                           <div class="alert alert-danger" role="alert">
+                              <b><?php echo htmlspecialchars( $naoExiste, ENT_COMPAT, 'UTF-8', FALSE ); ?></b>
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                 <span aria-hidden="true">&times;</span>
+                              </button>
+                           </div>
+                           <?php } ?>
                            <form  role="form" autocomplete="off" id="formLogin" novalidate="" method="POST" action="/check-email">
                               <div class="row">
                                  <div class="col-md-12 mb-3">

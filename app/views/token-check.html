@@ -28,7 +28,15 @@
                           </button>
                         </div>
                         <div class="card-body form-box">
-                           <form  role="form" autocomplete="off" id="formLogin" novalidate="" method="POST" action="/check-code">
+                           {if="$naoExiste != ''"}
+                           <div class="alert alert-danger" role="alert">
+                              <b>{$naoExiste}</b>
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                 <span aria-hidden="true">&times;</span>
+                              </button>
+                           </div>
+                           {/if}
+                           <form  role="form" autocomplete="off" id="formLogin" novalidate="" method="POST" action="/token-check">
                               <div class="row">
                                  <div class="col-md-12 mb-3">
                                     <label for=""><b>Codigo de verificação</b></label>
@@ -38,9 +46,44 @@
                                           <i class="fa fa-key"></i>
                                           </span>
                                        </div>
-                                       <input type="text" name="codigo_verificacao" class="form-control rounded-2" placeholder="intruduza o de verificação" required>
+                                       <input type="text" name="codigo_verificacao" class="form-control rounded-2" placeholder="intruduza codigo de verificação" required>
                                        <div class="invalid-feedback">
                                           intruduza o de verificação
+                                       </div>
+
+                                    </div>
+                                 </div>
+                                 <input type="hidden" name="email" id="" value="{$email}">
+
+                              </div>
+                              <div class="row">
+                                 <div class="col-md-12 mb-3">
+                                    <label for=""><b>Nova Senha do Usuario</b></label>
+                                    <div class="input-group">
+                                       <div class="input-group-prepend">
+                                          <span class="input-group-text">
+                                          <i class="fa fa-key"></i>
+                                          </span>
+                                       </div>
+                                       <input type="text" name="nova_senha" class="form-control rounded-2" placeholder="sua nova senha" required>
+                                       <div class="invalid-feedback">
+                                          informe Nova Senha do Usuario
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-md-12 mb-3">
+                                    <label for=""><b>Confirmar Senha</b></label>
+                                    <div class="input-group">
+                                       <div class="input-group-prepend">
+                                          <span class="input-group-text">
+                                          <i class="fa fa-key"></i>
+                                          </span>
+                                       </div>
+                                       <input type="text" name="confirm" class="form-control rounded-2" placeholder="confirmar nova senha" required>
+                                       <div class="invalid-feedback">
+                                          confirmar senha do usuario
                                        </div>
                                     </div>
                                  </div>

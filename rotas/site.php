@@ -6,6 +6,9 @@ use controllers\Produto as ProdutoC;
 use models\Depoimento as DepoimentoM;
 use controllers\Depoimento as DepoimentoC;
 Use controllers\Cliente;
+use models\Carrinho as CarrinhoM;
+use controllers\Carrinho as CarrinhoC;
+use controllers\Recovery;
 
 $app->get('/', function() {
     $page = new Page();
@@ -57,14 +60,12 @@ $app->post('/login', function() {
     $ipaddress= get_client_ip();
 
         Cliente::iniciar_sessao($_POST["username"], $_POST["userpass"],$ipaddress);
-        var_dump(  Cliente::iniciar_sessao($_POST["username"], $_POST["userpass"],$ipaddress));
     header("Location: /");
     exit;
 });
 
 $app->get('/logout', function() {
     UsuarioC::logout();
-    exit();
     header("Location: /login");
     exit();
 });
@@ -153,7 +154,9 @@ $app->get('/recuperar-senha', function() {
         "header" => false,
         "footer" => false
     ]);
-    $page->setTpl("recuperar-senha");
+    $page->setTpl("recuperar-senha", array(
+        "naoExiste" =>Recovery::getNaoExiste()
+    ));
 
 });
 $app->get('/token-check', function() {
@@ -161,6 +164,29 @@ $app->get('/token-check', function() {
         "header" => false,
         "footer" => false
     ]);
-    $page->setTpl("token-check");
+    $page->setTpl("token-check",array(
+        "email"=>$_SESSION["email"],
+        "naoExiste" =>Recovery::getNaoExiste()
+    ));
+
+});
+$app->post('/check-email', function() {
+    $userM = new UsuarioM();
+    $userM->setEmailUsuario($_POST["email_usuario"]);
+    $recovery = new Recovery();
+    $recovery->setCodigo($userM);
+
+    exit();
+
+});
+$app->post('/token-check', function() {
+
+    $token=$_POST["codigo_verificacao"];
+    $email =$_POST["email"];
+    $senha = $_POST["nova_senha"];
+    $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+    $recovery = new Recovery();
+    $recovery->checkToken($token,$email,$senhaHash);
+
 
 });

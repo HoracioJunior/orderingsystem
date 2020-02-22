@@ -2,18 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79e2c214-2980-4ae1-b4b5-315b41479f2f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/Cliente.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/404.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/Carrinho.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/Recovery.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/Carrinho.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/vendors/flutuante.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/vendors/flutuante.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Usuario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/vendors/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/vendors/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/login.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/login.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/vendors/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/vendors/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/footer.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/footer.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/header.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/header.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views-cache/login.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/login.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/recuperar-senha.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/recuperar-senha.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/token-check.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/token-check.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rotas/administrador.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/administrador.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/recuperar-senha.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/recuperar-senha.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/token-check.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/token-check.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/libs/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/libs/composer/autoload_static.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rotas/cliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/cliente.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rotas/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/site.php" afterDir="false" />
     </list>
@@ -122,7 +130,9 @@
       <workItem from="1581811058426" duration="7596000" />
       <workItem from="1581868492651" duration="14221000" />
       <workItem from="1582042711403" duration="8744000" />
-      <workItem from="1582157703248" duration="8793000" />
+      <workItem from="1582157703248" duration="8796000" />
+      <workItem from="1582241678223" duration="9053000" />
+      <workItem from="1582321200786" duration="15561000" />
     </task>
     <servers />
   </component>
@@ -137,18 +147,18 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="232" y="40" key="#Composer/0.0.1280.760@0.0.1280.760" timestamp="1580788424008" />
-    <state x="427" y="97" key="#com.intellij.ide.util.MemberChooser" timestamp="1582165551209">
+    <state x="427" y="97" key="#com.intellij.ide.util.MemberChooser" timestamp="1582243177506">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="427" y="97" key="#com.intellij.ide.util.MemberChooser/0.0.1280.760@0.0.1280.760" timestamp="1582165551209" />
+    <state x="427" y="97" key="#com.intellij.ide.util.MemberChooser/0.0.1280.760@0.0.1280.760" timestamp="1582243177506" />
     <state x="370" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582165474077">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="370" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.760@0.0.1280.760" timestamp="1582165474077" />
-    <state x="431" y="197" key="NewPhpClassDialog" timestamp="1582165355333">
+    <state x="431" y="197" key="NewPhpClassDialog" timestamp="1582321365464">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="431" y="197" key="NewPhpClassDialog/0.0.1280.760@0.0.1280.760" timestamp="1582165355333" />
+    <state x="431" y="197" key="NewPhpClassDialog/0.0.1280.760@0.0.1280.760" timestamp="1582321365464" />
     <state x="454" y="305" key="NewPhpFileDialog" timestamp="1581609583890">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
@@ -161,10 +171,10 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="310" y="0" width="795" height="760" key="find.popup/0.0.1280.760@0.0.1280.760" timestamp="1580783709211" />
-    <state x="296" y="170" width="672" height="677" key="run.anything.popup" timestamp="1581549584911">
+    <state x="296" y="170" width="672" height="677" key="run.anything.popup" timestamp="1582321674431">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="296" y="170" width="672" height="677" key="run.anything.popup/0.0.1280.760@0.0.1280.760" timestamp="1581549584911" />
+    <state x="296" y="170" width="672" height="677" key="run.anything.popup/0.0.1280.760@0.0.1280.760" timestamp="1582321674431" />
     <state x="303" y="81" width="672" height="678" key="search.everywhere.popup" timestamp="1581388352638">
       <screen x="0" y="0" width="1280" height="760" />
     </state>

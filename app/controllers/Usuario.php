@@ -12,6 +12,7 @@ class Usuario
 {
 
 
+
     public static function iniciar_sessao(string $email, string $senha, $ipadd){
         $con = new Conexao();
 
@@ -51,6 +52,20 @@ class Usuario
         $_SESSION["usuario"]=NULL;
 
 
+    }
+    public static function getUserFromSession(){
+        $user = new Usuario();
+        if(isset( $_SESSION["usuario"]) &&  (int)$_SESSION["usuario"]['id_usuario']>0){
+            $user-> $_SESSION["usuario"];
+        }
+        return $user;
+    }
+    public static function checkLogin(){
+        if (!isset( $_SESSION["usuario"]) || !$_SESSION["usuario"] || !(int)$_SESSION["usuario"]['id_usuario']>0){
+            return false;//Usuario nao logado
+        }else{
+            return true;
+        }
     }
     public  function cadastrar_usuario(UsuarioM $usuario){
         $emails = Usuario::getEmail();
