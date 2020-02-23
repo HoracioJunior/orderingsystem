@@ -64,5 +64,8 @@ class Conexao
 		return $stmt->fetchAll(\PDO::FETCH_ASSOC);
 
 	}
+	public function  getLastId(){
+	  return $this->conn->lastInsertId();
+    }
 
 }

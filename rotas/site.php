@@ -81,8 +81,13 @@ $app->get('/menu', function() {
 $app->get('/carrinho', function() {
     $page = new Page();
     $testemunhos = DepoimentoC::listarDepoimentos();
+    $carrinho = new CarrinhoC();
+    $lista = $carrinho->listCart();
+    $contar = $carrinho->countCart();
     $page->setTpl("carrinho",array(
-        "depoimento"=>$testemunhos
+        "depoimento"=>$testemunhos,
+        "lista"=>$lista,
+        "contar"=>$contar
     ));
 
 });
@@ -106,6 +111,13 @@ $app->get('/depoimentos', function() {
         "depoimento"=>$testemunhos
     ));
 
+});
+$app->post('/carrinho/adicionar', function() {
+        $produtoId = $_POST["id_produto"];
+        $carrinho = new CarrinhoC();
+        $carrinho->addProduct($produtoId);
+        header("Location: /carrinho");
+        exit();
 });
 $app->post('/depoimentos', function() {
     UsuarioC::verficarSessao(3);
@@ -187,6 +199,4 @@ $app->post('/token-check', function() {
     $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
     $recovery = new Recovery();
     $recovery->checkToken($token,$email,$senhaHash);
-
-
 });

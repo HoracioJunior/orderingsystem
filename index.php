@@ -10,6 +10,7 @@ $app->notFound(function () use ($app){
     $app->render("404.html");
 });
 
+
 require_once("./rotas/site.php");
 require_once("./rotas/funcoes.php");
 require_once("./rotas/cliente.php");
