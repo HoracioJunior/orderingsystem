@@ -4,14 +4,10 @@
     <list default="true" id="79e2c214-2980-4ae1-b4b5-315b41479f2f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Carrinho.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Carrinho.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Carrinho.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Carrinho.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Conexao.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Conexao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/pages/PageCliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/pages/PageCliente.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/vendors/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/vendors/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views-cache/carrinho.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/carrinho.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/index.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/index.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/carrinho.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/carrinho.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rotas/funcoes.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/funcoes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rotas/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/site.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,6 +119,7 @@
       <workItem from="1582241678223" duration="9053000" />
       <workItem from="1582321200786" duration="16052000" />
       <workItem from="1582399746681" duration="16269000" />
+      <workItem from="1582501729662" duration="8195000" />
     </task>
     <servers />
   </component>

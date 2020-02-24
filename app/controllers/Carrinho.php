@@ -71,7 +71,12 @@ public function addProduct(int $idProduto){
             );
             $this->conn->query($sql, $params);
         }else{
-            return false;
+            $sql = "INSERT INTO tb_CarrinhoProdutos(fk_id_produto,fk_id_carrinho) VALUES(:produtoId,:id_carrinho)";
+            $params = array(
+                ":produtoId"=>$idProduto,
+                ":id_carrinho"=> $_SESSION[Carrinho::SESSION]["carrinhoId"]
+            );
+            $this->conn->query($sql, $params);
         }
 
     }catch (\PDOException $e){
@@ -100,11 +105,10 @@ public function listCart()
 {
     try {
         $this->createCart();
-        $sql = " SELECT tb_produto.nome_produto, tb_produto.preco_produto, tb_produto.img_item, tb_CarrinhoProdutos.fk_id_produto, tb_carrinhoprodutos.fk_id_carrinho 
-                    FROM tb_CarrinhoProdutos 
-                    INNER JOIN tb_produto 
-                    ON tb_produto.id_produto = tb_carrinhoprodutos.fk_id_produto 
-                    WHERE tb_carrinhoprodutos.fk_id_carrinho=:carrinhoId";
+        $sql = "SELECT b.id_produto, b.nome_produto, b.preco_produto, b.img_item, COUNT(*) as quantidade, SUM(b.preco_produto) as vlTotal
+                    FROM tb_CarrinhoProdutos a INNER JOIN tb_produto b
+                    ON b.id_produto = a.fk_id_produto
+                    WHERE a.fk_id_carrinho =:carrinhoId GROUP BY b.id_produto, b.nome_produto, b.preco_produto, b.img_item";
         $params = array(
             ":carrinhoId"=>$_SESSION[Carrinho::SESSION]["carrinhoId"]
         );
@@ -127,6 +131,20 @@ public function listCart()
      }
  }
 
+    public  function subTotal(){
+        try {;
+            $sql = "SELECT SUM(preco_produto) as Subtotal from tb_produto a 
+                    INNER JOIN  tb_carrinhoprodutos b ON a.id_produto = b.fk_id_produto
+                    WHERE b.fk_id_carrinho=:carrinhoId";
+            $params = array(
+                ":carrinhoId"=>$_SESSION[Carrinho::SESSION]["carrinhoId"]
+            );
+            return  $this->conn->select($sql, $params);
+        }catch (\PDOException $e){
+            echo "ERRO: ".$e->getMessage()."\n";
+            echo "LINHA: ".$e->getLine()."\n";
+        }
+    }
 
     /*const SESSION = "carrinho";
   public function  save(CarrinhoM $carrinho)

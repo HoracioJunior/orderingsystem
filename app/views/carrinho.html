@@ -39,9 +39,15 @@
                         <tr>
                             <th scope="row"><img src="/app/uploads/{$value.img_item}" alt=""></th>
                             <td>{$value.nome_produto}</td>
-                            <td>{$value.preco_produto}</td>
-                            <td>2</td>
-                            <td>410</td>
+                            <td>{function="formatarPreco($value.preco_produto)"}</td>
+                            <td class="product-quantity">
+                                <div class="quantity buttons_added">
+                                    <input type="button" class="minus" value="-" onclick="window.location.href = '#'">
+                                    <input type="number" size="4" class="input-text qty text" title="Qty" value="{$value.quantidade}" min="0" step="1">
+                                    <input type="button" class="plus" value="+" onclick="window.location.href = '#'">
+                                </div>
+                            </td>
+                            <td>{function="formatarPreco($value.vlTotal)"}</td>
                             <td><i class="fa fa-trash text-danger"></i></td>
                         </tr>
                {/loop}
@@ -57,7 +63,7 @@
                 </div>
                 <div class="row subtotal">
                     <div class="col-6 sub">Subtotal:</div>
-                    <div class="col-6 sub text-right">150 MZN</div>
+                    <div class="col-6 sub text-right">{loop="$subtotal"}{function="formatarPreco($value.Subtotal)"}{/loop} MZN</div>
                 </div>
                 <div class="row delivery-pickup">
                     <div class="col-12 ">
@@ -75,6 +81,7 @@
                     <div class="col-md-6">Taxa de Delivery:</div>
                     <div class="col-md-6 text-right ">150 MZN</div>
                 </div>
+                <hr>
                 <div class="row mb-3 total">
                     <div class="col-md-6">Total a Pagar:</div>
                     <div class="col-md-6 text-right ">150 MZN</div>

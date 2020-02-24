@@ -87,7 +87,8 @@ $app->get('/carrinho', function() {
     $page->setTpl("carrinho",array(
         "depoimento"=>$testemunhos,
         "lista"=>$lista,
-        "contar"=>$contar
+        "contar"=>$contar,
+        "subtotal"=>$carrinho->subTotal()
     ));
 
 });

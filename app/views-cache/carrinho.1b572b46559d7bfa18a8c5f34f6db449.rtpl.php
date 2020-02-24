@@ -39,9 +39,15 @@
                         <tr>
                             <th scope="row"><img src="/app/uploads/<?php echo htmlspecialchars( $value1["img_item"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" alt=""></th>
                             <td><?php echo htmlspecialchars( $value1["nome_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
-                            <td><?php echo htmlspecialchars( $value1["preco_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
-                            <td>2</td>
-                            <td>410</td>
+                            <td><?php echo formatarPreco($value1["preco_produto"]); ?></td>
+                            <td class="product-quantity">
+                                <div class="quantity buttons_added">
+                                    <input type="button" class="minus" value="-" onclick="window.location.href = '#'">
+                                    <input type="number" size="4" class="input-text qty text" title="Qty" value="<?php echo htmlspecialchars( $value1["quantidade"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" min="0" step="1">
+                                    <input type="button" class="plus" value="+" onclick="window.location.href = '#'">
+                                </div>
+                            </td>
+                            <td><?php echo formatarPreco($value1["vlTotal"]); ?></td>
                             <td><i class="fa fa-trash text-danger"></i></td>
                         </tr>
                <?php } ?>
@@ -57,7 +63,7 @@
                 </div>
                 <div class="row subtotal">
                     <div class="col-6 sub">Subtotal:</div>
-                    <div class="col-6 sub text-right">150 MZN</div>
+                    <div class="col-6 sub text-right"><?php $counter1=-1;  if( isset($subtotal) && ( is_array($subtotal) || $subtotal instanceof Traversable ) && sizeof($subtotal) ) foreach( $subtotal as $key1 => $value1 ){ $counter1++; ?><?php echo formatarPreco($value1["Subtotal"]); ?><?php } ?> MZN</div>
                 </div>
                 <div class="row delivery-pickup">
                     <div class="col-12 ">
@@ -75,6 +81,7 @@
                     <div class="col-md-6">Taxa de Delivery:</div>
                     <div class="col-md-6 text-right ">150 MZN</div>
                 </div>
+                <hr>
                 <div class="row mb-3 total">
                     <div class="col-md-6">Total a Pagar:</div>
                     <div class="col-md-6 text-right ">150 MZN</div>

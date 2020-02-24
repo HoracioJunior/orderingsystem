@@ -1,6 +1,6 @@
 <?php
 
- function formatarPreco(float $preco)
+ function formatarPreco($preco)
 {
    return number_format($preco,2,",", ".");
 }
