@@ -146,6 +146,35 @@ public function listCart()
         }
     }
 
+    public function  deleteSingle($idProduto){
+    $conn = new Conexao();
+        try {
+           $conn->query("Delete from tb_carrinhoprodutos where fk_id_produto=:idProduto and fk_id_carrinho=:carrinhoId LIMIT 1",array(
+               ":carrinhoId"=>$_SESSION[Carrinho::SESSION]["carrinhoId"],
+               ":idProduto"=>$idProduto
+           ));
+            header("location: /carrinho");
+            exit();
+        }catch (\PDOException $e){
+            echo "ERRO: ".$e->getMessage()."\n";
+            echo "LINHA: ".$e->getLine()."\n";
+        }
+    }
+    public function  deleteAll($idProduto){
+        $conn = new Conexao();
+        try {
+            $conn->query("Delete from tb_carrinhoprodutos where fk_id_produto=:idProduto and fk_id_carrinho=:carrinhoId",array(
+                ":carrinhoId"=>$_SESSION[Carrinho::SESSION]["carrinhoId"],
+                ":idProduto"=>$idProduto
+            ));
+            header("location: /carrinho");
+            exit();
+        }catch (\PDOException $e){
+            echo "ERRO: ".$e->getMessage()."\n";
+            echo "LINHA: ".$e->getLine()."\n";
+        }
+    }
+
     /*const SESSION = "carrinho";
   public function  save(CarrinhoM $carrinho)
     {

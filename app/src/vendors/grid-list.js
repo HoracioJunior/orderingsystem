@@ -3,6 +3,7 @@
 var gridmenu;
 var  listmenu;
 
+
 window.onload= function(){
 	gridmenu = document.getElementById("grid-menu");
 	listmenu = document.getElementById("list-menu");
@@ -11,8 +12,8 @@ window.onload= function(){
 	grid.onclick=mostrarGrid;
 	var list= document.getElementById("list");
 	list.onclick=mostrarList;
-
 	listmenu.classList.add("esconder");
+
 }
 
 function mostrarGrid() {

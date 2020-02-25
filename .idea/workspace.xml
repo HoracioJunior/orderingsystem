@@ -2,12 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79e2c214-2980-4ae1-b4b5-315b41479f2f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/controllers/Endereco.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/Endereco.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/vendors/fab.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views-cache/fab.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/fab.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Carrinho.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Carrinho.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/vendors/grid-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/vendors/grid-list.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/vendors/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/vendors/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/carrinho.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/carrinho.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/cadastrar-item.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/cadastrar-usuario.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/cadastrar-usuarios.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/cadastrar.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/carrinho.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/categorias.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/contacto.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/denied.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/depoimentos.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/editar-categoria.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/editar-item.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/editar-perfil.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/eliminar-conta.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/footer.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/footer.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/header.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/header.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/header.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/header.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/index.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/index.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/index.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/index.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/list-usuarios.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/login.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/login.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/menu.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/menu.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/meu-perfil.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/minhas-ordens.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/mudar-senha.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/mudar-senha.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/recuperar-senha.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/token-check.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/carrinho.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/carrinho.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rotas/funcoes.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/funcoes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rotas/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/site.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +58,20 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="ordering" />
@@ -66,18 +118,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\ordering\rotas" />
-      <recent name="C:\wamp64\www\ordering\app\src\vendors" />
-      <recent name="C:\wamp64\www\ordering\app\src\assets\css" />
-      <recent name="C:\wamp64\www\ordering" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\ordering\template" />
       <recent name="C:\wamp64\www\ordering\app\src\img" />
       <recent name="C:\wamp64\www\ordering\app\models\pages" />
       <recent name="C:\wamp64\www\ordering\app\views" />
       <recent name="C:\wamp64\www\ordering\app\views\admin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ordering\app\src\vendors" />
+      <recent name="C:\wamp64\www\ordering\rotas" />
+      <recent name="C:\wamp64\www\ordering\app\src\assets\css" />
+      <recent name="C:\wamp64\www\ordering" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -120,6 +172,7 @@
       <workItem from="1582321200786" duration="16052000" />
       <workItem from="1582399746681" duration="16269000" />
       <workItem from="1582501729662" duration="8195000" />
+      <workItem from="1582593385691" duration="10919000" />
     </task>
     <servers />
   </component>
@@ -134,18 +187,22 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="232" y="40" key="#Composer/0.0.1280.760@0.0.1280.760" timestamp="1580788424008" />
-    <state x="427" y="97" key="#com.intellij.ide.util.MemberChooser" timestamp="1582401329437">
+    <state x="232" y="43" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582601927319">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="427" y="97" key="#com.intellij.ide.util.MemberChooser/0.0.1280.760@0.0.1280.760" timestamp="1582401329437" />
+    <state x="232" y="43" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1582601927319" />
+    <state x="427" y="97" key="#com.intellij.ide.util.MemberChooser" timestamp="1582604056194">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="427" y="97" key="#com.intellij.ide.util.MemberChooser/0.0.1280.760@0.0.1280.760" timestamp="1582604056194" />
     <state x="370" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582438359172">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="370" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.760@0.0.1280.760" timestamp="1582438359172" />
-    <state x="431" y="197" key="NewPhpClassDialog" timestamp="1582321365464">
+    <state x="431" y="197" key="NewPhpClassDialog" timestamp="1582604099906">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="431" y="197" key="NewPhpClassDialog/0.0.1280.760@0.0.1280.760" timestamp="1582321365464" />
+    <state x="431" y="197" key="NewPhpClassDialog/0.0.1280.760@0.0.1280.760" timestamp="1582604099906" />
     <state x="454" y="305" key="NewPhpFileDialog" timestamp="1581609583890">
       <screen x="0" y="0" width="1280" height="760" />
     </state>

@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Ordering SYS</title>
 	<link rel="stylesheet" href="/app/src/vendors/main.css">
+	<link rel="stylesheet" href="/app/src/vendors/fab.css">
 	<link rel="stylesheet" href="/app/src/vendors/flutuante.css">
 	<link rel="stylesheet" href="/app/src/vendors/bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" href="/app/src/vendors/fontawesome/css/all.css">

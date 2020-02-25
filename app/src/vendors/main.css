@@ -711,7 +711,9 @@ td.product-quantity div.quantity {
     float: none;
     margin: 0;
 }
+/*=================FAB========================================*/
 
+/*=================FIM FAB========================================*/
 /* Tablet Layout: 768px. */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 

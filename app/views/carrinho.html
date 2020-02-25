@@ -31,7 +31,7 @@
                             <th scope="col">Preço</th>
                             <th scope="col">Quantidade</th>
                             <th scope="col">Subtotal</th>
-                            <th scope="col">Apagar</th>
+                            <th scope="col">Acção</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -42,13 +42,16 @@
                             <td>{function="formatarPreco($value.preco_produto)"}</td>
                             <td class="product-quantity">
                                 <div class="quantity buttons_added">
-                                    <input type="button" class="minus" value="-" onclick="window.location.href = '#'">
+                                    <input type="button" class="minus" value="-" onclick="window.location.href = '/carrinho/{$value.id_produto}/menos'">
                                     <input type="number" size="4" class="input-text qty text" title="Qty" value="{$value.quantidade}" min="0" step="1">
-                                    <input type="button" class="plus" value="+" onclick="window.location.href = '#'">
+                                    <input type="button" class="plus" value="+" onclick="window.location.href = '/carrinho/{$value.id_produto}/add'">
                                 </div>
                             </td>
                             <td>{function="formatarPreco($value.vlTotal)"}</td>
-                            <td><i class="fa fa-trash text-danger"></i></td>
+                            <td><button class="btn btn-danger btn-sm" type="button" onclick="window.location.href = '/carrinho/{$value.id_produto}/deleteAll'">
+                                 <i class="fa fa-trash " ></i>
+                            </button>
+                               </td>
                         </tr>
                {/loop}
 
@@ -68,23 +71,23 @@
                 <div class="row delivery-pickup">
                     <div class="col-12 ">
                         <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline1" name="radio" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadioInline1">Delivery</label>
+                            <input type="radio" id="delivery" onclick="esconder()" name="radio" class="custom-control-input" checked>
+                            <label class="custom-control-label" for="delivery">Delivery</label>
                         </div>
                         <div class="custom-control custom-radio custom-control-inline radio2">
-                            <input type="radio" id="customRadioInline2" name="radio" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadioInline2">Pickup</label>
+                            <input type="radio" id="pickup" name="radio" class="custom-control-input">
+                            <label class="custom-control-label" for="pickup">Pickup</label>
                         </div>
                     </div>
                 </div>
-                <div class="row taxa-delivery mb-3">
-                    <div class="col-md-6">Taxa de Delivery:</div>
+                <div class="row taxa-delivery mb-3 " >
+                    <div class="col-md-6 " id="taxa_delivery">Taxa de Delivery:</div>
                     <div class="col-md-6 text-right ">150 MZN</div>
                 </div>
                 <hr>
                 <div class="row mb-3 total">
                     <div class="col-md-6">Total a Pagar:</div>
-                    <div class="col-md-6 text-right ">150 MZN</div>
+                    <div class="col-md-6 text-right ">{loop="$subtotal"}{function="formatarPreco($value.Subtotal+150)"}{/loop} MZN</div>
                 </div>
                 <div class="row mb-3 total">
                     <div class="col-md-12 d-flex justify-content-center">

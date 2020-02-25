@@ -67,3 +67,4 @@
     </div>
 </section>
 <?php require $this->checkTemplate("testemunhos");?>
+<?php require $this->checkTemplate("fab");?>

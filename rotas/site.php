@@ -113,6 +113,22 @@ $app->get('/depoimentos', function() {
     ));
 
 });
+$app->get('/carrinho/:idProduto/menos', function($idProduto) {
+    $carrinho = new CarrinhoC();
+    $carrinho->deleteSingle($idProduto);
+
+});
+$app->get('/carrinho/:idProduto/add', function($idProduto) {
+    $carrinho = new CarrinhoC();
+    $carrinho->addProduct((int)$idProduto);
+    header("Location: /carrinho");
+    exit();
+});
+$app->get('/carrinho/:idProduto/deleteAll', function($idProduto) {
+    $carrinho = new CarrinhoC();
+    $carrinho->deleteAll($idProduto);
+
+});
 $app->post('/carrinho/adicionar', function() {
         $produtoId = $_POST["id_produto"];
         $carrinho = new CarrinhoC();
