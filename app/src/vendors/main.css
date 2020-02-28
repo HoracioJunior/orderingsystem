@@ -40,6 +40,17 @@ body{
     padding: 0;
     box-sizing: border-box;
 
+}
+.input-group-text{
+    background-color:#008F95 !important;
+    color: #ffffff !important;
+}
+.subtitulo{
+    border-bottom: solid 2px #1f1f1f;
+    border-color: #008F95;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #008F95;
 
 }
 .separator{
@@ -711,6 +722,9 @@ td.product-quantity div.quantity {
     float: none;
     margin: 0;
 }
+
+
+
 /*=================FAB========================================*/
 
 /*=================FIM FAB========================================*/

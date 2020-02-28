@@ -1,4 +1,4 @@
-<!-- Modal para perfil-->
+<?php if(!class_exists('Rain\Tpl')){exit;}?><!-- Modal para perfil-->
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -10,15 +10,15 @@
             </div>
             <form action="/cliente/perfil/editar-perfil" method="post">
             <div class="modal-body">
-                <input type="hidden" name="id_usuario" value="{$dados.id_usuario}">
+                <input type="hidden" name="id_usuario" value="<?php echo htmlspecialchars( $dados["id_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                 <label>Nome do Usuario<strong class="text-danger">*</strong></label>
-                <input type="text" class="form-control" value="{$dados.nome_usuario}" name="nome_usuario" placeholder="nome do usuario" required>
+                <input type="text" class="form-control" value="<?php echo htmlspecialchars( $dados["nome_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" name="nome_usuario" placeholder="nome do usuario" required>
                 <label>Apelido do Usuario<strong class="text-danger">*</strong></label>
-                <input type="text" class="form-control" value="{$dados.apelido_usuario}" name="apelido_usuario" placeholder="nome do usuario" required>
+                <input type="text" class="form-control" value="<?php echo htmlspecialchars( $dados["apelido_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" name="apelido_usuario" placeholder="nome do usuario" required>
                 <label>Email do Usuario<strong class="text-danger">*</strong></label>
-                <input type="text" class="form-control" value="{$dados.email_usuario}" name="email_usuario" placeholder="nome do usuario" required>
+                <input type="text" class="form-control" value="<?php echo htmlspecialchars( $dados["email_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" name="email_usuario" placeholder="nome do usuario" required>
                 <label>Celular do Usuario<strong class="text-danger">*</strong></label>
-                <input type="text" class="form-control" value="{$dados.celular_usuario}" name="celular_usuario" placeholder="nome do usuario" required>
+                <input type="text" class="form-control" value="<?php echo htmlspecialchars( $dados["celular_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" name="celular_usuario" placeholder="nome do usuario" required>
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-secondary bnt-search">Salvar Alterações <i class="fa fa-save"></i></button>
@@ -49,9 +49,9 @@
                         <div class="col-md-12 teste">
                             <div class=" p-3 mt-4">
                                 <div class="">
-                                    <p><strong>Nome: </strong>{$dados.nome_usuario} {$dados.apelido_usuario}</p>
-                                    <p><strong>E-mail: </strong>{$dados.email_usuario}</p>
-                                    <p><strong>Celular: </strong>{$dados.celular_usuario}</p>
+                                    <p><strong>Nome: </strong><?php echo htmlspecialchars( $dados["nome_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?> <?php echo htmlspecialchars( $dados["apelido_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?></p>
+                                    <p><strong>E-mail: </strong><?php echo htmlspecialchars( $dados["email_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?></p>
+                                    <p><strong>Celular: </strong><?php echo htmlspecialchars( $dados["celular_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?></p>
                                 </div>
 
                             </div>
@@ -74,9 +74,9 @@
                         <div class="col-md-12 teste">
                             <div class=" p-3 mt-4">
                                 <div class="teste">
-                                    <p><strong>Nome: </strong>{$dados.nome_usuario} {$dados.apelido_usuario}</p>
-                                    <p><strong>E-mail: </strong>{$dados.email_usuario}</p>
-                                    <p><strong>Celular: </strong>{$dados.celular_usuario}</p>
+                                    <p><strong>Nome: </strong><?php echo htmlspecialchars( $dados["nome_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?> <?php echo htmlspecialchars( $dados["apelido_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?></p>
+                                    <p><strong>E-mail: </strong><?php echo htmlspecialchars( $dados["email_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?></p>
+                                    <p><strong>Celular: </strong><?php echo htmlspecialchars( $dados["celular_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?></p>
                                 </div>
 
                             </div>
@@ -103,7 +103,7 @@
             </div>
             <form action="/cliente/perfil/endereco/add" method="post">
                 <div class="modal-body">
-                    <input type="hidden" name="id_usuario" value="{$dados.id_usuario}">
+                    <input type="hidden" name="id_usuario" value="<?php echo htmlspecialchars( $dados["id_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                     <label>Endereço do usuario</label>
                     <input type="text" class="form-control" value="" name="endereco_usuario" placeholder="forneça o endereço do usuario" required>
                     </div>

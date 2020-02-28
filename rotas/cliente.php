@@ -2,6 +2,8 @@
 use models\pages\PageCliente;
 use controllers\Usuario as UsuarioC;
 use models\Usuario as UsuarioM;
+use models\Endereco as EnderecoM;
+use controllers\Endereco as EnderecoC;
 
 $app->get('/cliente', function() {
     UsuarioC::verficarSessao(3);
@@ -63,6 +65,7 @@ $app->post('/cliente/eliminar-conta', function() {
     header("Location: /login");
     exit();
 });
+
 $app->post('/cliente/perfil/editar-perfil', function() {
     //UsuarioC::verficarSessao(3);
     $UsuarioM = new UsuarioM();
@@ -83,5 +86,23 @@ $app->get('/cliente/perfil/editar-endereco', function() {
     $pageCliente->setTpl("editar-endereco",array(
         "dados"=>$dados
     ));
+});
+
+$app->post('/cliente/perfil/endereco/add', function() {
+    //UsuarioC::verficarSessao(3);
+   $em = new EnderecoM();
+   $em->setEndereco($_POST["endereco_usuario"]);
+   $em->setFkIdUsuario($_POST["id_usuario"]);
+
+    $ec = new EnderecoC();
+    $ec->insert($em);
+    header("Location: /cliente/meu-perfil");
+    exit();
+});
+$app->post('/cliente/perfil/endereco/editar', function() {
+    //UsuarioC::verficarSessao(3);
+
+    header("Location: /cliente/meu-perfil");
+    exit();
 });
 

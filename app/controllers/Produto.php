@@ -75,4 +75,17 @@ class Produto
             echo "tas fudido";
         }
     }
+    public function  paginacao($page=1,$itensPerPage =6){
+        $con= new Conexao();
+        $start = ($page-1)* $itensPerPage;
+
+        $result= $con ->select("SELECT * FROM `tb_produto` LIMIT $start,$itensPerPage ");
+        $contador = $con->select("SELECT COUNT(*) as nrTotal FROM `tb_produto`");
+
+        return[
+            "produtos"=>$result,
+            "total"=>(int)$contador[0]["nrTotal"],
+            "paginas"=>ceil($contador[0]["nrTotal"]/$itensPerPage)
+        ];
+    }
 }

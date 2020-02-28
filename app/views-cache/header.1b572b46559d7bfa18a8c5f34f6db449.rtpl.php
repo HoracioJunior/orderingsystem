@@ -1,8 +1,10 @@
 <?php if(!class_exists('Rain\Tpl')){exit;}?><!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Ordering SYS</title>
 	<link rel="stylesheet" href="/app/src/vendors/main.css">
 	<link rel="stylesheet" href="/app/src/vendors/fab.css">
@@ -11,6 +13,35 @@
 	<link rel="stylesheet" href="/app/src/vendors/fontawesome/css/all.css">
 	<link rel="stylesheet" href="/app/src/vendors/owlcarousel/css/owl.carousel.min.css">
 	<link rel="stylesheet" href="/app/src/vendors/owlcarousel/css/owl.theme.default.min.css">
+
+	<style>
+		.floating-btn{
+			width: 50px;
+			height: 50px;
+			background-color: #1b6d85;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			color: #ffffff;
+			font-size: 20px;
+			position: fixed;
+			right: 20px;
+			bottom: 20px;
+			cursor: pointer;
+			transition: background 0.25s;
+		}
+		.floating-btn:active{
+			background-color: #1b6d70;
+		}
+		.floating-btn a{
+			text-decoration: none;
+			color: #ffffff;
+		}
+		.floating-btn:hover{
+			background-color: #1b6d70;
+		}
+	</style>
 
 </head>
 <body>
@@ -66,7 +97,7 @@
 					<a class="nav-link" href="/carrinho">
              <span>
               <i class="fa fa-shopping-cart "></i>
-				 <sup><span class="nav-link badge badge-info">4</span></sup>
+				 <sup><span class="nav-link badge badge-info"></span></sup>
           </span>
 					</a>
 				</li>
@@ -82,5 +113,7 @@
 		</div>
 	</nav>
 </header><!-- /header -->
-
+<div class="floating-btn" style="">
+	<a href="/contacto"><i class="fa fa-question"></i></a>
+</div>
 		

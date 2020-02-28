@@ -51,10 +51,19 @@
 
                 </div>
                 <div class="card-footer text-muted">
+                    <div class="mt-0">
+                        <span>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </span>
+                        <small>4.5 (89 Avaliações)</small>
+                    </div>
                 </div>
             </div>
         </div>
-
         <?php } ?>
 
     </div>
@@ -67,4 +76,6 @@
     </div>
 </section>
 <?php require $this->checkTemplate("testemunhos");?>
-<?php require $this->checkTemplate("fab");?>
+
+
+

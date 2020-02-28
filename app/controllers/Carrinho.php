@@ -119,7 +119,7 @@ public function listCart()
     }
 }
  public  function countCart(){
-     try {;
+     try {
          $sql = "SELECT COUNT(`fk_id_carrinho`) as cart FROM `tb_carrinhoprodutos` WHERE  fk_id_carrinho=:carrinhoId";
          $params = array(
              ":carrinhoId"=>$_SESSION[Carrinho::SESSION]["carrinhoId"]

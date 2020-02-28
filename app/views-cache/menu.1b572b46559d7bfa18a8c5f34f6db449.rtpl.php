@@ -1,4 +1,4 @@
-<section class="hero-section">
+<?php if(!class_exists('Rain\Tpl')){exit;}?><section class="hero-section">
     <div class="conteudo">
 
         <div >
@@ -47,26 +47,26 @@
         </div>
         <div  id="grid-menu">
             <div class="row">
-                {loop="$produto"}
+                <?php $counter1=-1;  if( isset($produto) && ( is_array($produto) || $produto instanceof Traversable ) && sizeof($produto) ) foreach( $produto as $key1 => $value1 ){ $counter1++; ?>
                 <div  class="col-md-4 col-sm-6 col-xs-12 menu-card ">
                     <div class="card" >
-                        <img src="/app/uploads/{$value.img_item}"  class="card-img-top" alt="{$value.nome_produto}">
+                        <img src="/app/uploads/<?php echo htmlspecialchars( $value1["img_item"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"  class="card-img-top" alt="<?php echo htmlspecialchars( $value1["nome_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                         <div class="card-body card-corpo">
-                        <h5 class="card-title">{$value.nome_produto}</h5>
-                        <p class="card-text"><small>{$value.descricao_produto}</small></p>
+                        <h5 class="card-title"><?php echo htmlspecialchars( $value1["nome_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h5>
+                        <p class="card-text"><small><?php echo htmlspecialchars( $value1["descricao_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?></small></p>
 
                         <di class="row">
-                            <div class="col-md-6"><span class="preco text-muted">{function="formatarPreco($value.preco_produto)"} MZN</span></div>
+                            <div class="col-md-6"><span class="preco text-muted"><?php echo formatarPreco($value1["preco_produto"]); ?> MZN</span></div>
                             <div class="col-md-6">
 
-                                {if="$value.produto_status=='indisponivel'"}
+                                <?php if( $value1["produto_status"]=='indisponivel' ){ ?>
                                 <button class="btn btn-danger disabled float-right">Indisponível</button>
-                                {else}
+                                <?php }else{ ?>
                                 <form action="/carrinho/adicionar" method="post">
-                                    <input type="hidden" name="id_produto" value="{$value.id_produto}">
+                                    <input type="hidden" name="id_produto" value="<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                                     <button type="submit" class="btn btn-outline-primary btn-addcart">Peça agora</button>
                                 </form>
-                                {/if}
+                                <?php } ?>
                             </div>
                         </di>
                     </div>
@@ -84,21 +84,21 @@
                         </div>
                     </div>
                 </div>
-                {/loop}
+                <?php } ?>
             </div>
         </div>
 
 
         <div class="container mb-3"  id="list-menu">
             <div class="row">
-                {loop="$produto"}
+                <?php $counter1=-1;  if( isset($produto) && ( is_array($produto) || $produto instanceof Traversable ) && sizeof($produto) ) foreach( $produto as $key1 => $value1 ){ $counter1++; ?>
                 <div class="col-md-6 mt-3">
                     <div class="card list-card">
                         <div class="card-horizontal">
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-md-6"><h5 class="card-title">{$value.nome_produto}</h5></div>
-                                    <div class="col-md-6"><h6 class="float-right">{function="formatarPreco($value.preco_produto)"} MZN</h6></div>
+                                    <div class="col-md-6"><h5 class="card-title"><?php echo htmlspecialchars( $value1["nome_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h5></div>
+                                    <div class="col-md-6"><h6 class="float-right"><?php echo formatarPreco($value1["preco_produto"]); ?> MZN</h6></div>
                                 </div>
 
 
@@ -114,14 +114,14 @@
                                         <small>4.5 (89 Avaliações)</small>
                                     </div>
                                     <div class="col-6 mt-1">
-                                        {if="$value.produto_status=='indisponivel'"}
+                                        <?php if( $value1["produto_status"]=='indisponivel' ){ ?>
                                         <button class="btn btn-danger disabled float-right btn-sm">Indisponível</button>
-                                        {else}
+                                        <?php }else{ ?>
                                         <form action="/carrinho/adicionar" method="post">
-                                            <input type="hidden" name="id_produto" value="{$value.id_produto}">
+                                            <input type="hidden" name="id_produto" value="<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                                             <button type="submit" class="btn btn-outline-primary btn-addcart btn-sm">Peça agora</button>
                                         </form>
-                                        {/if}
+                                        <?php } ?>
                                     </div>
                                 </div>
 
@@ -129,7 +129,7 @@
                         </div>
                     </div>
                 </div>
-                {/loop}
+                <?php } ?>
             </div>
         </div>
         <div class="paginacao">
@@ -138,9 +138,9 @@
                     <li class="page-item ">
                         <a class="page-link" href="" tabindex="-1" aria-disabled="true">Anterior</a>
                     </li>
-                    {loop="$pages"}
-                    <li class="page-item"><a class="page-link" href="{$value.link}">{$value.page}</a></li>
-                    {/loop}
+                    <?php $counter1=-1;  if( isset($pages) && ( is_array($pages) || $pages instanceof Traversable ) && sizeof($pages) ) foreach( $pages as $key1 => $value1 ){ $counter1++; ?>
+                    <li class="page-item"><a class="page-link" href="<?php echo htmlspecialchars( $value1["link"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><?php echo htmlspecialchars( $value1["page"], ENT_COMPAT, 'UTF-8', FALSE ); ?></a></li>
+                    <?php } ?>
                     <li class="page-item">
                         <a class="page-link" href="#">Proximo</a>
                     </li>

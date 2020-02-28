@@ -14,6 +14,7 @@ $app->notFound(function () use ($app){
 require_once("./rotas/site.php");
 require_once("./rotas/funcoes.php");
 require_once("./rotas/cliente.php");
+require_once("./rotas/checkout.php");
 require_once("./rotas/administrador.php");
 
 require_once("./rotas/produto.php");

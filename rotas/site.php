@@ -71,10 +71,23 @@ $app->get('/logout', function() {
 });
 
 $app->get('/menu', function() {
+    $page = (isset($_GET['page'])) ? (int)$_GET['page']: 1;
+
+    //$produto = ProdutoC::listProduto();
+    $pages=[];
+
+    $produto = new ProdutoC();
+   $pagination= $produto->paginacao($page);
+    for ($i = 1;$i<=$pagination["paginas"];$i++){
+        array_push($pages,[
+            "link"=>"/menu?page=".$i,
+            "page"=>$i
+        ]);
+    }
     $page = new Page();
-    $produto = ProdutoC::listProduto();
     $page->setTpl("menu", array(
-        "produto"=>$produto
+        "produto"=>$pagination["produtos"],
+        "pages"=>$pages
     ));
 
 });
@@ -92,11 +105,8 @@ $app->get('/carrinho', function() {
     ));
 
 });
-$app->get('/menu', function() {
-    $page = new Page();
-    $page->setTpl("menu");
 
-});
+
 $app->get('/contacto', function() {
     $page = new Page();
     $page->setTpl("contacto");
@@ -217,3 +227,4 @@ $app->post('/token-check', function() {
     $recovery = new Recovery();
     $recovery->checkToken($token,$email,$senhaHash);
 });
+
