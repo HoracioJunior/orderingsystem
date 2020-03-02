@@ -76,7 +76,15 @@
 <script src="/app/src/vendors/owlcarousel/js/owl.carousel.min.js"></script>
 <script src="/app/src/vendors/owlcarousel/js/owl.costum.js"></script>
 <script src="/app/src/vendors/grid-list.js"></script>
+<script src="/app/src/vendors/xhttp.js"></script>
+<script src="/app/src/vendors/addCart.js"></script>
 <script src="/app/src/vendors/flutuante.js"></script>
+
+<script>
+    function showModal(id) {
+        $(".modal-body #id_produto").attr('value',id);
+    }
+</script>
 
 </body>
 </html>

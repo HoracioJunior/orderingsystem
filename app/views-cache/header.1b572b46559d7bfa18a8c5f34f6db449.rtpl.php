@@ -61,7 +61,7 @@
 			</div>
 			<div class="col-md-6">
 				<div class="row">
-					<div class="col-md-6 ">
+					<div class="col-md-6 col-xs-12 ">
 						<a href="/cliente" class="float-right btn btn-secondary btn-header">
 							<i class="fa fa-user"></i>&nbsp;Minha Conta
 						</a>
@@ -97,12 +97,12 @@
 					<a class="nav-link" href="/carrinho">
              <span>
               <i class="fa fa-shopping-cart "></i>
-				 <sup><span class="nav-link badge badge-info"></span></sup>
+				 <sup><span class="nav-link badge badge-danger"><?php echo htmlspecialchars( $cartTotal["cart"], ENT_COMPAT, 'UTF-8', FALSE ); ?></span></sup>
           </span>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="/login">Cadastra-se</a>
+					<a class="nav-link" href="/cadastrar-usuario">Cadastra-se</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="/login">Entrar</a>

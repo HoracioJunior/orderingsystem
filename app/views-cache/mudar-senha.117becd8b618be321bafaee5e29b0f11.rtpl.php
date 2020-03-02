@@ -1,4 +1,4 @@
-<div class="main-content">
+<?php if(!class_exists('Rain\Tpl')){exit;}?><div class="main-content">
     <div class="main-content-inner">
         <div class="breadcrumbs ace-save-state" id="breadcrumbs">
             <ul class="breadcrumb">
@@ -34,22 +34,22 @@
 
             <!-- form inicio-->
             <form action="/admin/perfil/mudar-senha" method="post">
-                {if="$feedbacks != ''"}
+                <?php if( $feedbacks != '' ){ ?>
                 <div class="alert alert-success" role="alert">
-                    <b>{$feedbacks}</b>
+                    <b><?php echo htmlspecialchars( $feedbacks, ENT_COMPAT, 'UTF-8', FALSE ); ?></b>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                {/if}
-                {if="$errorfeedbacks != ''"}
+                <?php } ?>
+                <?php if( $errorfeedbacks != '' ){ ?>
                 <div class="alert alert-danger" role="alert">
-                    <b>{$errorfeedbacks}</b>
+                    <b><?php echo htmlspecialchars( $errorfeedbacks, ENT_COMPAT, 'UTF-8', FALSE ); ?></b>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                {/if}
+                <?php } ?>
                 <div class="row row-formatacao">
                     <div class="col-md-6 col-formatacao">
                         <label for="">Sua senha antiga</label>
@@ -77,7 +77,7 @@
                         </div>
                     </div>
                 </div>
-                <input type="hidden" value="{$dados.id_usuario}" name="id_usuario">
+                <input type="hidden" value="<?php echo htmlspecialchars( $dados["id_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" name="id_usuario">
                 
                 <div class="row ">
                     <div class="col-md-6 ">

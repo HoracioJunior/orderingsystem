@@ -1,4 +1,4 @@
-<div class="main-content">
+<?php if(!class_exists('Rain\Tpl')){exit;}?><div class="main-content">
     <div class="main-content-inner">
         <div class="breadcrumbs ace-save-state" id="breadcrumbs">
             <ul class="breadcrumb">
@@ -29,49 +29,64 @@
                     <small>
                         <i class="ace-icon fa fa-angle-double-right"></i>
                         Categorias &amp; Lista de Categorias
+
                     </small>
                 </h1>
             </div><!-- /.page-header -->
 
-            <!-- form inicio-->
-            <div class="tabela">
-                <a href="/admin/menu/cadastrar-item" class="btn btn-primary btn-lg">Adicionar item no Menu </a>
-                {if="$sucessoDelete != ''"}
-                <div class="alert alert-success" role="alert">
-                    <b>{$sucessoDelete}</b>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+
+                <div class="row">
+                    <di class="col-md-5">
+                        <button type="button" class="btn btn-primary btn-lg " data-toggle="modal" data-target="#myModal">
+                            Adicionar Categoria
+                        </button>
+                    </di>
+                    <div class="col-md-7">
+                        <?php if( $sucesso != '' ){ ?>
+                        <div class="alert alert-success" role="alert">
+                            <b><?php echo htmlspecialchars( $sucesso, ENT_COMPAT, 'UTF-8', FALSE ); ?></b>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <?php } ?>
+
+                        <?php if( $existe != '' ){ ?>
+                        <div class="alert alert-danger" role="alert">
+                            <b><?php echo htmlspecialchars( $existe, ENT_COMPAT, 'UTF-8', FALSE ); ?></b>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <?php } ?>
+                    </div>
                 </div>
-                {/if}
+
+
+            <!-- form inicio-->
+            <div class="tabela mt-3">
                 <table class="table  table-responsive usuarios">
                     <thead class="px-10">
                     <tr >
                         <th scope="col">#Cod</th>
-                        <th scope="col">Imagem do Item</th>
-                        <th scope="col">Nome do Item</th>
-                        <th scope="col">Descrição do Item</th>
-                        <th scope="col">Preço do Item</th>
+                        <th scope="col">Nome da Categoria</th>
+                        <th scope="col">Data do Cadastro</th>
                         <th scope="col">Accoes</th>
                     </tr>
                     </thead>
                     <tbody>
-                    {loop="$produto"}
+                    <?php $counter1=-1;  if( isset($categoria) && ( is_array($categoria) || $categoria instanceof Traversable ) && sizeof($categoria) ) foreach( $categoria as $key1 => $value1 ){ $counter1++; ?>
                     <tr>
-                        <th >{$value.id_produto}</th>
+                        <th ><?php echo htmlspecialchars( $value1["id_produto_ctg"], ENT_COMPAT, 'UTF-8', FALSE ); ?></th>
+                        <td><?php echo htmlspecialchars( $value1["nome_categoria"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                        <td><?php echo htmlspecialchars( $value1["data_cadastro"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                         <td>
-                            <img src="/app/uploads/{$value.img_item}" style="width: 150px; height: 100px;" alt="imagem do produto">
-                        </td>
-                        <td>{$value.nome_produto}</td>
-                        <td>{$value.descricao_produto}</td>
-                        <td>{$value.preco_produto}</td>
-                        <td>
-                            <a href="/admin/menu/{$value.id_produto}/editar-item"  >Editar <i class="fa fa-edit "></i>
+                            <a href="/admin/categoria/<?php echo htmlspecialchars( $value1["id_produto_ctg"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/editar-categoria"  >Editar <i class="fa fa-edit "></i>
                                 </a>
-                            <a href="/admin/menu/{$value.id_produto}/eliminar-item" class="text-danger ml-2">Eliminar <i class="fa fa-trash"></i></a>
+                            <a href="/admin/categoria/<?php echo htmlspecialchars( $value1["id_produto_ctg"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/eliminar-categoria" class="text-danger ml-2">Eliminar <i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
-                    {/loop}
+                    <?php } ?>
                     </tbody>
                 </table>
             </div>

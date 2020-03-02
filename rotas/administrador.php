@@ -52,7 +52,8 @@ $app->get('/admin', function() {
     UsuarioC::verficarSessao(1);
     $pageAdmin = new PageAdmin();
     $pageAdmin->setTpl("index",array(
-        "usuario"=>$opt= $_SESSION["usuario"]
+        "usuario"=>$opt= $_SESSION["usuario"],
+        "totalUsers"=>UsuarioC::countUsers()
     ));
 
 });
@@ -87,7 +88,8 @@ $app->get('/admin/usuarios/list-usuarios', function() {
     $listaUsers = UsuarioC::ListarUsuarios();
     $pageAdmin = new PageAdmin();
     $pageAdmin->setTpl("list-usuarios", array(
-        "listaUsers"=>$listaUsers
+        "listaUsers"=>$listaUsers,
+        "feedbacks"=>UsuarioC::getFeedback(),
     ));
 });
 $app->get('/admin/usuarios/list-usuarios/:id_usuario/bloquear', function($id_usuario) {
@@ -134,7 +136,9 @@ $app->get('/admin/perfil/mudar-senha', function() {
     $pageAdmin = new PageAdmin();
     $dados = $_SESSION["usuario"];
     $pageAdmin->setTpl("mudar-senha", array(
-        "dados"=>$dados
+        "dados"=>$dados,
+        "feedbacks"=>UsuarioC::getFeedback(),
+        "errorfeedbacks"=>UsuarioC::getErrorFeedback()
     ));
 
 });
@@ -144,7 +148,7 @@ $app->post('/admin/perfil/mudar-senha', function() {
     $userM ->setSenhaUsuario($_POST["senha_nova"]);
     $userM -> setIdUsuario($_POST["id_usuario"]);
     UsuarioC::changeSenha($userM,$_POST["senha_antiga"]);
-    header("Location: /admin");
+    header("Location: /admin/perfil/mudar-senha");
     exit();
 
 });

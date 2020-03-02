@@ -64,14 +64,14 @@ $app->get('/admin/menu/cadastrar-item', function() {
     $categoria = CategoriaC::selectCategorias();
     $pageAdmin = new PageAdmin();
     $pageAdmin->setTpl("cadastrar-item", array(
-        "categoria"=>$categoria
+        "categoria"=>$categoria,
+        "sucessoProduto"=>ProdutoC::getSucesso()
     ));
 
 });
 $app->post('/admin/menu/cadastrar-item', function() {
     UsuarioC::verficarSessao(1);
     $produtoM = new ProdutoM();
-    $produtoC = new ProdutoC();
     $file = $_FILES["img"];
 
     $produtoM->setNomeProduto($_POST["nome_produto"]);
@@ -81,7 +81,7 @@ $app->post('/admin/menu/cadastrar-item', function() {
     $produtoM->setFkIdProdutoCtg($_POST["fk_categoria"]);
     $produtoC = new ProdutoC();
     $produtoC->cadastrar_produto($produtoM);
-    header("Location: /admin/menu/menu-itens");
+    header("Location: /admin/menu/cadastrar-item");
     exit();
 });
 
@@ -90,7 +90,8 @@ $app->get('/admin/menu/menu-itens', function() {
     $produto = ProdutoC::listProduto();
     $pageAdmin = new PageAdmin();
     $pageAdmin->setTpl("menu", array(
-        "produto"=>$produto
+        "produto"=>$produto,
+        "sucessoDelete"=>ProdutoC::getSucesso()
     ));
 
 });

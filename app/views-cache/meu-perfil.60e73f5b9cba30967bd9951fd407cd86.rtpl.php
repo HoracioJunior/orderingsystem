@@ -63,20 +63,16 @@
                 <div class="mb-3 card-bg">
                     <div class="row">
                         <div class="col-md-12">
-                            <div>
                                 <button type="button" data-toggle="modal" data-target="#endereco" class="position-absolute mt-3 ml-3 text-white btn btn-secondary" >
-                                    <i class="fas fa-user-edit"></i> Endereço
+                                    <i class="fas fa-user-plus"></i> Endereço
                                 </button>
-                            </div>
                         </div>
                     </div><br>
                     <div class="row">
                         <div class="col-md-12 teste">
                             <div class=" p-3 mt-4">
                                 <div class="teste">
-                                    <p><strong>Nome: </strong><?php echo htmlspecialchars( $dados["nome_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?> <?php echo htmlspecialchars( $dados["apelido_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?></p>
-                                    <p><strong>E-mail: </strong><?php echo htmlspecialchars( $dados["email_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?></p>
-                                    <p><strong>Celular: </strong><?php echo htmlspecialchars( $dados["celular_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?></p>
+                                    <p><strong>Nome: </strong><?php echo htmlspecialchars( $endereco, ENT_COMPAT, 'UTF-8', FALSE ); ?></p>
                                 </div>
 
                             </div>

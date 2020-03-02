@@ -437,6 +437,10 @@ nav .page-item .page-link:hover {
     border-color: #008F95 !important;
     color: #fff !important;
 }
+.estrelas{
+    cursor: pointer;
+    color:  #008F95 !important;
+}
 /*=================Pagina Menu Fim========================================*/
 
 
@@ -738,10 +742,13 @@ td.product-quantity div.quantity {
 
 }
 /* Mobile Layout: 320px. */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 480px) {
 
     div.quantity input.plus, div.quantity input.minus {
         display: none;
+    }
+    .switch-menu{
+        display: none !important;
     }
 
 }

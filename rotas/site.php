@@ -9,6 +9,8 @@ Use controllers\Cliente;
 use models\Carrinho as CarrinhoM;
 use controllers\Carrinho as CarrinhoC;
 use controllers\Recovery;
+use models\Avaliar as AvaliarM;
+use controllers\Avaliar as AvaliarC;
 
 $app->get('/', function() {
     $page = new Page();
@@ -227,4 +229,20 @@ $app->post('/token-check', function() {
     $recovery = new Recovery();
     $recovery->checkToken($token,$email,$senhaHash);
 });
+
+$app->post('/avaliar', function() {
+    UsuarioC::verficarSessao(3);
+    $avaliarModel = new AvaliarM();
+    $avaliarModel->setFkIdUsuario($_POST["id_usuario"]);
+    $avaliarModel->setFkIdProduto($_POST["id_produto"]);
+    $avaliarModel->setComentario($_POST["comentario"]);
+    $avaliarModel->setQtdEstrelas($_POST["qtd_estrelas"]);
+    var_dump($avaliarModel);
+    exit();
+    $avaliarC = new AvaliarC();
+    $avaliarC->avaliar($avaliarModel);
+    exit();
+
+});
+
 

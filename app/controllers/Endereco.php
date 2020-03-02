@@ -11,7 +11,10 @@ class Endereco
     {
         $conn = new Conexao();
         try {
-
+    $conn->query("INSERT INTO tb_enderecos(endereco, fk_id_usuario) VALUES(:endereco,:id_usuario)", array(
+        ":endereco"=>$endereco->getEndereco(),
+        ":id_usuario"=>$endereco->getFkIdUsuario()
+    ));
         }catch (\PDOException $e){
             echo "ERRO: ".$e->getMessage()."\n";
             echo "LINHA: ".$e->getLine()."\n";
@@ -44,7 +47,10 @@ class Endereco
     {
         $conn = new Conexao();
         try {
-
+           $result= $conn->select("SELECT * FROM tb_enderecos WHERE fk_id_usuario=:id_usuario", array(
+               ":id_usuario"=>$idUsuario
+            ));
+           return $result[0]["endereco"];
         }catch (\PDOException $e){
             echo "ERRO: ".$e->getMessage()."\n";
             echo "LINHA: ".$e->getLine()."\n";

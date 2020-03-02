@@ -71,8 +71,8 @@
                         </di>
                     </div>
                         <div class="card-footer text-muted">
-                            <div class="mt-0">
-                                       <span>
+                            <div class="mt-0" >
+                                       <span class="estrelas" data-toggle="modal" onclick="showModal(<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>)" data-target="#myModal">
                                            <i class="fa fa-star"></i>
                                            <i class="fa fa-star"></i>
                                            <i class="fa fa-star"></i>
@@ -103,8 +103,8 @@
 
 
                                 <div class="row">
-                                    <div class="col-6 mt-2">
-                                       <span>
+                                    <div class="col-6 mt-2" id="">
+                                       <span class="estrelas" data-toggle="modal" onclick="showModal(<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>)" data-target="#myModal">
                                            <i class="fa fa-star"></i>
                                            <i class="fa fa-star"></i>
                                            <i class="fa fa-star"></i>
@@ -118,7 +118,7 @@
                                         <button class="btn btn-danger disabled float-right btn-sm">Indisponível</button>
                                         <?php }else{ ?>
                                         <form action="/carrinho/adicionar" method="post">
-                                            <input type="hidden" name="id_produto" value="<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+                                            <input type="hidden" id="campo_<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" name="id_produto" value="<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                                             <button type="submit" class="btn btn-outline-primary btn-addcart btn-sm">Peça agora</button>
                                         </form>
                                         <?php } ?>
@@ -129,9 +129,11 @@
                         </div>
                     </div>
                 </div>
+
                 <?php } ?>
             </div>
         </div>
+        <!--Paginacao-->
         <div class="paginacao">
             <nav>
                 <ul class="pagination justify-content-center">
@@ -147,7 +149,38 @@
                 </ul>
             </nav>
         </div>
-
+<!--Fim de Paginacao-->
     </div>
+
+    <!-- Modal  cadastrar-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title" id="myModalLabel">Avaliar Item</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <form action="/avaliar" method="post">
+                    <div class="modal-body">
+                        <div class="row row-formatacao">
+                            <div class="col-md-8 col-formatacao">
+                                <label for="">Comentario</label>
+                                <input type="text" id="id_produto" name="id_produto" >
+                                <input type="text" id="id_usuario" name="id_usuario" value="2" >
+                                <input type="text" id="qtd_estrelas" name="qtd_estrelas" value="4" >
+                                    <div class="input-group">
+                                    <textarea  class="form-control" name="comentario" aria-describedby="basic-addon1"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Avaliar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> <!--Fim de Modal-->
 </section>
 

@@ -19,7 +19,6 @@
             <div class="col-md-8">
                 <div class="row">
                     <div class="col-md-12 itens-cart text-center">Ordens no Carrinho
-                    <?php $counter1=-1;  if( isset($contar) && ( is_array($contar) || $contar instanceof Traversable ) && sizeof($contar) ) foreach( $contar as $key1 => $value1 ){ $counter1++; ?><?php echo htmlspecialchars( $value1["cart"], ENT_COMPAT, 'UTF-8', FALSE ); ?><?php } ?>
                     </div>
                 </div>
                 <div class="tabela">
@@ -71,7 +70,7 @@
                 <div class="row delivery-pickup">
                     <div class="col-12 ">
                         <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="delivery" onclick="esconder()" name="radio" class="custom-control-input" checked>
+                            <input type="radio" id="delivery" onclick="" name="radio" class="custom-control-input" checked>
                             <label class="custom-control-label" for="delivery">Delivery</label>
                         </div>
                         <div class="custom-control custom-radio custom-control-inline radio2">

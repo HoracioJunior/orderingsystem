@@ -8,9 +8,7 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="row">
-                    <div class="col-md-12 itens-cart text-center">Ordens no Carrinho
-                        <?php $counter1=-1;  if( isset($contar) && ( is_array($contar) || $contar instanceof Traversable ) && sizeof($contar) ) foreach( $contar as $key1 => $value1 ){ $counter1++; ?><?php echo htmlspecialchars( $value1["cart"], ENT_COMPAT, 'UTF-8', FALSE ); ?><?php } ?>
-                    </div>
+                    <div class="col-md-12 itens-cart text-center">Ordens no Carrinho</div>
                 </div>
                 <div class="tabela">
                     <table class="table table-hover table-responsive">
@@ -126,15 +124,15 @@
             <div class="row mb-2">
                 <div class="col-md-12">
                     <div class="row">
-                        <div class="form-group">
-                            <input type="radio" class="form-control-inline" id="mpesa" value="1" name="mpesa" checked>
-                            <label for="mpesa">M-Pesa</label>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" id="mpesa" value="1" name="tipo_pagamento" checked>
+                            <label for="mpesa" class="custom-control-label">M-Pesa</label>
                         </div>
                     </div>
                     <div class="row">
-                        <p><div class="form-group">
-                        <input type="radio" class="form-control-inline" placeholder="ffff" id="paypal" value="2" name="paypal">
-                        <label for="paypal">PayPal</label>
+                        <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input"  id="paypal" value="2" name="tipo_pagamento">
+                        <label for="paypal" class="custom-control-label">PayPal</label>
                     </div>
                     </div>
                 </div>

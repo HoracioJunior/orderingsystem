@@ -5,13 +5,10 @@ namespace controllers;
 
 use models\Conexao;
 use models\Usuario as UsuarioM;
-use Rain\Tpl;
 
 
 class Usuario
 {
-
-
 
     public static function iniciar_sessao(string $email, string $senha, $ipadd){
         $con = new Conexao();
@@ -48,25 +45,9 @@ class Usuario
     }
     public static function logout()
     {
-
         $_SESSION["usuario"]=NULL;
+    }
 
-
-    }
-    public static function getUserFromSession(){
-        $user = new Usuario();
-        if(isset( $_SESSION["usuario"]) &&  (int)$_SESSION["usuario"]['id_usuario']>0){
-            $user-> $_SESSION["usuario"];
-        }
-        return $user;
-    }
-    public static function checkLogin(){
-        if (!isset( $_SESSION["usuario"]) || !$_SESSION["usuario"] || !(int)$_SESSION["usuario"]['id_usuario']>0){
-            return false;//Usuario nao logado
-        }else{
-            return true;
-        }
-    }
     public  function cadastrar_usuario(UsuarioM $usuario){
         $emails = Usuario::getEmail();
         if(in_array($usuario->getEmailUsuario(),$emails)){
@@ -87,8 +68,6 @@ class Usuario
                 )
             );
         }
-
-
     }
     public static function getEmail(){
         $conn = new Conexao();
@@ -107,7 +86,6 @@ class Usuario
     public  function updatePerfil(UsuarioM $usuario)
     {
         $con = new Conexao();
-
         $con->query("Update tb_usuarios set nome_usuario = :nome,apelido_usuario=:apelido, email_usuario=:email, celular_usuario=:celular where id_usuario=:id",
             array(
                 ":id"=>$usuario->getIdUsuario(),
@@ -131,25 +109,15 @@ class Usuario
         $con = new Conexao();
         return $con->select("select * from tb_usuarios");
     }
-    public function update(UsuarioM $usuario)
-    {
-        $con = new Conexao();
-    }
+
     public static function statusBloquear(int $id)
     {
         $con = new Conexao();
         $con ->query("UPDATE tb_usuarios set usuario_status='inativo' where id_usuario = :id", array(
             ":id"=>$id
         ));
-
-    }
-    public static function eliminar(UsuarioM $usuario)
-    {
-        $con = new Conexao();
-        $con ->query("UPDATE tb_usuarios set usuario_status='inativo' where id_usuario = :id", array(
-            ":id"=>$usuario->getIdUsuario()
-        ));
-
+        $sucesso = "operacao efectuada com sucesso";
+        Usuario::setFeedback($sucesso);
     }
     public static function statusDesbloquear(int $id)
     {
@@ -157,11 +125,19 @@ class Usuario
         $con ->query("UPDATE tb_usuarios set usuario_status='activo' where id_usuario = :id", array(
             ":id"=>$id
         ));
-
+        $sucesso = "operacao efectuada com sucesso";
+        Usuario::setFeedback($sucesso);
     }
+    public static function eliminar(UsuarioM $usuario)
+    {
+        $con = new Conexao();
+        $con ->query("UPDATE tb_usuarios set usuario_status='inativo' where id_usuario = :id", array(
+            ":id"=>$usuario->getIdUsuario()
+        ));
+    }
+
     public static function changeSenha(UsuarioM $usuario, string $senhaAntiga)
     {
-
         $con = new Conexao();
        $result= $con->select("select * from tb_usuarios where id_usuario = :id", array(
             ":id"=>$usuario->getIdUsuario()
@@ -172,13 +148,23 @@ class Usuario
                     ":id"=>$usuario->getIdUsuario(),
                     ":senha"=>$usuario->getSenhaUsuario()
                 ));
-
+                $sucesso = "Troca de senha efectuada com sucesso";
+                Usuario::setFeedback($sucesso);
             }else{
-                echo"errado";
+                $sucesso = "Nao foi possivel trocar a senha";
+                Usuario::setErrorFeedback($sucesso);
             }
+        }else{
+            $sucesso = "Nao foi possivel trocar a senha";
+            Usuario::setErrorFeedback($sucesso);
         }
 
 
+    }
+    public static function countUsers(){
+        $conn = new Conexao();
+        $result = $conn->select("SELECT COUNT(id_usuario) as total FROM `tb_usuarios` ");
+        return $result[0];
     }
     //Seccao de erros
     public static function setExiste($msg)
@@ -200,33 +186,23 @@ class Usuario
 
     public static function clearExiste()
     {
-
         $_SESSION["emailError"] = NULL;
-
     }
 //Loginerror
     public static function setLoginErro($msg)
     {
-
         $_SESSION["loginErro"] = $msg;
-
     }
     public static function getLoginErro()
     {
-
         $msg = (isset($_SESSION["loginErro"]) && $_SESSION["loginErro"]) ? $_SESSION["loginErro"] : '';
-
         Usuario::clearLoginErro();
-
         return $msg;
-
     }
 
     public static function clearLoginErro()
     {
-
         $_SESSION["loginErro"] = NULL;
-
     }
 // Fim seccao de erros
     public static function verficarSessao(int $tipoUsuario)
@@ -253,5 +229,37 @@ class Usuario
         }
     }
 
+    public static function setFeedback($msg)
+    {
+        $_SESSION["feedbacks"] = $msg;
+    }
 
+    public static function getFeedback()
+    {
+        $msg = (isset($_SESSION["feedbacks"]) && $_SESSION["feedbacks"]) ? $_SESSION["feedbacks"] : '';
+        Usuario::clearFeedback();
+        return $msg;
+    }
+
+    public static function clearFeedback()
+    {
+        $_SESSION["feedbacks"] = NULL;
+    }
+
+    public static function setErrorFeedback($msg)
+    {
+        $_SESSION["Errorfeedbacks"] = $msg;
+    }
+
+    public static function getErrorFeedback()
+    {
+        $msg = (isset($_SESSION["Errorfeedbacks"]) && $_SESSION["Errorfeedbacks"]) ? $_SESSION["Errorfeedbacks"] : '';
+        Usuario::clearErrorFeedback();
+        return $msg;
+    }
+
+    public static function clearErrorFeedback()
+    {
+        $_SESSION["Errorfeedbacks"] = NULL;
+    }
 }

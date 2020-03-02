@@ -120,11 +120,11 @@ public function listCart()
 }
  public  function countCart(){
      try {
-         $sql = "SELECT COUNT(`fk_id_carrinho`) as cart FROM `tb_carrinhoprodutos` WHERE  fk_id_carrinho=:carrinhoId";
-         $params = array(
+         $con = new Conexao();
+         $result = $con->select("SELECT COUNT(id_CarrinhoProdutos) as cart FROM `tb_carrinhoprodutos` WHERE  fk_id_carrinho=:carrinhoId", array(
              ":carrinhoId"=>$_SESSION[Carrinho::SESSION]["carrinhoId"]
-         );
-         return  $this->conn->select($sql, $params);
+         ));
+         return  $result[0];
      }catch (\PDOException $e){
          echo "ERRO: ".$e->getMessage()."\n";
          echo "LINHA: ".$e->getLine()."\n";
@@ -175,53 +175,4 @@ public function listCart()
         }
     }
 
-    /*const SESSION = "carrinho";
-  public function  save(CarrinhoM $carrinho)
-    {
-        $conn = new Conexao();
-        $conn->query("INSERT INTO tb_carrinho(id_session) VALUES (:id_session)", array(
-            ":id_session" => $carrinho->getIdSession()
-        ));
-    }
-
-    public static function getFromSession()
-    {
-        $cart = new Carrinho();
-        if(isset($_SESSION[Carrinho::SESSION]) && (int)$_SESSION[Carrinho::SESSION]['id_carrinho'] > 0){
-            $cart->get((int)$_SESSION[Carrinho::SESSION]['id_carrinho']);
-        } else{
-            $cart->getFromSessionId();
-            $dados =["id_session"=>session_id()];
-            $cart->save();
-        }
-        return $cart;
-    }
-    public function getFromSessionId(){
-        $conn = new Conexao();
-        $result= $conn->select("SELECT * FROM tb_carrinho WHERE id_session = :id_session", array(
-            ":id_session"=>session_id()
-        ));
-        if(count($result)>0){
-            return $result;
-        }
-
-    }
-    public function get(int $id_carrinho){
-        $conn = new Conexao();
-       $result= $conn->select("SELECT * FROM tb_carrinho WHERE id_carrinho = :id", array(
-         ":id"=>$id_carrinho
-       ));
-        if(count($result)>0){
-            return $result;
-        }
-    }
-    public function  save()
-    {
-        $c = new CarrinhoM();
-       $cart= $c->getIdSession();
-        $conn = new Conexao();
-        $conn->query("INSERT INTO tb_carrinho(id_session) VALUES (:id_session)", array(
-            ":id_session" => $cart
-        ));
-    }*/
 }

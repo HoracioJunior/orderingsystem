@@ -1,4 +1,4 @@
-<div class="main-content">
+<?php if(!class_exists('Rain\Tpl')){exit;}?><div class="main-content">
     <div class="main-content-inner">
         <div class="breadcrumbs ace-save-state" id="breadcrumbs">
             <ul class="breadcrumb">
@@ -34,14 +34,14 @@
             <!-- form inicio-->
 
             <div class="tabela">
-                {if="$feedbacks != ''"}
+                <?php if( $feedbacks != '' ){ ?>
                 <div class="alert alert-success" role="alert">
-                    <b>{$feedbacks}</b>
+                    <b><?php echo htmlspecialchars( $feedbacks, ENT_COMPAT, 'UTF-8', FALSE ); ?></b>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                {/if}
+                <?php } ?>
                 <table class="table  table-responsive usuarios">
                     <thead class="px-10">
                     <tr >
@@ -54,26 +54,26 @@
                     </tr>
                     </thead>
                     <tbody>
-                    {loop="$listaUsers"}
+                    <?php $counter1=-1;  if( isset($listaUsers) && ( is_array($listaUsers) || $listaUsers instanceof Traversable ) && sizeof($listaUsers) ) foreach( $listaUsers as $key1 => $value1 ){ $counter1++; ?>
                     <tr>
-                        <th >{$value.id_usuario}</th>
-                        <td>{$value.nome_usuario}</td>
-                        <td>{$value.apelido_usuario}</td>
-                        <td>{$value.email_usuario}</td>
-                        <td>{$value.celular_usuario}</td>
+                        <th ><?php echo htmlspecialchars( $value1["id_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?></th>
+                        <td><?php echo htmlspecialchars( $value1["nome_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                        <td><?php echo htmlspecialchars( $value1["apelido_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                        <td><?php echo htmlspecialchars( $value1["email_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                        <td><?php echo htmlspecialchars( $value1["celular_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                         <td>
 
 
-                                {if="$value.usuario_status=='activo'"}
-                            <a href="/admin/usuarios/list-usuarios/{$value.id_usuario}/bloquear" class="btn btn-danger btn-sm">Bloqueiar<i class="fa fa-lock "></i></a>
-                                {else}
-                            <a href="/admin/usuarios/list-usuarios/{$value.id_usuario}/desbloquear" class="btn btn-primary btn-sm">Desbloquear<i class="fa fa-lock "></i></a>
-                                {/if}
+                                <?php if( $value1["usuario_status"]=='activo' ){ ?>
+                            <a href="/admin/usuarios/list-usuarios/<?php echo htmlspecialchars( $value1["id_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/bloquear" class="btn btn-danger btn-sm">Bloqueiar<i class="fa fa-lock "></i></a>
+                                <?php }else{ ?>
+                            <a href="/admin/usuarios/list-usuarios/<?php echo htmlspecialchars( $value1["id_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/desbloquear" class="btn btn-primary btn-sm">Desbloquear<i class="fa fa-lock "></i></a>
+                                <?php } ?>
 
 
                         </td>
                     </tr>
-                    {/loop}
+                    <?php } ?>
                     </tbody>
                 </table>
             </div>

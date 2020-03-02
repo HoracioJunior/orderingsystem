@@ -2,34 +2,59 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79e2c214-2980-4ae1-b4b5-315b41479f2f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views-cache/cadastrar.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views-cache/carrinho.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views-cache/contacto.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views-cache/footer.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views-cache/header.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views-cache/index.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views-cache/login.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views-cache/menu.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views-cache/meu-perfil.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views-cache/recuperar-senha.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/checkout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rotas/checkout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Vilanculo_Junior.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/Avaliar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/Avaliar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/vendors/addCart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/vendors/xhttp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/uploads/5e5a92feddb96.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/uploads/5e5a948d646e2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/uploads/5e5a954611f9c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views-cache/cadastrar-item.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views-cache/categorias.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views-cache/editar-perfil.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views-cache/eliminar-conta.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views-cache/footer.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views-cache/header.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views-cache/index.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views-cache/list-usuarios.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views-cache/login.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views-cache/menu.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views-cache/minhas-ordens.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views-cache/mudar-senha.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views-cache/mudar-senha.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Carrinho.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Carrinho.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Endereco.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Endereco.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Produto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/vendors/fab.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Usuario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/pages/Page.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/pages/Page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/assets/css/ace.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/assets/css/ace.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/vendors/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/vendors/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/carrinho.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/carrinho.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/checkout.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/checkout.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/footer.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/footer.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views-cache/header.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/header.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views-cache/index.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/index.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/index.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/index.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/menu.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/menu.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/meu-perfil.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/meu-perfil.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/cadastrar-item.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/cadastrar-item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/list-usuarios.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/list-usuarios.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/mudar-senha.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/mudar-senha.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/carrinho.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/carrinho.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cliente/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cliente/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/cliente/meu-perfil.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cliente/meu-perfil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/fab.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rotas/administrador.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/administrador.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rotas/cliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/cliente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rotas/funcoes.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/funcoes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rotas/produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/produto.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rotas/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/site.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,9 +88,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -99,7 +124,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/rotas" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -159,6 +184,9 @@
       <workItem from="1582593385691" duration="10919000" />
       <workItem from="1582651457259" duration="11685000" />
       <workItem from="1582822292648" duration="18312000" />
+      <workItem from="1582993366512" duration="12784000" />
+      <workItem from="1583029143703" duration="4246000" />
+      <workItem from="1583102006675" duration="13883000" />
     </task>
     <servers />
   </component>
@@ -177,26 +205,26 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="232" y="43" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1582601927319" />
-    <state x="427" y="97" key="#com.intellij.ide.util.MemberChooser" timestamp="1582604056194">
+    <state x="427" y="97" key="#com.intellij.ide.util.MemberChooser" timestamp="1583119198023">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="427" y="97" key="#com.intellij.ide.util.MemberChooser/0.0.1280.760@0.0.1280.760" timestamp="1582604056194" />
+    <state x="427" y="97" key="#com.intellij.ide.util.MemberChooser/0.0.1280.760@0.0.1280.760" timestamp="1583119198023" />
     <state x="370" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582438359172">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="370" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.760@0.0.1280.760" timestamp="1582438359172" />
-    <state x="431" y="197" key="NewPhpClassDialog" timestamp="1582604099906">
+    <state x="431" y="197" key="NewPhpClassDialog" timestamp="1583114280932">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="431" y="197" key="NewPhpClassDialog/0.0.1280.760@0.0.1280.760" timestamp="1582604099906" />
+    <state x="431" y="197" key="NewPhpClassDialog/0.0.1280.760@0.0.1280.760" timestamp="1583114280932" />
     <state x="454" y="305" key="NewPhpFileDialog" timestamp="1581609583890">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="454" y="305" key="NewPhpFileDialog/0.0.1280.760@0.0.1280.760" timestamp="1581609583890" />
-    <state x="133" y="24" key="SettingsEditor" timestamp="1581525320698">
+    <state x="116" y="52" key="SettingsEditor" timestamp="1583035040300">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="133" y="24" key="SettingsEditor/0.0.1280.760@0.0.1280.760" timestamp="1581525320698" />
+    <state x="116" y="52" key="SettingsEditor/0.0.1280.760@0.0.1280.760" timestamp="1583035040300" />
     <state x="310" y="0" width="795" height="760" key="find.popup" timestamp="1580783709211">
       <screen x="0" y="0" width="1280" height="760" />
     </state>

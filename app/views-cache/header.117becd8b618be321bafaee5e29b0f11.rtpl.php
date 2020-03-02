@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if(!class_exists('Rain\Tpl')){exit;}?><!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -53,7 +53,7 @@
                         <img class="nav-user-photo" src="/app/src/assets/images/avatars/user.jpg" alt="foto de usuario" />
                         <span class="user-info">
 									<small>Benvindo</small>
-                                    {$dados.nome_usuario}
+                                    <?php echo htmlspecialchars( $dados["nome_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?>
 								</span>
 
                         <i class="ace-icon fa fa-caret-down"></i>
@@ -124,7 +124,7 @@
             <li class="">
                 <a href="#" class="dropdown-toggle">
                     <i class="menu-icon fa fa-users"></i>
-                    <span class="menu-text">Usuarios <b class="counters">{$total.total}</b></span>
+                    <span class="menu-text">Usuarios <b class="counters"><?php echo htmlspecialchars( $total["total"], ENT_COMPAT, 'UTF-8', FALSE ); ?></b></span>
                     <b class="arrow fa fa-angle-down"></b>
                 </a>
 
@@ -202,7 +202,7 @@
             <li class="">
                 <a href="#" class="dropdown-toggle">
                     <i class="menu-icon fa fa-shopping-basket"></i>
-                    <span class="menu-text">Pedidos <b class="counters">{$total.total}</b></span>
+                    <span class="menu-text">Pedidos <b class="counters"><?php echo htmlspecialchars( $total["total"], ENT_COMPAT, 'UTF-8', FALSE ); ?></b></span>
                     <b class="arrow fa fa-angle-down"></b>
                 </a>
                 <b class="arrow"></b>
@@ -210,7 +210,7 @@
                     <li class="">
                         <a href="faq.html">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            Novos Pedidos <b class="counters">{$total.total}</b>
+                            Novos Pedidos <b class="counters"><?php echo htmlspecialchars( $total["total"], ENT_COMPAT, 'UTF-8', FALSE ); ?></b>
                         </a>
                         <b class="arrow"></b>
                     </li>

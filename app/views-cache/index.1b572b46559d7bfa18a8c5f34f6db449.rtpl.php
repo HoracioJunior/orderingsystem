@@ -40,9 +40,9 @@
                                     <?php if( $value1["produto_status"]=='indisponivel' ){ ?>
                                         <button class="btn btn-danger disabled float-right">Indisponível</button>
                                     <?php }else{ ?>
-                                        <form action="/carrinho/adicionar" method="POST">
+                                        <form method="post" action="/carrinho/adicionar" id="form-adicionar">
                                             <input type="hidden" name="id_produto" value="<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
-                                            <button type="submit" class="btn btn-outline-primary btn-addcart">Peça agora</button>
+                                            <button type="submit" class="btn btn-outline-primary btn-addcart" id="btn-carrinho">Peça agora</button>
                                         </form>
                                     <?php } ?>
                             </div>

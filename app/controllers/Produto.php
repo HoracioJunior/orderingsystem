@@ -27,6 +27,9 @@ class Produto
                 ":preco"=>$pro->getPrecoProduto(),
                 ":categoria"=>$pro->getFkIdProdutoCtg(),
             ));
+            $sucesso = "o item foi adicionada com sucesso";
+            Produto::setSucesso($sucesso);
+
         }else{
             echo "tas fudido";
         }
@@ -47,6 +50,8 @@ class Produto
         $conn->query("delete from tb_produto where id_produto = :id",array(
             ":id"=>$id
         ));
+        $sucesso = "operacao efectuada com sucesso";
+        Produto::setSucesso($sucesso);
     }
 
     public function update_produto(ProdutoM $pro)
@@ -87,5 +92,29 @@ class Produto
             "total"=>(int)$contador[0]["nrTotal"],
             "paginas"=>ceil($contador[0]["nrTotal"]/$itensPerPage)
         ];
+    }
+    public static function setSucesso($msg)
+    {
+
+        $_SESSION["sucessoProduto"] = $msg;
+
+    }
+
+    public static function getSucesso()
+    {
+
+        $msg = (isset($_SESSION["sucessoProduto"]) && $_SESSION["sucessoProduto"]) ? $_SESSION["sucessoProduto"] : '';
+
+        Produto::clearSucesso();
+
+        return $msg;
+
+    }
+
+    public static function clearSucesso()
+    {
+
+        $_SESSION["sucessoProduto"] = NULL;
+
     }
 }

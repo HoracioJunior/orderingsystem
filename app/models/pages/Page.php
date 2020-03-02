@@ -2,6 +2,8 @@
 
 
 namespace models\pages;
+use controllers\Carrinho;
+use controllers\Usuario;
 use Rain\Tpl;
 
 class Page
@@ -37,6 +39,18 @@ class Page
             if(isset($_SESSION["usuario"])){
                 $dados = $_SESSION["usuario"];
                 $this->tpl->assign("dados",$dados);
+            }
+            //Usuarios
+           $total[]= Usuario::countUsers();
+            $this->tpl->assign("total",$total[0]);
+            //Carrinho
+            if (isset($_SESSION[Carrinho::SESSION])){
+                $carrinhoTotal = new Carrinho();
+                $cartTotal[]= $carrinhoTotal->countCart();
+                $this->tpl->assign("cartTotal",$cartTotal[0]);
+            }else{
+                $cartTotal= 0;
+                $this->tpl->assign("cartTotal",$cartTotal);
             }
             $this->tpl->draw("header", false);
         }

@@ -40,9 +40,9 @@
                                     {if="$value.produto_status=='indisponivel'"}
                                         <button class="btn btn-danger disabled float-right">Indisponível</button>
                                     {else}
-                                        <form action="/carrinho/adicionar" method="POST">
+                                        <form method="post" action="/carrinho/adicionar" id="form-adicionar">
                                             <input type="hidden" name="id_produto" value="{$value.id_produto}">
-                                            <button type="submit" class="btn btn-outline-primary btn-addcart">Peça agora</button>
+                                            <button type="submit" class="btn btn-outline-primary btn-addcart" id="btn-carrinho">Peça agora</button>
                                         </form>
                                     {/if}
                             </div>

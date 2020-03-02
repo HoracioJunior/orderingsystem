@@ -27,8 +27,11 @@ $app->get('/cliente/meu-perfil', function() {
     //UsuarioC::verficarSessao(3);
     $pageCliente = new PageCliente();
     $dados = $_SESSION["usuario"];
+    $endereco = new EnderecoC();
+    $result = $endereco->listar($_SESSION["usuario"]["id_usuario"]);
     $pageCliente->setTpl("meu-perfil",array(
-        "dados"=>$dados
+        "dados"=>$dados,
+        "endereco"=>$result
     ));
 });
 $app->get('/cliente/mudar-senha', function() {
