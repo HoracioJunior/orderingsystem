@@ -37,7 +37,7 @@
 
                 <div class="row">
                     <di class="col-md-5">
-                        <button type="button" class="btn btn-primary btn-lg " data-toggle="modal" data-target="#myModal">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                             Adicionar Categoria
                         </button>
                     </di>
@@ -65,7 +65,7 @@
 
             <!-- form inicio-->
             <div class="tabela mt-3">
-                <table class="table  table-responsive usuarios">
+                <table id="tabela2" class="table  table-responsive table-striped table-bordered">
                     <thead class="px-10">
                     <tr >
                         <th scope="col">#Cod</th>

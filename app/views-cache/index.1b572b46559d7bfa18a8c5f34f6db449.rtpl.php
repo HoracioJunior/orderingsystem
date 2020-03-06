@@ -75,6 +75,7 @@
         <hr class="separator"/>
     </div>
 </section>
+
 <?php require $this->checkTemplate("testemunhos");?>
 
 

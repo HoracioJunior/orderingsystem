@@ -44,7 +44,7 @@
                     </button>
                 </div>
                 <?php } ?>
-                <table class="table  table-responsive usuarios">
+                <table id="tabela" class="table  table-responsive table-striped table-bordered">
                     <thead class="px-10">
                     <tr >
                         <th scope="col">#Cod</th>

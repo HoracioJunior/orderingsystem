@@ -9,39 +9,11 @@
 	<link rel="stylesheet" href="/app/src/vendors/main.css">
 	<link rel="stylesheet" href="/app/src/vendors/fab.css">
 	<link rel="stylesheet" href="/app/src/vendors/flutuante.css">
+	<link rel="stylesheet" href="/app/src/vendors/rating/css/jquery.rateyo.min.css">
 	<link rel="stylesheet" href="/app/src/vendors/bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" href="/app/src/vendors/fontawesome/css/all.css">
 	<link rel="stylesheet" href="/app/src/vendors/owlcarousel/css/owl.carousel.min.css">
 	<link rel="stylesheet" href="/app/src/vendors/owlcarousel/css/owl.theme.default.min.css">
-
-	<style>
-		.floating-btn{
-			width: 50px;
-			height: 50px;
-			background-color: #1b6d85;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			border-radius: 50%;
-			color: #ffffff;
-			font-size: 20px;
-			position: fixed;
-			right: 20px;
-			bottom: 20px;
-			cursor: pointer;
-			transition: background 0.25s;
-		}
-		.floating-btn:active{
-			background-color: #1b6d70;
-		}
-		.floating-btn a{
-			text-decoration: none;
-			color: #ffffff;
-		}
-		.floating-btn:hover{
-			background-color: #1b6d70;
-		}
-	</style>
 
 </head>
 <body>
@@ -113,7 +85,13 @@
 		</div>
 	</nav>
 </header><!-- /header -->
-<div class="floating-btn" style="">
-	<a href="/contacto"><i class="fa fa-question"></i></a>
+<div class="btn-group-fab" role="group" aria-label="FAB Menu">
+	<div>
+		<button type="button" class="btn btn-main btn-primary has-tooltip bnt-search" data-placement="left" title="Suporte"> <i class="fa fa-question"></i> </button>
+		<button type="button" class="btn btn-sub btn-danger has-tooltip" data-placement="left" title="E-mail"> <i class="fa fa-envelope"></i> </button>
+		<button type="button" class="btn btn-sub btn-warning has-tooltip" data-placement="left" title="SMS"> <i class="fa fa-sms"></i> </button>
+		<button type="button" class="btn btn-sub btn-warning has-tooltip" data-placement="left" title="Whatsapp"> <i class="fab fa-whatsapp"></i> </button>
+	</div>
 </div>
+
 		

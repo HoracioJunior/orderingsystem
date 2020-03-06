@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/app/src/assets/css/ace-skins.min.css" />
     <link rel="stylesheet" href="/app/src/assets/css/ace-rtl.min.css" />
     <link rel="stylesheet" href="/app/src/assets/dataTable/css/dataTables.bootstrap.min.css" />
+    <link rel="stylesheet" href="/app/src/assets/dataTable/css/buttons.bootstrap.min.css" />
     <!-- ace settings handler -->
     <script src="/app/src/assets/js/ace-extra.min.js"></script>
 

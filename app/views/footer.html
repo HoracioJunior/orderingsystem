@@ -72,6 +72,7 @@
 
 <script src="/app/src/vendors/jquery/jquery.min.js" ></script>
 <script src="/app/src/vendors/bootstrap/js/bootstrap.js"></script>
+<script src="/app/src/vendors/rating/js/jquery.rateyo.min.js"></script>
 <script src="/app/src/vendors/fontawesome/js/all.js"></script>
 <script src="/app/src/vendors/owlcarousel/js/owl.carousel.min.js"></script>
 <script src="/app/src/vendors/owlcarousel/js/owl.costum.js"></script>
@@ -84,6 +85,40 @@
     function showModal(id) {
         $(".modal-body #id_produto").attr('value',id);
     }
+
+    $(function () {
+        $(".rate").attr('class',"rateYo");
+          $(".rateYo").rateYo({
+            starWidth: "17px",
+            normalFill: "#008F95",
+            rating: 0.5,
+            ratedFill: "#E74C3C",
+            multiColor: {
+
+                "startColor": "#E74C3C",
+                "endColor"  : "#015249"
+            },
+              onChange: function (rating, rateYoInstance) {
+                  $(this).next().text(rating);
+              }
+        });
+        $(".rateYo").rateYo().on("rateyo.change",function (e,data) {
+            var rating =data.rating;
+            $(this).parent().find('.result').text(' '+rating);
+            $(".modal-body #qtd_estrelas").attr('value',rating);
+        });
+
+    });
+
+</script>
+<script>
+    $(function() {
+        $('.btn-group-fab').on('click', '.btn', function() {
+            $('.btn-group-fab').toggleClass('active');
+        });
+        $('has-tooltip').tooltip();
+    });
+
 </script>
 
 </body>

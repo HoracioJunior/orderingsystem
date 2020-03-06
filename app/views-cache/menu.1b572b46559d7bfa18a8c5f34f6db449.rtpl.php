@@ -71,16 +71,20 @@
                         </di>
                     </div>
                         <div class="card-footer text-muted">
-                            <div class="mt-0" >
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mt-0" >
                                        <span class="estrelas" data-toggle="modal" onclick="showModal(<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>)" data-target="#myModal">
-                                           <i class="fa fa-star"></i>
-                                           <i class="fa fa-star"></i>
-                                           <i class="fa fa-star"></i>
-                                           <i class="fa fa-star"></i>
-                                           <i class="fa fa-star"></i>
+                                           <span class="rate" ></span>
+                                           <i class="result">0</i>
                                        </span>
-                                <small>4.5 (89 Avaliações)</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 float-left">
+                                    <span>4.5 (89 Avaliações)</span>
+                                </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -105,11 +109,7 @@
                                 <div class="row">
                                     <div class="col-6 mt-2" id="">
                                        <span class="estrelas" data-toggle="modal" onclick="showModal(<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>)" data-target="#myModal">
-                                           <i class="fa fa-star"></i>
-                                           <i class="fa fa-star"></i>
-                                           <i class="fa fa-star"></i>
-                                           <i class="fa fa-star"></i>
-                                           <i class="fa fa-star"></i>
+                                           <i class="rate"></i><span class="result">0</span>
                                        </span>
                                         <small>4.5 (89 Avaliações)</small>
                                     </div>
@@ -168,7 +168,7 @@
                                 <label for="">Comentario</label>
                                 <input type="text" id="id_produto" name="id_produto" >
                                 <input type="text" id="id_usuario" name="id_usuario" value="2" >
-                                <input type="text" id="qtd_estrelas" name="qtd_estrelas" value="4" >
+                                <input type="text" id="qtd_estrelas" name="qtd_estrelas"  >
                                     <div class="input-group">
                                     <textarea  class="form-control" name="comentario" aria-describedby="basic-addon1"></textarea>
                                 </div>
@@ -183,4 +183,6 @@
         </div>
     </div> <!--Fim de Modal-->
 </section>
+
+
 

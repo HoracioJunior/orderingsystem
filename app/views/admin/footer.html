@@ -31,23 +31,20 @@
 <!-- ace scripts -->
 <script src="/app/src/assets/js/ace-elements.min.js"></script>
 <script src="/app/src/assets/js/ace.min.js"></script>
+<!-- dataTable Files-->
 <script src="/app/src/assets/dataTable/js/jquery.dataTables.min.js"></script>
 <script src="/app/src/assets/dataTable/js/dataTables.bootstrap.min.js"></script>
-<!--<script src="src/assets/js/custom-datatable.js"></script>-->
-<script type="text/javascript">
-	$(document).ready(function() {
-		$('.usuarios').DataTable({
-			"language": {
-				"lengthMenu": "Mostrar _MENU_ registos por pagina",
-				"zeroRecords": "Nenhum registo foi encontrado",
-				"info": "Mostrando pagina _PAGE_ de _PAGES_",
-				"infoEmpty": "Nenhum registo disponivel",
-				"infoFiltered": "(filtered from _MAX_ total records)"
-			}
-		} );
-	} );
-
-</script>
+<script src="/app/src/assets/dataTable/js/buttons.bootstrap.min.js"></script>
+<script src="/app/src/assets/dataTable/js/dataTables.buttons.min.js"></script>
+<script src="/app/src/assets/dataTable/js/buttons.flash.min.js"></script>
+<script src="/app/src/assets/dataTable/js/jszip.min.js"></script>
+<script src="/app/src/assets/dataTable/js/pdfmake.min.js"></script>
+<script src="/app/src/assets/dataTable/js/vfs_fonts.js"></script>
+<script src="/app/src/assets/dataTable/js/buttons.html5.min.js"></script>
+<script src="/app/src/assets/dataTable/js/buttons.colVis.min.js"></script>
+<script src="/app/src/assets/dataTable/js/buttons.print.min.js"></script>
+<script src="/app/src/assets/dataTable/js/costumizadoDataTable.js"></script>
+<script src="/app/src/assets/dataTable/js/costumizadoDataTable2.js"></script>
 
 </body>
 </html>
