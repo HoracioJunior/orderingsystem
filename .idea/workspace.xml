@@ -2,39 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79e2c214-2980-4ae1-b4b5-315b41479f2f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/Pedidos.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/Pedidos.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/assets/dataTable/css/buttons.bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/assets/dataTable/js/buttons.bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/assets/dataTable/js/buttons.colVis.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/assets/dataTable/js/costumizadoDataTable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/assets/dataTable/js/costumizadoDataTable2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/vendors/rating/css/jquery.rateyo.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/vendors/rating/js/jquery.rateyo.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/vendors/rating/js/jquery.rateyo.min.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/css/mine.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/assets/css/mine.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/vendors/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/vendors/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/vendors/rating/rating.costum.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/vendors/rating/rating.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/categorias.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/categorias.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/footer.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/footer.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/footer.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/footer.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/header.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/header.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/header.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/header.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/index.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/index.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/list-usuarios.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/list-usuarios.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/menu.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/menu.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Avaliar.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Avaliar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views-cache/menu.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/menu.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/categorias.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/categorias.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/list-usuarios.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/list-usuarios.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rotas/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/site.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +141,7 @@
       <workItem from="1583202960914" duration="2728000" />
       <workItem from="1583247294614" duration="3700000" />
       <workItem from="1583382201879" duration="8149000" />
-      <workItem from="1583461924367" duration="6354000" />
+      <workItem from="1583461924367" duration="8213000" />
     </task>
     <servers />
   </component>

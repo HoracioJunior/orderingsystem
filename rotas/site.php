@@ -86,10 +86,12 @@ $app->get('/menu', function() {
             "page"=>$i
         ]);
     }
+    $dados = $_SESSION["usuario"];
     $page = new Page();
     $page->setTpl("menu", array(
         "produto"=>$pagination["produtos"],
-        "pages"=>$pages
+        "pages"=>$pages,
+        "dados"=>$dados
     ));
 
 });
@@ -231,18 +233,16 @@ $app->post('/token-check', function() {
 });
 
 $app->post('/avaliar', function() {
-    UsuarioC::verficarSessao(3);
+    //UsuarioC::verficarSessao(3);
     $avaliarModel = new AvaliarM();
     $avaliarModel->setFkIdUsuario($_POST["id_usuario"]);
     $avaliarModel->setFkIdProduto($_POST["id_produto"]);
     $avaliarModel->setComentario($_POST["comentario"]);
     $avaliarModel->setQtdEstrelas($_POST["qtd_estrelas"]);
-    var_dump($avaliarModel);
-    exit();
     $avaliarC = new AvaliarC();
     $avaliarC->avaliar($avaliarModel);
+    header("Location: /menu");
     exit();
-
 });
 
 

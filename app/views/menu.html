@@ -161,13 +161,15 @@
                     <h4 class="modal-title" id="myModalLabel">Avaliar Item</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>
+                {if="$dados != '' "}
                 <form action="/avaliar" method="post">
                     <div class="modal-body">
                         <div class="row row-formatacao">
                             <div class="col-md-8 col-formatacao">
+
                                 <label for="">Comentario</label>
                                 <input type="text" id="id_produto" name="id_produto" >
-                                <input type="text" id="id_usuario" name="id_usuario" value="2" >
+                                <input type="text" id="id_usuario" name="id_usuario" value="{$dados.id_usuario}" >
                                 <input type="text" id="qtd_estrelas" name="qtd_estrelas"  >
                                     <div class="input-group">
                                     <textarea  class="form-control" name="comentario" aria-describedby="basic-addon1"></textarea>
@@ -179,6 +181,27 @@
                         <button type="submit" class="btn btn-primary">Avaliar</button>
                     </div>
                 </form>
+                {else}
+                <form action="/avaliar" method="post">
+                    <div class="modal-body">
+                        <div class="row row-formatacao">
+                            <div class="col-md-8 col-formatacao">
+
+                                <label for="">Comentario</label>
+                                <input type="text" id="id_produto" name="id_produto" >
+                                <input type="text" id="id_usuario" name="id_usuario" value="00" >
+                                <input type="text" id="qtd_estrelas" name="qtd_estrelas"  >
+                                <div class="input-group">
+                                    <textarea  class="form-control" name="comentario" aria-describedby="basic-addon1"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Avaliar</button>
+                    </div>
+                </form>
+                {/if}
             </div>
         </div>
     </div> <!--Fim de Modal-->
