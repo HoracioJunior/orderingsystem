@@ -49,21 +49,22 @@
 
                 <div class="row taxa-delivery mb-3 " >
                     <div class="col-md-6 " id="taxa_delivery">Taxa:</div>
-                    <div class="col-md-6 text-right ">150 MZN</div>
+                    <div class="col-md-6 text-right ">00 MZN</div>
                 </div>
                 <hr>
                 <div class="row mb-3 total">
                     <div class="col-md-6">Total a Pagar:</div>
-                    <div class="col-md-6 text-right ">{loop="$subtotal"}{function="formatarPreco($value.Subtotal+150)"}{/loop} MZN</div>
+                    <div class="col-md-6 text-right ">{loop="$subtotal"}{function="formatarPreco($value.Subtotal)"}{/loop} MZN</div>
                 </div>
             </div>
         </div>
-        <form action="" method="post">
-            <div class="row">
-                <h5 class="subtitulo">Dados do usuário</h5>
+        <form action="/checkout" method="post">
+
+            <div class="row mb-2">
+                <h5 class="subtitulo">Dados Pessoais</h5>
             </div>
-        <div class="row mb-2">
-            <div class="col-md-4">
+            <div class="row mb-2">
+            <div class="col-md-8">
                 <label for="nome_usuario">Nome<strong class="text-danger">*</strong></label>
                 <div class="input-group">
                     <div class="input-group-prepend">
@@ -75,46 +76,29 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-8">
-                <label for="endereco_usuario">Endereço<strong class="text-danger">*</strong></label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fa fa-location-arrow"></i></span>
-                    </div>
-                    <input type="text" id="endereco_usuario" name="endereco_usuario" class="form-control rounded-2" placeholder="endereço o morada" required>
-                    <div class="invalid-feedback">intruduza o seu endereço</div>
-                </div>
-            </div>
-        </div>
-        <div class="row mb-2">
-            <div class="col-md-6">
-                <label for="celular_usuario">Contacto<strong class="text-danger">*</strong></label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fa fa-phone-alt"></i></span>
-                    </div>
-                    <input type="text" name="celular_usuario" value="{$dados.celular_usuario}" id="celular_usuario" class="form-control rounded-2" placeholder=" intruduza o seu contacto" required>
-                    <div class="invalid-feedback">
-                        intruduza o contacto
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <label for="celular_alternativo">Contacto Alternativo</strong></label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fa fa-phone-alt"></i></span>
-                    </div>
-                    <input type="text" id="celular_alternativo" name="celular_alternativo" class="form-control rounded-2" placeholder="o seu contacto alternativo" required>
-                    <div class="invalid-feedback">intruduza o seu contacto alternativo</div>
-                </div>
-            </div>
+
         </div>
             <div class="row mb-2">
                 <div class="col-md-6">
-                    <label for="observacoes">Observações</label>
+                    <label for="celular_usuario">Contacto<strong class="text-danger">*</strong></label>
                     <div class="input-group">
-                        <textarea name="observacao" class="form-control" id="observacoes" cols="30" rows="3"></textarea>
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-phone-alt"></i></span>
+                        </div>
+                        <input type="text" name="celular_usuario" value="{$dados.celular_usuario}" id="celular_usuario" class="form-control rounded-2" placeholder=" intruduza o seu contacto" required>
+                        <div class="invalid-feedback">
+                            intruduza o contacto
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="celular_alternativo">Contacto Alternativo</strong></label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-phone-alt"></i></span>
+                        </div>
+                        <input type="text" id="celular_alternativo" name="celular_alternativo" class="form-control rounded-2" placeholder="o seu contacto alternativo" required>
+                        <div class="invalid-feedback">intruduza o seu contacto alternativo</div>
                     </div>
                 </div>
             </div>
@@ -137,13 +121,15 @@
                     </div>
                 </div>
             </div>
+            <input type="hidden" value='{loop="$subtotal"}{$value.Subtotal+150}{/loop}' name="total">
+            <input type="hidden" name="id_usuario" value="{$dados.id_usuario}">
+            <input type="hidden" value="{$carrinho}" name="id_carrinho">
             <div class="row mb-2">
                     <div class="input-group">
                         <button type="submit" class="btn btn-secondary bnt-search">Prosseguir</button>
                     </div>
             </div>
-            <input type="text" value='{loop="$subtotal"}{$value.Subtotal+150}{/loop}' name="total">
-            <input type="text" name="id_usuario" value="{$dados.id_usuario}">
+
         </form>
     </div>
 </section>

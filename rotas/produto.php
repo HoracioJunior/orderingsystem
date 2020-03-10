@@ -123,7 +123,7 @@ $app->post('/admin/menu/editar-item', function() {
     $produtoM ->setPrecoProduto($_POST["preco_produto"]);
     $produtoM->setFkIdProdutoCtg($_POST["fk_categoria"]);
     $produtoC = new ProdutoC();
-    $produtoC->cadastrar_produto($produtoM);
+    $produtoC->update_produto($produtoM);
     header("Location: /admin/menu/menu-itens");
     exit();
 });

@@ -63,6 +63,7 @@
                     <div class="col-md-12 text-center">Pagamento</div>
 
                 </div>
+                <form action="/next-step" method="post">
                 <div class="row subtotal">
                     <div class="col-6 sub">Subtotal:</div>
                     <div class="col-6 sub text-right"><?php $counter1=-1;  if( isset($subtotal) && ( is_array($subtotal) || $subtotal instanceof Traversable ) && sizeof($subtotal) ) foreach( $subtotal as $key1 => $value1 ){ $counter1++; ?><?php echo formatarPreco($value1["Subtotal"]); ?><?php } ?> MZN</div>
@@ -70,11 +71,11 @@
                 <div class="row delivery-pickup">
                     <div class="col-12 ">
                         <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="delivery" onclick="" name="radio" class="custom-control-input" checked>
+                            <input type="radio" id="delivery" value="1" onclick="" name="radio" class="custom-control-input" checked>
                             <label class="custom-control-label" for="delivery">Delivery</label>
                         </div>
                         <div class="custom-control custom-radio custom-control-inline radio2">
-                            <input type="radio" id="pickup" name="radio" class="custom-control-input">
+                            <input type="radio" id="pickup" name="radio" value="2" class="custom-control-input">
                             <label class="custom-control-label" for="pickup">Pickup</label>
                         </div>
                     </div>
@@ -88,15 +89,18 @@
                     <div class="col-md-6">Total a Pagar:</div>
                     <div class="col-md-6 text-right "><?php $counter1=-1;  if( isset($subtotal) && ( is_array($subtotal) || $subtotal instanceof Traversable ) && sizeof($subtotal) ) foreach( $subtotal as $key1 => $value1 ){ $counter1++; ?><?php echo formatarPreco($value1["Subtotal"]+150); ?><?php } ?> MZN</div>
                 </div>
+
                 <div class="row mb-3 total">
                     <div class="col-md-12 d-flex justify-content-center">
-                        <a href="/checkout" class="btn btn-primary bnt-search">
+                        <button type="submit" class="btn btn-primary bnt-search">
                             Pagamento/Checkout
-                        </a>
+                        </button>
                     </div>
 
                 </div>
+                </form>
             </div>
+
         </div>
     </div>
 </section>

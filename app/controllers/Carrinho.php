@@ -174,5 +174,19 @@ public function listCart()
             echo "LINHA: ".$e->getLine()."\n";
         }
     }
+    public  function getIdCart()
+    {
+        try {
+
+            $sql = " SELECT * FROM tb_CarrinhoProdutos where fk_id_carrinho = :id_carrinho";
+            $params = array(
+                ":id_carrinho"=>$_SESSION[Carrinho::SESSION]["carrinhoId"]
+            );
+            return  $this->conn->select($sql, $params);
+        }catch (\PDOException $e){
+            echo "ERRO: ".$e->getMessage()."\n";
+            echo "LINHA: ".$e->getLine()."\n";
+        }
+    }
 
 }

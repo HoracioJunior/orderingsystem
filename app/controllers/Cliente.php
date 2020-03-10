@@ -13,29 +13,27 @@ class Cliente extends Usuario
         $con = new Conexao();
 
         $res = $con->select("SELECT * FROM tb_usuarios WHERE email_usuario = :email AND usuario_status ='activo'", array
-            ("email"=>$email)
+            ("email" => $email)
         );
-        if(count($res)>0){
+        if (count($res) > 0) {
 
-            if(password_verify($senha,$res[0]["senha_usuario"]))
-            {
+            if (password_verify($senha, $res[0]["senha_usuario"])) {
                 $_SESSION["usuario"] = $res[0];
                 $id = $_SESSION["usuario"]["id_usuario"];
                 $sessionId = mt_rand();
-                $con->query("insert into tb_logs (ipaddress,fk_id_usuario, sessionId) VALUES (:ip, :id, :sessao)", array(
-                    ":ip"=>$ipadd,
-                    ":id"=>$id,
-                    ":sessao"=>$sessionId
+                $con->query("insert into tb_logs (ipaddress,fk_id_usuario) VALUES (:ip, :id)", array(
+                    ":ip" => $ipadd,
+                    ":id" => $id
                 ));
                 header("Location: /admin");
-            }else{
+            } else {
                 $msg = "Email ou senha do usuario forncedo estão errado";
                 Usuario::setLoginErro($msg);
                 header("Location: /login");
                 exit();
 
             }
-        } else{
+        } else {
             $msg = "Email ou senha do usuario forncedo estão errado";
             Usuario::setLoginErro($msg);
             header("Location: /login");

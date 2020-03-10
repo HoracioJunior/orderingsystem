@@ -6,7 +6,7 @@ namespace models;
 
 class Pedidos
 {
-    private $id_pedido,$fk_id_usuario,$fk_id_carrinhoProdutos, $total;
+    private $id_pedido,$fk_id_usuario,$fk_id_carrinho, $total,$status;
 
 
 
@@ -38,16 +38,16 @@ class Pedidos
 
 
 
-    public function getFkIdCarrinhoProdutos()
+    public function getFkIdCarrinho()
     {
-        return $this->fk_id_carrinhoProdutos;
+        return $this->fk_id_carrinho;
     }
 
 
 
-    public function setFkIdCarrinhoProdutos($fk_id_carrinhoProdutos)
+    public function setFkIdCarrinho($fk_id_carrinho)
     {
-        $this->fk_id_carrinhoProdutos = $fk_id_carrinhoProdutos;
+        $this->fk_id_carrinho =(int)$fk_id_carrinho;
     }
 
 
@@ -60,7 +60,18 @@ class Pedidos
 
     public function setTotal($total)
     {
-        $this->total = $total;
+        $this->total = (float)$total;
+    }
+
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+
+    public function setStatus($status)
+    {
+        $this->status =(string)$status;
     }
 
 

@@ -26,7 +26,7 @@
 						<span><i class="fa fa-envelope"></i> info@ordering.store</span>
 					</div>
 					<div class="col-md-6">
-						<span><i class="fa fa-1x fa-phone"></i> +258 8483 96068/8483 96068 </span>
+						<span><i class="fa fa-1x fa-phone-alt"></i> +258 8483 96068/8483 96068 </span>
 					</div>
 				</div>
 
@@ -39,8 +39,8 @@
 						</a>
 					</div>
 					<div class="col-md-6">
-						<a href="" class="float-right btn btn-secondary btn-header">
-							<i class="fa fa-user"></i>&nbsp;Tornar-se Deliver
+						<a href="/login" class="float-right btn btn-secondary btn-header">
+							<i class="fa fa-sign-in-alt"></i>&nbsp;Iniciar Sessão
 						</a>
 					</div>
 				</div>
@@ -62,23 +62,22 @@
 				<li class="nav-item">
 					<a class="nav-link" href="/menu">Menu</a>
 				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="/carrinho">
+						<span>
+							<i class="fa fa-shopping-cart "></i>
+							<sup><span class="nav-link badge badge-danger">{$cartTotal.cart}</span></sup>
+						</span>
+					</a>
+				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="/contacto">Sobre</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="/carrinho">
-             <span>
-              <i class="fa fa-shopping-cart "></i>
-				 <sup><span class="nav-link badge badge-danger">{$cartTotal.cart}</span></sup>
-          </span>
-					</a>
-				</li>
-				<li class="nav-item">
 					<a class="nav-link" href="/cadastrar-usuario">Cadastra-se</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/login">Entrar</a>
-				</li>
+
 
 
 			</ul>
@@ -87,8 +86,8 @@
 </header><!-- /header -->
 <div class="btn-group-fab" role="group" aria-label="FAB Menu">
 	<div>
-		<button type="button" class="btn btn-main btn-primary has-tooltip bnt-search" data-placement="left" title="Suporte"> <i class="fa fa-question"></i> </button>
-		<button type="button" class="btn btn-sub btn-danger has-tooltip" data-placement="left" title="E-mail"> <i class="fa fa-envelope"></i> </button>
+		<button type="button" class="btn btn-main btn-primary has-tooltip bnt-search" data-placement="left" title="Suporte"> <i class="fa fa-headset"></i> </button>
+		<a href="/contacto" class="btn btn-sub btn-danger has-tooltip" data-placement="left" title="E-mail"> <i class="fa fa-envelope"></i> </a>
 		<button type="button" class="btn btn-sub btn-warning has-tooltip" data-placement="left" title="SMS"> <i class="fa fa-sms"></i> </button>
 		<button type="button" class="btn btn-sub btn-warning has-tooltip" data-placement="left" title="Whatsapp"> <i class="fab fa-whatsapp"></i> </button>
 	</div>
