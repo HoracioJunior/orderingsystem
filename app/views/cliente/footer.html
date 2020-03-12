@@ -72,10 +72,23 @@
 
 <script src="/app/src/vendors/jquery/jquery.min.js" ></script>
 <script src="/app/src/vendors/bootstrap/js/bootstrap.js"></script>
+<script src="/app/src/vendors/datatables/jquery.dataTables.min.js"></script>
+<script src="/app/src/vendors/datatables/dataTables.bootstrap.min.js"></script>
 <script src="/app/src/vendors/fontawesome/js/all.js"></script>
 <script src="/app/src/vendors/owlcarousel/js/owl.carousel.min.js"></script>
 <script src="/app/src/vendors/owlcarousel/js/owl.costum.js"></script>
 <script src="/app/src/vendors/grid-list.js"></script>
-
+<script>
+    $(function () {
+        $('#example').DataTable({
+            "paging": false,
+            "lengthChange": false,
+            "searching": true,
+            "ordering": false,
+            "info": false,
+            "autoWidth": true
+        });
+    });
+</script>
 </body>
 </html>

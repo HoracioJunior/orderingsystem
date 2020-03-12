@@ -115,7 +115,6 @@ $app->get('/carrinho', function () {
     $carrinho = new CarrinhoC();
     $lista = $carrinho->listCart();
     $contar = $carrinho->countCart();
-   
     $page->setTpl("carrinho", array(
         "depoimento" => $testemunhos,
         "lista" => $lista,

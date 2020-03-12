@@ -1,3 +1,17 @@
+body{
+  background-image: url("../img/final.jpg") ;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.coluna{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.bg-orders{
+  background-color: #07889B  !important;
+  color: #fff !important;
+}
 .bg-nav {
     background-color: #008F95 !important;
     color: #fff !important;
@@ -118,3 +132,10 @@
   }
 }
 
+div.dataTables_filter label {
+  white-space: nowrap;
+  text-align: left;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}

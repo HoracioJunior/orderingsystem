@@ -72,6 +72,8 @@
 
 <script src="/app/src/vendors/jquery/jquery.min.js" ></script>
 <script src="/app/src/vendors/bootstrap/js/bootstrap.js"></script>
+<script src="/app/src/vendors/datatables/jquery.dataTables.min.js"></script>
+<script src="/app/src/vendors/datatables/dataTables.bootstrap.min.js"></script>
 <script src="/app/src/vendors/rating/js/jquery.rateyo.min.js"></script>
 <script src="/app/src/vendors/fontawesome/js/all.js"></script>
 <script src="/app/src/vendors/owlcarousel/js/owl.carousel.min.js"></script>
@@ -82,6 +84,7 @@
 <script src="/app/src/vendors/flutuante.js"></script>
 
 <script>
+
     function showModal(id) {
         $(".modal-body #id_produto").attr('value',id);
     }
@@ -111,15 +114,7 @@
     });
 
 </script>
-<script>
-    $(function() {
-        $('.btn-group-fab').on('click', '.btn', function() {
-            $('.btn-group-fab').toggleClass('active');
-        });
-        $('has-tooltip').tooltip();
-    });
 
-</script>
 
 </body>
 </html>

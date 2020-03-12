@@ -4,6 +4,7 @@ use controllers\Usuario as UsuarioC;
 use models\Usuario as UsuarioM;
 use models\Endereco as EnderecoM;
 use controllers\Endereco as EnderecoC;
+use controllers\Pedidos as PedidoC;
 
 $app->get('/cliente', function() {
     UsuarioC::verficarSessao(3);
@@ -18,11 +19,29 @@ $app->get('/cliente/minhas-ordens', function() {
     //UsuarioC::verficarSessao(3);
     $pageCliente = new PageCliente();
     $dados = $_SESSION["usuario"];
+    $id_usuario = $_SESSION["usuario"]["id_usuario"];
+
+    $pedido = new PedidoC();
+    $resultado = $pedido->listarPedidos($id_usuario);
     $pageCliente->setTpl("minhas-ordens",array(
-        "dados"=>$dados
+        "dados"=>$dados,
+        "pedido"=>$resultado
     ));
 
 });
+
+$app->get('/cliente/meu-pedido/:idPedido/detalhes', function ($idPedido){
+    $pageCliente = new PageCliente();
+    $pedido = new PedidoC();
+    $id_usuario = $_SESSION["usuario"]["id_usuario"];
+    $resultado = $pedido->listarPedidos($id_usuario);
+    $detalhes = $pedido->detalhesPedido($idPedido);
+    $pageCliente->setTpl("detalhes",array(
+        "pedido"=>$resultado,
+        "detalhes"=>$detalhes
+    ));
+});
+
 $app->get('/cliente/meu-perfil', function() {
     //UsuarioC::verficarSessao(3);
     $pageCliente = new PageCliente();
@@ -92,7 +111,7 @@ $app->get('/cliente/perfil/editar-endereco', function() {
 });
 
 $app->post('/cliente/perfil/endereco/add', function() {
-    //UsuarioC::verficarSessao(3);
+    UsuarioC::verficarSessao(3);
    $em = new EnderecoM();
    $em->setEndereco($_POST["endereco_usuario"]);
    $em->setFkIdUsuario($_POST["id_usuario"]);
@@ -103,8 +122,7 @@ $app->post('/cliente/perfil/endereco/add', function() {
     exit();
 });
 $app->post('/cliente/perfil/endereco/editar', function() {
-    //UsuarioC::verficarSessao(3);
-
+    UsuarioC::verficarSessao(3);
     header("Location: /cliente/meu-perfil");
     exit();
 });

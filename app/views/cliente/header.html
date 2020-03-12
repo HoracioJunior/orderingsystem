@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="/app/src/vendors/profile.css">
     <link rel="stylesheet" href="/app/src/vendors/main.css">
     <link rel="stylesheet" href="/app/src/vendors/bootstrap/css/bootstrap.css">
+
+    <link rel="stylesheet" href="/app/src/vendors/datatables/jquery.dataTables.css">
+    <link rel="stylesheet" href="/app/src/vendors/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" href="/app/src/vendors/fontawesome/css/all.css">
     <link rel="stylesheet" href="/app/src/vendors/owlcarousel/css/owl.carousel.min.css">
     <link rel="stylesheet" href="/app/src/vendors/owlcarousel/css/owl.theme.default.min.css">

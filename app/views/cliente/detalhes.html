@@ -1,10 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<!--Content-->
+<div class="col-md-9" xmlns="http://www.w3.org/1999/html">
+    <div class="dashboard-area">
+        <!--Todo conteudo aqui-->
+        <div class="row">
+            <section class="invoice">
+                <!-- title row -->
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="page-header">
+                            <i class="fa fa-globe"></i> AdminLTE, Inc.
+                            <small class="pull-right">Date: 2/10/2014</small>
+                        </h2>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- info row -->
+                <div class="row invoice-info">
+                    <div class="col-md-7 invoice-col">
+                        Dados Pessoais
+                        <address>
+                            {loop="$detalhes"}
+                            <strong></strong><br>
+                            <strong>Endereço de Entrega:</strong> {$value.endereco}<br>
+                            <strong>Contacto:</strong> {$value.celular}<br>
+                            <strong> Contacto Alt.:</strong> {$value.celular_alternativo}<br>
+                            {/loop}
+                        </address>
+                    </div>
+                    <!-- /.col -->
+
+                    <!-- /.col -->
+                    <div class="col-md-5 invoice-col">
+                        <b>Invoice #007612</b><br>
+                        <br>
+                        <b>Order ID:</b> 4F3S8J<br>
+                        <b>Payment Due:</b> 2/22/2014<br>
+                        <b>Account:</b> 968-34567
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+
+                <!-- Table row -->
+                <div class="row">
+                    <div class="col-md-12 table-responsive">
+                        <table class="table table-striped table-responsive">
+                            <thead>
+                            <tr>
+                                <th>Nome do Item</th>
+                                <th>Preço do Item</th>
+                                <th>Quantidade</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            {loop="$pedido"}
+                            <tr>
+                                <td>{$value.nome_produto}</td>
+                                <td>{$value.preco_produto}</td>
+                                <td>{$value.qtd}</td>
+                            </tr>
+                            {/loop}
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+
+                <div class="row">
+
+                </div>
+                <!-- /.row -->
+
+                <!-- this row will not appear when printing -->
+                <div class="row no-print">
+                    <div class="col-xs-12">
+                        <a href="invoice-print.html" target="_blank" class="btn bnt-search btn-primary" style="margin-right: 5px;"><i class="fa fa-print"></i> Print</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+</div>
+</section>

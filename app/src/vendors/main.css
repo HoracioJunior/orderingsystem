@@ -830,3 +830,38 @@ td.product-quantity div.quantity {
 .btn-group-fab .btn-sub:nth-child(5) {
     bottom: 210px;
 }
+
+/*Invoice css*/
+.invoice {
+    position: relative;
+    background: #fff;
+    border: 1px solid #f4f4f4;
+    padding: 20px;
+    margin: 10px 25px;
+}
+.page-header {
+    margin: 10px 0 20px 0;
+    font-size: 22px;
+}
+.page-header > small {
+    color: #666;
+    display: block;
+    margin-top: 5px;
+}
+.pull-right {
+    float: right !important;
+}
+address {
+    margin-bottom: 20px;
+    font-style: normal;
+    line-height: 1.42857143;
+}
+.lead {
+    font-size: 21px;
+}
+.lead {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+}

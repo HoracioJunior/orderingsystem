@@ -14,7 +14,7 @@
     <!-- text fonts -->
     <link rel="stylesheet" href="/app/src/assets/css/fonts.googleapis.com.css" />
     <link rel="stylesheet" href="/app/src/assets/css/ace.css" class="ace-main-stylesheet" id="main-ace-style" />
-    <link rel="stylesheet" href="/app/src/assets/css/mine.css" />
+    <link rel="stylesheet" href="/app/src/assets/css/mine.css"/>
     <link rel="stylesheet" href="/app/src/assets/css/ace-skins.min.css" />
     <link rel="stylesheet" href="/app/src/assets/css/ace-rtl.min.css" />
     <link rel="stylesheet" href="/app/src/assets/dataTable/css/dataTables.bootstrap.min.css" />

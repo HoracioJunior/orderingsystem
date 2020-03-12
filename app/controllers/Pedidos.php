@@ -24,7 +24,7 @@ class Pedidos
                     ":total" => $pedido->getTotal(),
                     ":status" => $pedido->getStatus()
                 ));
-            $id=$conn->getLastId();
+            $id = $conn->getLastId();
             $conn->query("INSERT INTO 
             tb_detalhespedido(nome_usuario, celular, 
                       celular_alternativo, endereco, 
@@ -46,5 +46,50 @@ class Pedidos
         }
     }
 
+    public function listarPedidos($id_usuario)
+    {
+        try {
+            $conn = new Conexao();
+            $result = $conn->select("
+            SELECT c.id_produto,COUNT(*) as qtd, c.nome_produto, c.preco_produto,a.id_pedidos, a.total_pedido, a.data_pedido,a.status_pedido
+            from tb_pedido a INNER JOIN tb_carrinhoprodutos b ON b.fk_id_carrinho = a.fk_id_carrinho INNER JOIN tb_produto c 
+            ON c.id_produto = b.fk_id_produto 
+            WHERE a.fk_id_usuario = :id_usuario GROUP BY a.id_pedidos, a.total_pedido,a.data_pedido 
+            ", array(
+                ":id_usuario"=>$id_usuario
+            ));
+            return $result;
+        }catch (\PDOException $exception){
+            echo "ERRO: " . $exception->getMessage() . "\n";
+            echo "LINHA: " . $exception->getLine() . "\n";
+        }
+    }
 
+    public function detalhesPedido($id_pedido)
+    {
+        try {
+            $conn = new Conexao();
+            $result = $conn->select("
+            SELECT b.total_pedido,b.data_pedido,a.nome_usuario,a.celular,a.celular_alternativo,a.endereco, 
+                   a.observacao,a.tipo_pagamento from tb_detalhespedido a INNER JOIN 
+                    tb_pedido b ON b.id_pedidos = a.fk_id_pedido where fk_id_pedido= :id_pedido 
+            ", array(
+                ":id_pedido"=>$id_pedido
+            ));
+            return $result;
+        }catch (\PDOException $exception){
+            echo "ERRO: " . $exception->getMessage() . "\n";
+            echo "LINHA: " . $exception->getLine() . "\n";
+        }
+    }
+    /*
+     *SELECT c.id_produto COUNT(*) as qtd, c.nome_produto, c.preco_produto from tb_pedido a
+INNER JOIN tb_carrinhoprodutos b ON b.fk_id_carrinho = a.fk_id_carrinho
+INNER JOIN tb_produto c ON c.id_produto = b.fk_id_produto
+WHERE a.fk_id_usuario = 2
+GROUP BY c.id_produto
+
+
+    SELECT b.total_pedido,b.data_pedido,a.nome_usuario,a.celular,a.celular_alternativo,a.endereco, a.observacao,a.tipo_pagamento from tb_detalhespedido a INNER JOIN tb_pedido b ON b.id_pedidos = a.fk_id_pedido where fk_id_pedido=2
+     * */
 }
