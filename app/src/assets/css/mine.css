@@ -67,3 +67,66 @@ form .row-formatacao{
 .bg-red, .bg-yellow, .bg-aqua, .bg-blue, .bg-light-blue, .bg-green, .bg-navy, .bg-teal, .bg-olive, .bg-lime, .bg-orange, .bg-fuchsia, .bg-purple, .bg-maroon, .bg-black, .bg-red-active, .bg-yellow-active, .bg-aqua-active, .bg-blue-active, .bg-light-blue-active, .bg-green-active, .bg-navy-active, .bg-teal-active, .bg-olive-active, .bg-lime-active, .bg-orange-active, .bg-fuchsia-active, .bg-purple-active, .bg-maroon-active, .bg-black-active, .callout.callout-danger, .callout.callout-warning, .callout.callout-info, .callout.callout-success, .alert-success, .alert-danger, .alert-error, .alert-warning, .alert-info, .label-danger, .label-info, .label-warning, .label-primary, .label-success, .modal-primary .modal-body, .modal-primary .modal-header, .modal-primary .modal-footer, .modal-warning .modal-body, .modal-warning .modal-header, .modal-warning .modal-footer, .modal-info .modal-body, .modal-info .modal-header, .modal-info .modal-footer, .modal-success .modal-body, .modal-success .modal-header, .modal-success .modal-footer, .modal-danger .modal-body, .modal-danger .modal-header, .modal-danger .modal-footer {
  color: #fff !important;
 }
+
+.box.box-success {
+ border-top-color: #00a65a;
+}
+.box {
+ position: relative;
+ border-radius: 3px;
+ background: #ffffff;
+ border-top: 3px solid #d2d6de;
+ border-top-color: rgb(210, 214, 222);
+ margin-bottom: 20px;
+ width: 100%;
+ box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.box-header.with-border {
+ border-bottom: 1px solid #f4f4f4;
+}
+.box-header {
+ color: #444;
+ display: block;
+ padding: 10px;
+ position: relative;
+}
+.box-header > .fa, .box-header > .glyphicon, .box-header > .ion, .box-header .box-title {
+ display: inline-block;
+ font-size: 18px;
+ margin: 0;
+ line-height: 1;
+}
+.box-header > .box-tools {
+ position: absolute;
+ right: 10px;
+ top: 5px;
+}
+.box-body {
+ border-top-left-radius: 0;
+ border-top-right-radius: 0;
+ border-bottom-right-radius: 3px;
+ border-bottom-left-radius: 3px;
+ padding: 10px;
+}
+.chart {
+ position: relative;
+ overflow: hidden;
+ width: 100%;
+}
+.content {
+ min-height: 250px;
+ padding: 15px;
+ padding-right: 15px;
+ padding-left: 15px;
+ margin-right: auto;
+ margin-left: auto;
+ padding-left: 15px;
+ padding-right: 15px;
+}
+.btn-box-tool {
+ padding: 5px;
+ font-size: 12px;
+ background: transparent;
+ color: #97a0b3;
+}

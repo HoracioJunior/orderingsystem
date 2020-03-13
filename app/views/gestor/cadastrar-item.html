@@ -1,0 +1,105 @@
+<div class="main-content">
+    <div class="main-content-inner">
+        <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    <i class="ace-icon fa fa-home home-icon"></i>
+                    <a href="#">Inicio</a>
+                </li>
+                <li class="active">Dashboard</li>
+            </ul><!-- /.breadcrumb -->
+
+            <div class="nav-search" id="nav-search">
+                <form class="form-search">
+                                <span class="input-icon">
+                                    <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+                                    <i class="ace-icon fa fa-search nav-search-icon"></i>
+                                </span>
+                </form>
+            </div><!-- /.nav-search -->
+        </div>
+
+        <div class="page-content">
+
+
+            <div class="page-header">
+                <h1>
+                    Dashboard
+                    <small>
+                        <i class="ace-icon fa fa-angle-double-right"></i>
+                        Produto &amp; ADD Item
+                    </small>
+                </h1>
+            </div><!-- /.page-header -->
+
+            <!-- form inicio-->
+            <form action="/gestor/menu/cadastrar-item" method="post" enctype="multipart/form-data">
+                {if="$sucessoProduto != ''"}
+                <div class="alert alert-success" role="alert">
+                    <b>{$sucessoProduto}</b>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {/if}
+                <div class="row row-formatacao">
+                    <div class="col-md-6 col-formatacao">
+                        <label >Nome do Item</label>
+                        <div class="input-group">
+                            <span class="input-group-addon" ><i class="fa fa-barcode"></i></span>
+                            <input type="text" class="form-control" placeholder="Nome do Item" name="nome_produto" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label >Categoria do Item</label>
+                        <div class="input-group">
+                            <span class="input-group-addon" ><i class="fa fa-align-justify"></i></span>
+                            <select class="form-control" name="fk_categoria">
+                                <option>==Escolha a Categoria==</option>
+                                {loop="$categoria"}
+                                <option value="{$value.id_produto_ctg}">{$value.nome_categoria}</option>
+                                {/loop}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-formatacao">
+                    <div class="col-md-6">
+                        <label >Preço do Item</label>
+                        <div class="input-group">
+                            <span class="input-group-addon" ><i class="fa fa-hashtag"></i></span>
+                            <input type="text" class="form-control" name="preco_produto" placeholder="preço do item" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label >Foto do item</label>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1 "><i class="fa fa-camera"></i></span>
+                            <input type="file" class="form-control" name="img" placeholder="Imagem ou Foto do produto" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row-formatacao">
+                    <div class="col-md-6">
+                        <label >Descrição do Item</label>
+                        <div class="input-group">
+                            <textarea class="form-control" rows="3" cols="60" name="descricao_produto"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row ">
+                    <div class="col-md-6 ">
+                        <button type="submit" name="btn_cadastrar" class="btn btn-success ">Salvar Item</button>
+                        <button type="reset" name="btn_cancelar" class="btn btn-danger">Cancelar</button>
+                    </div>
+
+                </div>
+            </form><!-- /form -->
+            <!-- PAGE CONTENT ENDS -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+</div><!-- /.page-content -->
+</div>
+</div><!-- /.main-content -->

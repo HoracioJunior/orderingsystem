@@ -38,7 +38,7 @@
         </button>
 
         <div class="navbar-header pull-left">
-            <a href="/admin" class="navbar-brand">
+            <a href="/gestor" class="navbar-brand">
                 <small class="text-uppercase">
                     <i class="fa fa-leaf"></i>
                     FAST FOOD Painel Administrativo
@@ -62,7 +62,7 @@
 
                     <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                         <li>
-                            <a href="/admin/perfil/editar-perfil">
+                            <a href="/gestor/perfil/editar-perfil">
                                 <i class="ace-icon fa fa-edit"></i>
                                 Meu Perfil
                             </a>
@@ -71,7 +71,7 @@
                         <li class="divider"></li>
 
                         <li>
-                            <a href="/admin/logout">
+                            <a href="/gestor/logout">
                                 <i class="ace-icon fa fa-power-off"></i>
                                 Terminar Sessão
                             </a>
@@ -105,128 +105,9 @@
             </div>
         </div><!-- /.sidebar-shortcuts -->
 
-        <?php if( $dados["fk_id_nivel_acesso"] == 1 ){ ?>
         <ul class="nav nav-list">
             <li class="active">
-                <a href="/admin">
-                    <i class="menu-icon fa fa-tachometer"></i>
-                    <span class="menu-text"> Dashboard </span>
-                </a>
-
-                <b class="arrow"></b>
-            </li>
-            <li class="">
-                <a href="#" class="dropdown-toggle">
-                    <i class="menu-icon fa fa-users"></i>
-                    <span class="menu-text">Usuarios <b class="counters"><?php echo htmlspecialchars( $total["total"], ENT_COMPAT, 'UTF-8', FALSE ); ?></b></span>
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-
-                <b class="arrow"></b>
-                <ul class="submenu">
-                    <li class="">
-                        <a href="/admin/usuario/cadastrar-usuario">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Adicionar Usuario
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="">
-                        <a href="/admin/usuarios/list-usuarios">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Listar Usuarios
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-                </ul>
-            </li>
-
-            <li class="">
-                <a href="#" class="dropdown-toggle">
-                    <i class="menu-icon fa fa-file"></i>
-
-                    <span class="menu-text">
-								Relatorios
-							</span>
-
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-
-                <b class="arrow"></b>
-
-                <ul class="submenu">
-                    <li class="">
-                        <a href="faq.html">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Gerar relatorio
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-                </ul>
-            </li>
-
-
-            <li class="">
-                <a href="#" class="dropdown-toggle">
-                    <i class="menu-icon fa fa-file-o"></i>
-
-                    <span class="menu-text">
-								Logs de Acesso
-							</span>
-
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-
-                <b class="arrow"></b>
-
-                <ul class="submenu">
-                    <li class="">
-                        <a href="faq.html">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Ver Logs de Acesso
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-                </ul>
-            </li>
-            <li class="">
-                <a href="#" class="dropdown-toggle">
-                    <i class="menu-icon fa fa-user"></i>
-                    <span class="menu-text">Minha Conta</span>
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-
-                <b class="arrow"></b>
-                <ul class="submenu">
-                    <li class="">
-                        <a href="/admin/perfil/editar-perfil"><i class="menu-icon fa fa-caret-right"></i>
-                            Meu Perfil
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-                    <li class="">
-                        <a href="/admin/perfil/mudar-senha"><i class="menu-icon fa fa-caret-right"></i>
-                            Mudar Senha
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                </ul>
-            </li>
-        </ul><!-- /.nav-list -->
-        <?php } ?>
-        <?php if( $dados["fk_id_nivel_acesso"] == 2 ){ ?>
-        <ul class="nav nav-list">
-            <li class="active">
-                <a href="/admin">
+                <a href="/gestor">
                     <i class="menu-icon fa fa-tachometer"></i>
                     <span class="menu-text"> Dashboard </span>
                 </a>
@@ -245,18 +126,18 @@
 
                 <ul class="submenu">
                     <li class="">
-                        <a href="/admin/menu/categorias">
+                        <a href="/gestor/menu/categorias">
                             <i class="menu-icon fa fa-caret-right"></i>
                             Categorias de Menu
                         </a>
-                        <a href="/admin/menu/cadastrar-item">
+                        <a href="/gestor/menu/cadastrar-item">
                             <i class="menu-icon fa fa-caret-right"></i>
                             Adicionar item
                         </a>
                         <b class="arrow"></b>
                     </li>
                     <li class="">
-                        <a href="/admin/menu/menu-itens">
+                        <a href="/gestor/menu/menu-itens">
                             <i class="menu-icon fa fa-caret-right"></i>
                             Ver Itens do Menu
                         </a>
@@ -339,13 +220,13 @@
                 <b class="arrow"></b>
                 <ul class="submenu">
                     <li class="">
-                        <a href="/admin/perfil/editar-perfil"><i class="menu-icon fa fa-caret-right"></i>
+                        <a href="/gestor/perfil/editar-perfil"><i class="menu-icon fa fa-caret-right"></i>
                             Meu Perfil
                         </a>
                         <b class="arrow"></b>
                     </li>
                     <li class="">
-                        <a href="/admin/perfil/mudar-senha"><i class="menu-icon fa fa-caret-right"></i>
+                        <a href="/gestor/perfil/mudar-senha"><i class="menu-icon fa fa-caret-right"></i>
                             Mudar Senha
                         </a>
                         <b class="arrow"></b>
@@ -354,7 +235,6 @@
                 </ul>
             </li>
         </ul><!-- /.nav-list -->
-        <?php } ?>
 
 
         <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">

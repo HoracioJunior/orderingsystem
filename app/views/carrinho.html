@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="row">
-                    <div class="col-md-12 itens-cart text-center">Ordens no Carrinho
+                    <div class="col-md-12 itens-cart text-center">Itens no Carrinho
                     </div>
                 </div>
                 <div class="tabela">

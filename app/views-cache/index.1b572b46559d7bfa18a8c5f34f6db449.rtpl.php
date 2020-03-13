@@ -19,7 +19,7 @@
 
 </section>
 <section class="popular">
-    <div class="titulo text-center">
+    <div class="titulo text-center pb-3">
         <h1 class="">Mais Popular</h1>
         <hr class="separator"/>
         <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit</small>
@@ -70,10 +70,96 @@
 </section>
 
 <section class="passos">
+
     <div class="texto-titulo">
-        <h1 class="text-center">4 Passos e já está.</h1>
+        <h3 class="text-center font-weight-bold">4 Cliques e já está!</h3>
         <hr class="separator"/>
     </div>
+
+    <div class="container">
+        <div class="row pb-3">
+            <div class="col-md-3">
+              <div class="row">
+                  <div class="col-12">
+                      <div class="contentor ">
+                      <img src="/app/src/img/steps/step2.png" alt="procurar" class="steps-img">
+                      </div>
+                  </div>
+              </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="cliques">1. Escolher</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="steps-text">Encontre o item desejado no nosso Menu</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="contentor">
+                            <img src="/app/src/img/steps/step2.png" alt="procurar" class="steps-img">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="cliques">2. Adicionar ao Carrinho</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="steps-text">Encontre o item desejado no nosso Menu</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="contentor">
+                        <img src="/app/src/img/steps/step3.png" alt="procurar" class=" steps-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="cliques">3. Pagar</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="steps-text">Pague os seus pedidos fácil e rápido</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="contentor">
+                            <img src="/app/src/img/steps/step4.png" alt="procurar" class=" steps-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="cliques">4. Delivery ou Pickup</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="steps-text">
+                            Entrega na porta da sua casa ou no lugar desejado
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 </section>
 
 <?php require $this->checkTemplate("testemunhos");?>

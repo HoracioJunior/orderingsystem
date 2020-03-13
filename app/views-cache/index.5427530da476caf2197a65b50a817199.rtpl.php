@@ -97,7 +97,17 @@
                         </a>
                     </div>
                 </div>
-            </div><!-- /.row --><!-- /.row -->
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <canvas id="myChart" width="400" height="400"></canvas>
+                </div>
+            </div>
+            <!-- /.row -->
+
+
+            <!-- /.row --><!-- /.row -->
 
             <!-- PAGE CONTENT ENDS -->
         </div><!-- /.col -->

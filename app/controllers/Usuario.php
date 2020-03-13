@@ -14,7 +14,10 @@ class Usuario
     {
         $con = new Conexao();
 
-        $res = $con->select("SELECT * FROM tb_usuarios WHERE email_usuario = :email AND usuario_status ='activo'", array
+        $res = $con->select("SELECT * FROM tb_usuarios 
+                            WHERE email_usuario = :email 
+                            AND usuario_status ='activo' 
+                            AND fk_id_nivel_acesso = 1 OR fk_id_nivel_acesso = 2", array
             ("email" => $email)
         );
         if (count($res) > 0) {

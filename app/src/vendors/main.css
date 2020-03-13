@@ -220,22 +220,33 @@ nav .ml-auto{
 
 /*=================STEPS INICIO========================================*/
 .passos{
-    width: 100%;
-    height: 450px;
-    background-image: url(../img/heroimg.jpg);
-    background-size: cover;
-    background-position: center;
-
+    height: auto;
+    background-color: #F2F2F2;
 }
 .texto-titulo{
     padding: 30px 30px;
     text-transform: uppercase;
-    color: #fff;
+    color: #0c0c0c;
+    font-weight: bold;
 }
 
 /*======================STEPS FIM==========================================*/
-
-
+.contentor{
+    display: flex;
+    justify-content: center;
+}
+.steps-text{
+    text-align: center !important;
+}
+.steps-img{
+    min-height: 105px;
+    max-height: 105px;
+}
+.cliques{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
 
 /*=================Testemonial Inicio========================================*/
 .testimonial1 {

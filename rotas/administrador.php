@@ -43,18 +43,20 @@ $app->post('/admin/login', function() {
 });
 
 $app->get('/admin/logout', function() {
-
-UsuarioC::logout();
+    UsuarioC::logout();
     header("Location: /admin/login");
     exit();
 });
+
 $app->get('/admin', function() {
     UsuarioC::verficarSessao(1);
-    $pageAdmin = new PageAdmin();
-    $pageAdmin->setTpl("index",array(
-        "usuario"=>$opt= $_SESSION["usuario"],
-        "totalUsers"=>UsuarioC::countUsers()
-    ));
+        $pageAdmin = new PageAdmin();
+        $pageAdmin->setTpl("index",array(
+            "usuario"=>$opt= $_SESSION["usuario"],
+            "totalUsers"=>UsuarioC::countUsers()
+        ));
+
+
 
 });
 

@@ -1,5 +1,5 @@
 <?php
-use models\pages\PageAdmin;
+use models\pages\PageGestor;
 use models\Usuario as UsuarioM;
 use controllers\Usuario as UsuarioC;
 use controllers\Categoria as CategoriaC;
@@ -9,68 +9,68 @@ use models\Produto as ProdutoM;
 use Rain\Tpl;
 
 /* ======================================inicio DAS Rotas de Categorias====================================*/
-$app->get('/admin/menu/categorias', function() {
-    UsuarioC::verficarSessao(1);
+$app->get('/gestor/menu/categorias', function() {
+    UsuarioC::verficarSessao(2);
     $categoriaM = CategoriaC::selectCategorias();
-    $pageAdmin = new PageAdmin();
-    $pageAdmin->setTpl("categorias", array(
+    $pageGestor = new PageGestor();
+    $pageGestor->setTpl("categorias", array(
         "categoria"=>$categoriaM,
         "sucesso" => CategoriaC::getSucesso(),
         "existe"=>CategoriaC::getExiste()
     ));
 });
 
-$app->post('/admin/menu/categorias/add', function() {
-    UsuarioC::verficarSessao(1);
+$app->post('/gestor/menu/categorias/add', function() {
+    UsuarioC::verficarSessao(2);
     $categoriaM = new CategoriaM();
     $categoriaM -> setNomeCategoria($_POST["nome_categoria"]);
     $categoriaC = new CategoriaC();
     $categoriaC ->cadastrar_categoria($categoriaM);
-    header("Location: /admin/menu/categorias");
+    header("Location: /gestor/menu/categorias");
     exit();
 });
 
-$app->get('/admin/categoria/:idCategoria/eliminar-categoria', function($idCategoria) {
-    UsuarioC::verficarSessao(1);
+$app->get('/gestor/categoria/:idCategoria/eliminar-categoria', function($idCategoria) {
+    UsuarioC::verficarSessao(2);
     CategoriaC::deleteById($idCategoria);
-    header("Location: /admin/menu/categorias");
+    header("Location: /gestor/menu/categorias");
     exit();
 });
 
-$app->get('/admin/categoria/:idCategoria/editar-categoria', function($idCategoria) {
-    UsuarioC::verficarSessao(1);
-    $pageAdmin = new PageAdmin();
+$app->get('/gestor/categoria/:idCategoria/editar-categoria', function($idCategoria) {
+    UsuarioC::verficarSessao(2);
+    $pageGestor = new PageGestor();
     $categoria =CategoriaC::selectCategoriasById($idCategoria);
 
-    $pageAdmin->setTpl("editar-categoria", [
+    $pageGestor->setTpl("editar-categoria", [
         "categoria"=>$categoria[0]
     ]);
 });
-$app->post('/admin/categoria/editar-categoria', function() {
-    UsuarioC::verficarSessao(1);
+$app->post('/gestor/categoria/editar-categoria', function() {
+    UsuarioC::verficarSessao(2);
     $categoriaM = new CategoriaM();
     $categoriaM ->setIdCategoria($_POST["id_categoria"]);
     $categoriaM ->setNomeCategoria($_POST["nome_categoria"]);
     $categoriaC = new CategoriaC();
     $categoriaC ->update($categoriaM);
-    header("Location: /admin/menu/categorias");
+    header("Location: /gestor/menu/categorias");
     exit();
 });
 /* ===================================FIM DAS ROTAS CATEGORIAS========================================*/
 
 /* ===================================INICIO DAS ROTAS Produto========================================*/
-$app->get('/admin/menu/cadastrar-item', function() {
-    UsuarioC::verficarSessao(1);
+$app->get('/gestor/menu/cadastrar-item', function() {
+    UsuarioC::verficarSessao(2);
     $categoria = CategoriaC::selectCategorias();
-    $pageAdmin = new PageAdmin();
-    $pageAdmin->setTpl("cadastrar-item", array(
+    $pageGestor = new PageGestor();
+    $pageGestor->setTpl("cadastrar-item", array(
         "categoria"=>$categoria,
         "sucessoProduto"=>ProdutoC::getSucesso()
     ));
 
 });
-$app->post('/admin/menu/cadastrar-item', function() {
-    UsuarioC::verficarSessao(1);
+$app->post('/gestor/menu/cadastrar-item', function() {
+    UsuarioC::verficarSessao(2);
     $produtoM = new ProdutoM();
     $file = $_FILES["img"];
 
@@ -81,39 +81,39 @@ $app->post('/admin/menu/cadastrar-item', function() {
     $produtoM->setFkIdProdutoCtg($_POST["fk_categoria"]);
     $produtoC = new ProdutoC();
     $produtoC->cadastrar_produto($produtoM);
-    header("Location: /admin/menu/cadastrar-item");
+    header("Location: /gestor/menu/cadastrar-item");
     exit();
 });
 
-$app->get('/admin/menu/menu-itens', function() {
-    UsuarioC::verficarSessao(1);
+$app->get('/gestor/menu/menu-itens', function() {
+    UsuarioC::verficarSessao(2);
     $produto = ProdutoC::listProduto();
-    $pageAdmin = new PageAdmin();
-    $pageAdmin->setTpl("menu", array(
+    $pageGestor = new PageGestor();
+    $pageGestor->setTpl("menu", array(
         "produto"=>$produto,
         "sucessoDelete"=>ProdutoC::getSucesso()
     ));
 
 });
-$app->get('/admin/menu/:idProduto/eliminar-item', function($idCategoria) {
-    UsuarioC::verficarSessao(1);
+$app->get('/gestor/menu/:idProduto/eliminar-item', function($idCategoria) {
+    UsuarioC::verficarSessao(2);
     ProdutoC::deleteById($idCategoria);
-    header("Location: /admin/menu/menu-itens");
+    header("Location: /gestor/menu/menu-itens");
     exit();
 });
 
-$app->get('/admin/menu/:idProduto/editar-item', function($idCategoria) {
-    UsuarioC::verficarSessao(1);
-    $pageAdmin = new PageAdmin();
+$app->get('/gestor/menu/:idProduto/editar-item', function($idCategoria) {
+    UsuarioC::verficarSessao(2);
+    $pageGestor = new PageGestor();
     $categoria = CategoriaC::selectCategorias();
     $produto=ProdutoC::selectProdutoById($idCategoria);
-    $pageAdmin->setTpl("editar-item", [
+    $pageGestor->setTpl("editar-item", [
         "produto"=>$produto[0],
         "categoria"=>$categoria
     ]);
 });
-$app->post('/admin/menu/editar-item', function() {
-    UsuarioC::verficarSessao(1);
+$app->post('/gestor/menu/editar-item', function() {
+    UsuarioC::verficarSessao(2);
     $produtoM = new ProdutoM();
     $file = $_FILES["img"];
     $produtoM->setIdProduto($_POST["id_produto"]);
@@ -124,7 +124,7 @@ $app->post('/admin/menu/editar-item', function() {
     $produtoM->setFkIdProdutoCtg($_POST["fk_categoria"]);
     $produtoC = new ProdutoC();
     $produtoC->update_produto($produtoM);
-    header("Location: /admin/menu/menu-itens");
+    header("Location: /gestor/menu/menu-itens");
     exit();
 });
 
