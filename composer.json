@@ -11,7 +11,9 @@
     	"slim/slim":"2.0",
     	"rain/raintpl":"3.0.0",
 		"coffeecode/paginator": "1.0,*",
-      "ext-json": "*"
+      "ext-json": "*",
+        "paypal/rest-api-sdk-php": "*",
+        "stripe/stripe-php": "^7.27"
     },
     "config":{
         "vendor-dir": "libs/"

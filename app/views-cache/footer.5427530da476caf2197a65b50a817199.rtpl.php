@@ -46,14 +46,9 @@
 <script src="/app/src/assets/dataTable/js/costumizadoDataTable.js"></script>
 <script src="/app/src/assets/dataTable/js/costumizadoDataTable2.js"></script>
 
-<script src="/app/src/assets/charts/Chart.min.js"></script>
-<!--<script src="/app/src/assets/charts/customCharts.js"></script>-->
 
 <script>
-    var ctx = document.getElementById('myChart');
-    var myBarChart = new Chart(ctx, {
-        type: 'bar'
-    });
+
 </script>
 </body>
 </html>
