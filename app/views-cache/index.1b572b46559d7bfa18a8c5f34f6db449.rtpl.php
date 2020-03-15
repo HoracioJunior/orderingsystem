@@ -101,7 +101,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="contentor">
-                            <img src="/app/src/img/steps/step2.png" alt="procurar" class="steps-img">
+                            <img src="/app/src/img/steps/cart.png" alt="procurar" class="steps-img">
                         </div>
 
                     </div>
@@ -113,7 +113,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <div class="steps-text">Encontre o item desejado no nosso Menu</div>
+                        <div class="steps-text">Adiciona os itens desejado ao carrinho de compras</div>
                     </div>
                 </div>
             </div>

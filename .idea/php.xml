@@ -7,6 +7,9 @@
       <path value="$PROJECT_DIR$/libs/slim/slim" />
       <path value="$PROJECT_DIR$/libs/phpmailer/phpmailer" />
       <path value="$PROJECT_DIR$/libs/coffeecode/paginator" />
+      <path value="$PROJECT_DIR$/libs/paypal/rest-api-sdk-php" />
+      <path value="$PROJECT_DIR$/libs/psr/log" />
+      <path value="$PROJECT_DIR$/libs/stripe/stripe-php" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7" />

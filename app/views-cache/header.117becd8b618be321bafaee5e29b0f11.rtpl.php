@@ -104,8 +104,6 @@
                 <span class="btn btn-danger"></span>
             </div>
         </div><!-- /.sidebar-shortcuts -->
-
-        <?php if( $dados["fk_id_nivel_acesso"] == 1 ){ ?>
         <ul class="nav nav-list">
             <li class="active">
                 <a href="/admin">
@@ -115,6 +113,8 @@
 
                 <b class="arrow"></b>
             </li>
+
+
             <li class="">
                 <a href="#" class="dropdown-toggle">
                     <i class="menu-icon fa fa-users"></i>
@@ -144,33 +144,6 @@
 
                 </ul>
             </li>
-
-            <li class="">
-                <a href="#" class="dropdown-toggle">
-                    <i class="menu-icon fa fa-file"></i>
-
-                    <span class="menu-text">
-								Relatorios
-							</span>
-
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-
-                <b class="arrow"></b>
-
-                <ul class="submenu">
-                    <li class="">
-                        <a href="faq.html">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Gerar relatorio
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-                </ul>
-            </li>
-
 
             <li class="">
                 <a href="#" class="dropdown-toggle">
@@ -222,139 +195,7 @@
                 </ul>
             </li>
         </ul><!-- /.nav-list -->
-        <?php } ?>
-        <?php if( $dados["fk_id_nivel_acesso"] == 2 ){ ?>
-        <ul class="nav nav-list">
-            <li class="active">
-                <a href="/admin">
-                    <i class="menu-icon fa fa-tachometer"></i>
-                    <span class="menu-text"> Dashboard </span>
-                </a>
-                <b class="arrow"></b>
-            </li>
 
-
-            <li class="">
-                <a href="#" class="dropdown-toggle">
-                    <i class="menu-icon fa fa-file-o"></i>
-                    <span class="menu-text">Menu</span>
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-
-                <b class="arrow"></b>
-
-                <ul class="submenu">
-                    <li class="">
-                        <a href="/admin/menu/categorias">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Categorias de Menu
-                        </a>
-                        <a href="/admin/menu/cadastrar-item">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Adicionar item
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-                    <li class="">
-                        <a href="/admin/menu/menu-itens">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Ver Itens do Menu
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="">
-                <a href="#" class="dropdown-toggle">
-                    <i class="menu-icon fa fa-shopping-basket"></i>
-                    <span class="menu-text">Pedidos <b class="counters"><?php echo htmlspecialchars( $total["total"], ENT_COMPAT, 'UTF-8', FALSE ); ?></b></span>
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-                <b class="arrow"></b>
-                <ul class="submenu">
-                    <li class="">
-                        <a href="faq.html">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Novos Pedidos <b class="counters"><?php echo htmlspecialchars( $total["total"], ENT_COMPAT, 'UTF-8', FALSE ); ?></b>
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-                    <li class="">
-                        <a href="faq.html">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Pedidos Pendentes
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="">
-                        <a href="error-404.html">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Ordens Completas
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-
-                </ul>
-            </li>
-
-
-
-            <li class="">
-                <a href="#" class="dropdown-toggle">
-                    <i class="menu-icon fa fa-file"></i>
-
-                    <span class="menu-text">
-								Relatorios
-							</span>
-
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-
-                <b class="arrow"></b>
-                <ul class="submenu">
-                    <li class="">
-                        <a href="faq.html">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Gerar relatorio
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-                </ul>
-            </li>
-
-            <li class="">
-                <a href="#" class="dropdown-toggle">
-                    <i class="menu-icon fa fa-user"></i>
-                    <span class="menu-text">Minha Conta</span>
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-
-                <b class="arrow"></b>
-                <ul class="submenu">
-                    <li class="">
-                        <a href="/admin/perfil/editar-perfil"><i class="menu-icon fa fa-caret-right"></i>
-                            Meu Perfil
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-                    <li class="">
-                        <a href="/admin/perfil/mudar-senha"><i class="menu-icon fa fa-caret-right"></i>
-                            Mudar Senha
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                </ul>
-            </li>
-        </ul><!-- /.nav-list -->
-        <?php } ?>
 
 
         <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">

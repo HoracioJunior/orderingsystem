@@ -234,11 +234,14 @@ class Usuario
                 exit();
             }
         } else {
-            if ($tipoUsuario == 1 or $tipoUsuario == 2) {
+            if ($tipoUsuario == 1  ) {
                 header("Location: /admin/login");
                 exit();
-            } elseif ($tipoUsuario == 3) {
-                header("Location: /login");
+            } elseif ($tipoUsuario == 2) {
+                header("Location: /gestor/login");
+                exit();
+            }elseif ($tipoUsuario == 3) {
+            header("Location: /login");
                 exit();
             }
         }

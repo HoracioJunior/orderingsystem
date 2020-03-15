@@ -7,9 +7,12 @@
       <sourceFolder url="file://$MODULE_DIR$/app" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/libs/coffeecode/paginator" />
       <excludeFolder url="file://$MODULE_DIR$/libs/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/libs/paypal/rest-api-sdk-php" />
       <excludeFolder url="file://$MODULE_DIR$/libs/phpmailer/phpmailer" />
+      <excludeFolder url="file://$MODULE_DIR$/libs/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/libs/rain/raintpl" />
       <excludeFolder url="file://$MODULE_DIR$/libs/slim/slim" />
+      <excludeFolder url="file://$MODULE_DIR$/libs/stripe/stripe-php" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

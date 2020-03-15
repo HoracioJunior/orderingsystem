@@ -1,5 +1,6 @@
 <?php
 
+use controllers\Usuario;
 use models\pages\Page;
 use controllers\Usuario as UsuarioC;
 use models\Usuario as UsuarioM;
@@ -192,28 +193,32 @@ $app->get('/cadastrar-usuario', function () {
         "footer" => false
     ]);
     $page->setTpl("cadastrar", array(
-        "emailError" => UsuarioC::getExiste()
+        "emailError" => UsuarioC::getExiste(),
+        "falha"=>UsuarioC::getLoginErro()
     ));
 });
 
 $app->post('/cadastrar-usuario', function () {
     $userM = new UsuarioM();
 
-    /*if(!isset($_POST["nome_usuario"]) || $_POST["nome_usuario"] =''){
-        UsuarioC::setErrorRegister("Preencha o campo nome do usuario");
+    if ($_POST["fk_nivel_acesso"] != 1) {
+        $msg = "Não Foi Possivel Efectuar o Cadastro. Tente Novamente";
+        UsuarioC::setLoginErro($msg);
+        header("Location: /cadastrar-usuario");
+        exit();
+    } else {
+        $userM->setNomeUsuario($_POST["nome_usuario"]);
+        $userM->setApelidoUsuario($_POST["apelido_usuario"]);
+        $userM->setEmailUsuario($_POST["email_usuario"]);
+        $userM->setSenhaUsuario($_POST["senha_usuario"]);
+        $userM->setCelularUsuario($_POST["celular_usuario"]);
+        $userM->setNivelAcesso($_POST["fk_nivel_acesso"]);
+        $UserC = new UsuarioC();
+        $UserC->cadastrar_usuario($userM);
         header("Location: /login");
         exit();
-    }*/
-    $userM->setNomeUsuario($_POST["nome_usuario"]);
-    $userM->setApelidoUsuario($_POST["apelido_usuario"]);
-    $userM->setEmailUsuario($_POST["email_usuario"]);
-    $userM->setSenhaUsuario($_POST["senha_usuario"]);
-    $userM->setCelularUsuario($_POST["celular_usuario"]);
-    $userM->setNivelAcesso($_POST["fk_nivel_acesso"]);
-    $UserC = new UsuarioC();
-    $UserC->cadastrar_usuario($userM);
-    header("Location: /login");
-    exit();
+    }
+
 
 });
 

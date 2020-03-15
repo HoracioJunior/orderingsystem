@@ -2,10 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79e2c214-2980-4ae1-b4b5-315b41479f2f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/views/admin/cadastrar-item.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/categorias.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/editar-categoria.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/editar-item.html" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/img/steps/cart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ordering.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ordering.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Usuario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/assets/charts/customCharts.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/assets/charts/customCharts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/img/steps/step1.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/img/steps/step1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/img/steps/step2.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/img/steps/step2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/img/steps/step3.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/img/steps/step3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/img/steps/step4.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/img/steps/step4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/cadastrar.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/cadastrar.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/footer.5427530da476caf2197a65b50a817199.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/footer.5427530da476caf2197a65b50a817199.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/index.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/index.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/index.5427530da476caf2197a65b50a817199.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/index.5427530da476caf2197a65b50a817199.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cadastrar.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cadastrar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/gestor/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/gestor/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/gestor/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/gestor/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rotas/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/site.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/404.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/404.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +78,9 @@
       <path value="$PROJECT_DIR$/libs/slim/slim" />
       <path value="$PROJECT_DIR$/libs/phpmailer/phpmailer" />
       <path value="$PROJECT_DIR$/libs/coffeecode/paginator" />
+      <path value="$PROJECT_DIR$/libs/paypal/rest-api-sdk-php" />
+      <path value="$PROJECT_DIR$/libs/psr/log" />
+      <path value="$PROJECT_DIR$/libs/stripe/stripe-php" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XJFbrgDJZFLgYMxdxQuONfF7yg" />
@@ -156,6 +176,7 @@
       <workItem from="1583867243809" duration="9467000" />
       <workItem from="1583934779461" duration="14551000" />
       <workItem from="1584030179539" duration="18731000" />
+      <workItem from="1584197903441" duration="8226000" />
     </task>
     <servers />
   </component>
@@ -186,10 +207,10 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="289" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.760@0.0.1280.760" timestamp="1583811230925" />
-    <state x="370" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1584072141539">
+    <state x="370" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1584198339591">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="370" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.760@0.0.1280.760" timestamp="1584072141539" />
+    <state x="370" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.760@0.0.1280.760" timestamp="1584198339591" />
     <state width="937" height="190" key="GridCell.Tab.0.bottom" timestamp="1583733082042">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
@@ -214,6 +235,10 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="454" y="305" key="NewPhpFileDialog/0.0.1280.760@0.0.1280.760" timestamp="1584036749969" />
+    <state x="281" y="85" key="RollbackChangesDialog" timestamp="1584200264135">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="281" y="85" key="RollbackChangesDialog/0.0.1280.760@0.0.1280.760" timestamp="1584200264135" />
     <state x="116" y="52" key="SettingsEditor" timestamp="1583733831219">
       <screen x="0" y="0" width="1280" height="760" />
     </state>

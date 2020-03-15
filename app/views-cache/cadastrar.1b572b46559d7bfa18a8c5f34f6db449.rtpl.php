@@ -37,35 +37,43 @@
                                     </button>
                                 </div>
                                 <?php } ?>
+                                <?php if( $falha != '' ){ ?>
+                                <div class="alert alert-danger" role="alert">
+                                    <b><?php echo htmlspecialchars( $falha, ENT_COMPAT, 'UTF-8', FALSE ); ?></b>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <?php } ?>
                                 <div class="form-group">
                                     <label for="nome_usuario">Nome do Usuario<b class="text-danger">*</b></label>
-                                    <input type="text" class="form-control form-control-lg rounded-2" id="nome_usuario" name="nome_usuario" required="">
+                                    <input type="text" class="form-control form-control rounded-2" id="nome_usuario" name="nome_usuario" required="">
                                     <div class="invalid-feedback">Oops, you missed this one.</div>
                                 </div>
                                 <div class="form-group">
                                     <label for="apelido_usuario">Apelido do Usuario<b class="text-danger">*</b></label>
-                                    <input type="text" class="form-control form-control-lg rounded-2" id="apelido_usuario" name="apelido_usuario" required="">
+                                    <input type="text" class="form-control form-control rounded-2" id="apelido_usuario" name="apelido_usuario" required="">
                                     <div class="invalid-feedback">Oops, you missed this one.</div>
                                 </div>
                                 <div class="form-group">
                                     <label for="email_usuario">E-mail do Usuario<b class="text-danger">*</b></label>
-                                    <input type="email" class="form-control form-control-lg rounded-2" id="email_usuario" name="email_usuario" required="">
+                                    <input type="email" class="form-control form-control rounded-2" id="email_usuario" name="email_usuario" required="">
                                     <div class="invalid-feedback">Oops, you missed this one.</div>
                                 </div>
                                 <div class="form-group">
                                     <label for="celular_usuario">Numero de Celular<b class="text-danger">*</b></label>
-                                    <input type="text" class="form-control form-control-lg rounded-2" id="celular_usuario" name="celular_usuario" required="">
+                                    <input type="text" class="form-control form-control rounded-2" id="celular_usuario" name="celular_usuario" required="">
                                     <div class="invalid-feedback">Oops, you missed this one.</div>
                                 </div>
                                 <div class="form-group">
                                     <label for="senha_usuario">Senha do Usuario<b class="text-danger">*</b></label>
-                                    <input type="password" class="form-control form-control-lg rounded-2" id="senha_usuario" name="senha_usuario" required="">
+                                    <input type="password" class="form-control form-control rounded-2" id="senha_usuario" name="senha_usuario" required="">
                                     <div class="invalid-feedback">digite a senha!</div>
                                 </div>
                                 <input type="hidden" name="fk_nivel_acesso" value="3">
                                 <div class="form-group">
                                     <label for="confirmar_senha">Confirmar Senha do usuario<b class="text-danger">*</b></label>
-                                    <input type="password" class="form-control form-control-lg rounded-2" id="confirmar_senha" name="confirmar_senha" required="">
+                                    <input type="password" class="form-control form-control rounded-2" id="confirmar_senha" name="confirmar_senha" required="">
                                     <div class="invalid-feedback">confirme a tua senha!</div>
                                 </div>
                                 <div class="form-group">

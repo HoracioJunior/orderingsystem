@@ -31,6 +31,8 @@
 <!-- ace scripts -->
 <script src="/app/src/assets/js/ace-elements.min.js"></script>
 <script src="/app/src/assets/js/ace.min.js"></script>
+<script src="/app/src/assets/charts/Chart.js"></script>
+<script src="/app/src/assets/charts/customCharts.js"></script>
 <!-- dataTable Files-->
 <script src="/app/src/assets/dataTable/js/jquery.dataTables.min.js"></script>
 <script src="/app/src/assets/dataTable/js/dataTables.bootstrap.min.js"></script>
