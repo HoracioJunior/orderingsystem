@@ -40,7 +40,7 @@
                                     <?php if( $value1["produto_status"]=='indisponivel' ){ ?>
                                         <button class="btn btn-danger disabled float-right">Indisponível</button>
                                     <?php }else{ ?>
-                                        <form method="post" action="/carrinho/adicionar" id="form-adicionar">
+                                        <form method="post" id="form-adicionar">
                                             <input type="hidden" name="id_produto" value="<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                                             <button type="submit" class="btn btn-outline-primary btn-addcart" id="btn-carrinho">Peça agora</button>
                                         </form>
@@ -51,15 +51,18 @@
 
                 </div>
                 <div class="card-footer text-muted">
-                    <div class="mt-0">
-                        <span>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </span>
-                        <small>4.5 (89 Avaliações)</small>
+                    <div class="row ">
+                        <div class="col-md-6">
+                            <div class="mt-0" >
+                                <span class="estrelas" data-toggle="modal" onclick="showModal(<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>)" data-target="#myModal">
+                                    <span class="rate" ></span>
+                                    <i class="result">0</i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 float-left">
+                            <span>4.5 (89 Avaliações)</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -166,3 +169,35 @@
 
 
 
+
+<!-- Modal  cadastrar-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="modal-title" id="myModalLabel">Avaliar Item</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <form action="/avaliar" method="post">
+                <div class="modal-body">
+                    <div class="row row-formatacao">
+                        <div class="col-md-8 col-formatacao">
+                            <input type="hidden" id="id_produto" name="id_produto" >
+                            <input type="hidden" id="id_usuario" name="id_usuario" value="" >
+                            <input type="hidden" id="qtd_estrelas" name="qtd_estrelas"  >
+                            <label for="">Comentario</label>
+                            <div class="input-group">
+                                <textarea  class="form-control" name="comentario" aria-describedby="basic-addon1"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Avaliar</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

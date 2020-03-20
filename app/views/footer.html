@@ -33,6 +33,7 @@
                     <ul class="list-unstyled">
                         <li><a href="/contacto" title=""><i class="fa fa-angle-double-right"></i>Sobre Nos</a></li>
                         <li><a href="/contacto" title=""><i class="fa fa-angle-double-right"></i> Contacte-nos</a></li>
+                    </ul>
                 </div>
             </div>
 
@@ -81,7 +82,6 @@
 <script src="/app/src/vendors/grid-list.js"></script>
 <script src="/app/src/vendors/xhttp.js"></script>
 <script src="/app/src/vendors/addCart.js"></script>
-<script src="/app/src/vendors/flutuante.js"></script>
 
 <script>
 

@@ -83,6 +83,7 @@ $app->get('/menu', function () {
     $pages = [];
 
     $produto = new ProdutoC();
+
     $pagination = $produto->paginacao($page);
     for ($i = 1; $i <= $pagination["paginas"]; $i++) {
         array_push($pages, [

@@ -64,6 +64,21 @@ class Pedidos
             echo "LINHA: " . $exception->getLine() . "\n";
         }
     }
+    public function novosPedidos()
+    {
+        $status = (string)"pago";
+        try {
+            $conn = new Conexao();
+            $result = $conn->select("SELECT * FROM tb_pedido a INNER JOIN tb_usuarios b ON b.id_usuario = a.fk_id_usuario WHERE a.status_pedido = :status ",
+                array(
+                ":status"=>$status
+                    ));
+            return $result;
+        }catch (\PDOException $exception){
+            echo "ERRO: " . $exception->getMessage() . "\n";
+            echo "LINHA: " . $exception->getLine() . "\n";
+        }
+    }
 
     public function detalhesPedido($id_pedido)
     {

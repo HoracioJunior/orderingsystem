@@ -7,7 +7,6 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Ordering SYS</title>
 	<link rel="stylesheet" href="/app/src/vendors/main.css">
-	<link rel="stylesheet" href="/app/src/vendors/fab.css">
 	<link rel="stylesheet" href="/app/src/vendors/flutuante.css">
 	<link rel="stylesheet" href="/app/src/vendors/rating/css/jquery.rateyo.min.css">
 	<link rel="stylesheet" href="/app/src/vendors/bootstrap/css/bootstrap.css">
@@ -87,7 +86,7 @@
 <div class="btn-group-fab" role="group" aria-label="FAB Menu">
 	<div>
 		<button type="button" class="btn btn-main btn-primary has-tooltip bnt-search" data-placement="left" title="Suporte"> <i class="fa fa-headset"></i> </button>
-		<a href="/contacto" class="btn btn-sub btn-danger has-tooltip" data-placement="left" title="E-mail"> <i class="fa fa-envelope"></i> </a>
+		<button type="button" class="btn btn-sub btn-danger has-tooltip" data-placement="left" title="E-mail"> <i class="fa fa-envelope"></i> </button>
 		<button type="button" class="btn btn-sub btn-warning has-tooltip" data-placement="left" title="SMS"> <i class="fa fa-sms"></i> </button>
 		<button type="button" class="btn btn-sub btn-warning has-tooltip" data-placement="left" title="Whatsapp"> <i class="fab fa-whatsapp"></i> </button>
 	</div>

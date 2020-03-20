@@ -1,5 +1,6 @@
 $(document).ready(function() {
     var table = $('#tabela2').DataTable( {
+        dom:'Blrftip',
         "language": {
             "lengthMenu": "Mostrar _MENU_ registos por pagina",
             "zeroRecords": "Nenhum registo foi encontrado",
@@ -17,7 +18,4 @@ $(document).ready(function() {
         },
         "lengthMenu": [ [5,10, 25, 50, -1], [5,10, 25, 50, "Todos"] ],
     } );
-
-    table.buttons().container()
-        .appendTo( '#tabela2_wrapper .col-sm-6:eq(0)' );
 } );

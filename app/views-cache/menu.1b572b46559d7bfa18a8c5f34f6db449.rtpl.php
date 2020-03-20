@@ -20,12 +20,12 @@
 
 <section class="steps">
     <div class="container">
-        <dinv class="row">
+        <div class="row">
             <div class="col-md-3 step-col"><span class="rounded-circle nr">1</span>Escolher <i class="fa fa-check"></i></div>
             <div class="col-md-3 step-col"><span class="rounded-circle nr">2</span>Adicionar ao carrinho <i class="fa fa-cart-plus"></i></div>
             <div class="col-md-3 step-col"><span class="rounded-circle nr">3</span>Checkout <i class="fa fa-coins"></i></div>
             <div class="col-md-3 step-col"><span class="rounded-circle nr">4</span>Receber ou Levantar <i class="fas fa-bicycle"></i></div>
-        </dinv>
+        </div>
     </div>
 </section>
 
@@ -55,23 +55,23 @@
                             <h5 class="card-title"><?php echo htmlspecialchars( $value1["nome_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h5>
                             <p class="card-text"><small><?php echo htmlspecialchars( $value1["descricao_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?></small></p>
 
-                            <di class="row">
+                            <div class="row">
                                 <div class="col-md-6"><span class="preco text-muted"><?php echo formatarPreco($value1["preco_produto"]); ?> MZN</span></div>
                                 <div class="col-md-6">
 
                                     <?php if( $value1["produto_status"]=='indisponivel' ){ ?>
                                     <button class="btn btn-danger disabled float-right">Indisponível</button>
                                     <?php }else{ ?>
-                                    <form action="/carrinho/adicionar" method="post">
+                                    <form action="/carrinho/adicionar" id="form-adiconar" method="post">
                                         <input type="hidden" name="id_produto" value="<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                                         <button type="submit" class="btn btn-outline-primary btn-addcart">Peça agora</button>
                                     </form>
                                     <?php } ?>
                                 </div>
-                            </di>
+                            </div>
                         </div>
                         <div class="card-footer text-muted">
-                            <div class="row">
+                            <div class="row ">
                                 <div class="col-md-6">
                                     <div class="mt-0" >
                                        <span class="estrelas" data-toggle="modal" onclick="showModal(<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>)" data-target="#myModal">
@@ -105,13 +105,14 @@
                                     <div class="col-md-6"><h6 class="float-right"><?php echo formatarPreco($value1["preco_produto"]); ?> MZN</h6></div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-6 mt-2" id="">
+                                    <div class="col-8 mt-2" id="">
                                        <span class="estrelas" data-toggle="modal" onclick="showModal(<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>)" data-target="#myModal">
-                                           <i class="rate"></i><span class="result">0</span>
+                                           <i class="rate"></i><span class="result">0 </span>
+                                            <small class="avaliacao"> 4.5 (89 Avaliações)</small>
                                        </span>
-                                        <small>4.5 (89 Avaliações)</small>
+
                                     </div>
-                                    <div class="col-6 mt-1">
+                                    <div class="col-4 mt-1">
                                         <?php if( $value1["produto_status"]=='indisponivel' ){ ?>
                                         <button class="btn btn-danger disabled float-right btn-sm">Indisponível</button>
                                         <?php }else{ ?>
@@ -149,39 +150,38 @@
         </div>
         <!--Fim de Paginacao-->
     </div>
+</section>
 
-    <!-- Modal  cadastrar-->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
+<!-- Modal  cadastrar-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
 
-                    <h4 class="modal-title" id="myModalLabel">Avaliar Item</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                </div>
-                <form action="/avaliar" method="post">
-                    <div class="modal-body">
-                        <div class="row row-formatacao">
-                            <div class="col-md-8 col-formatacao">
-                                <label for="">Comentario</label>
-                                <input type="hidden" id="id_produto" name="id_produto" >
-                                <input type="hidden" id="id_usuario" name="id_usuario" value="<?php echo htmlspecialchars( $dados["id_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" >
-                                <input type="hidden" id="qtd_estrelas" name="qtd_estrelas"  >
-                                <div class="input-group">
-                                    <textarea  class="form-control" name="comentario" aria-describedby="basic-addon1"></textarea>
-                                </div>
+                <h4 class="modal-title" id="myModalLabel">Avaliar Item</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <form action="/avaliar" method="post">
+                <div class="modal-body">
+                    <div class="row row-formatacao">
+                        <div class="col-md-8 col-formatacao">
+                            <input type="hidden" id="id_produto" name="id_produto" >
+                            <input type="hidden" id="id_usuario" name="id_usuario" value="<?php echo htmlspecialchars( $dados["id_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" >
+                            <input type="hidden" id="qtd_estrelas" name="qtd_estrelas"  >
+                            <label for="">Comentario</label>
+                            <div class="input-group">
+
+                                <textarea  class="form-control" name="comentario" aria-describedby="basic-addon1"></textarea>
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Avaliar</button>
-                    </div>
-                </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Avaliar</button>
+                </div>
+            </form>
 
-            </div>
         </div>
-    </div> <!--Fim de Modal-->
-</section>
-
-
+    </div>
+</div>
 

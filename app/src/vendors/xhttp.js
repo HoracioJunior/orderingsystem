@@ -12,6 +12,9 @@ function xmlHttpGet(url,callback,parameters='') {
 function xmlHttpPost(url,callback,parameters='') {
     xhttp.onreadystatechange = callback;
     xhttp.open('POST',url+'.php', true);
+    if (typeof (parameters) != 'object'){
+        xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    }
     xhttp.send(parameters);
 }
 

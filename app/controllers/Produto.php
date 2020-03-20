@@ -80,6 +80,16 @@ class Produto
             echo "tas fudido";
         }
     }
+
+    public static function rating($id){
+        $conn = new Conexao();
+        $resultado = $conn ->select("SELECT fk_id_produto,COUNT(fk_id_produto) as qtd, 
+                                    FORMAT( AVG(qtd_estrelas),1) as media 
+                                    FROM tb_rating where fk_id_produto =:id  GROUP BY fk_id_produto",
+            array(":id"=>$id)
+        );
+        return $resultado;
+    }
     public function  paginacao($page=1,$itensPerPage =6){
         $con= new Conexao();
         $start = ($page-1)* $itensPerPage;

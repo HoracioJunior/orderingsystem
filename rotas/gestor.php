@@ -2,6 +2,8 @@
 use models\pages\PageGestor;
 use models\Usuario as UsuarioM;
 use controllers\Usuario as UsuarioC;
+use controllers\Pedidos as PedidoC;
+use models\Pedidos as PedidosM;
 use  controllers\Gestor;
 use Rain\Tpl;
 
@@ -109,7 +111,7 @@ $app->post('/gestor/perfil/mudar-senha', function() {
 });
 
 $app->get('/gestor/perfil/editar-perfil', function() {
-    UsuarioC::verficarSessao(1);
+    UsuarioC::verficarSessao(2);
     $pageGestor = new PageGestor();
     $nivelUsuario = UsuarioC::listNiveis();
     $dados = $_SESSION["usuario"];
@@ -119,7 +121,7 @@ $app->get('/gestor/perfil/editar-perfil', function() {
 
 });
 $app->post('/gestor/perfil/editar-perfil', function() {
-    UsuarioC::verficarSessao(1);
+    UsuarioC::verficarSessao(2);
     $UsuarioM = new UsuarioM();
     $UsuarioM->setNomeUsuario($_POST["nome_usuario"]);
     $UsuarioM->setApelidoUsuario($_POST["apelido_usuario"]);
@@ -135,7 +137,7 @@ $app->post('/gestor/perfil/editar-perfil', function() {
 
 
 $app->get('/gestor/perfil/mudar-senha', function() {
-    UsuarioC::verficarSessao(1);
+    UsuarioC::verficarSessao(2);
     $pageGestor = new PageGestor();
     $dados = $_SESSION["usuario"];
     $pageGestor->setTpl("mudar-senha", array(
@@ -146,13 +148,25 @@ $app->get('/gestor/perfil/mudar-senha', function() {
 
 });
 $app->post('/gestor/perfil/mudar-senha', function() {
-    UsuarioC::verficarSessao(1);
+    UsuarioC::verficarSessao(2);
     $userM = new UsuarioM();
     $userM ->setSenhaUsuario($_POST["senha_nova"]);
     $userM -> setIdUsuario($_POST["id_usuario"]);
     UsuarioC::changeSenha($userM,$_POST["senha_antiga"]);
     header("Location: /gestor/perfil/mudar-senha");
     exit();
+
+});
+$app->get('/gestor/pedidos/novos-pedidos', function() {
+    UsuarioC::verficarSessao(2);
+    $page = new PageGestor();
+
+    $pedido = new PedidoC();
+    $resultado = $pedido->novosPedidos();
+
+    $page->setTpl("novos-pedidos",array(
+        "pedido"=>$resultado
+    ));
 
 });
 /*===========================================FIM DAS ROTAS USUARIOS========================================*/

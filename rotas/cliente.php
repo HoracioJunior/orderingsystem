@@ -16,7 +16,7 @@ $app->get('/cliente', function() {
 
 });
 $app->get('/cliente/minhas-ordens', function() {
-    //UsuarioC::verficarSessao(3);
+    UsuarioC::verficarSessao(3);
     $pageCliente = new PageCliente();
     $dados = $_SESSION["usuario"];
     $id_usuario = $_SESSION["usuario"]["id_usuario"];
