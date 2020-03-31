@@ -51,9 +51,10 @@
                 <div class="footer-info-single">
                     <h2 class="title">Pagamentos</h2>
                     <p>
-                    <ul class="list-inline">
-                        <li class="list-inline-item"><img src="/app/src/img/paypal.png" alt="" style="width: 100px;"></li>
-                        <li class="list-inline-item"><img src="/app/src/img/paypal.png" alt="" style="width: 100px;"></li>
+                    <ul class="list-inline payment">
+                        <li class="list-inline-item"><img src="/app/src/img/payment/paypal.png" alt="" style="width: 50px;"></li>
+                        <li class="list-inline-item"><img src="/app/src/img/payment/visa.png" alt="" style="width: 50px;"></li>
+                        <li class="list-inline-item"><img src="/app/src/img/payment/visa.png" alt="" style="width: 50px;"></li>
                     </ul>
                     </p>
 
@@ -115,6 +116,11 @@
 
 </script>
 
+<script>
+    $(document).on('click','ul li', function () {
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+</script>
 
 </body>
 </html>

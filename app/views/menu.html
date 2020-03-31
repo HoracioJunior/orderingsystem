@@ -55,7 +55,7 @@
                             <h5 class="card-title">{$value.nome_produto}</h5>
                             <p class="card-text"><small>{$value.descricao_produto}</small></p>
 
-                            <div class="row">
+                            <div class="row btn-preco">
                                 <div class="col-md-6"><span class="preco text-muted">{function="formatarPreco($value.preco_produto)"} MZN</span></div>
                                 <div class="col-md-6">
 
@@ -81,7 +81,9 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 float-left">
-                                    <span>4.5 (89 Avaliações)</span>
+                                   
+                                    <span>{$value.RATE} ({$value.nr_avc} Avaliações)</span>
+                                   
                                 </div>
                             </div>
 
@@ -108,7 +110,9 @@
                                     <div class="col-8 mt-2" id="">
                                        <span class="estrelas" data-toggle="modal" onclick="showModal({$value.id_produto})" data-target="#myModal">
                                            <i class="rate"></i><span class="result">0 </span>
-                                            <small class="avaliacao"> 4.5 (89 Avaliações)</small>
+                                            <small class="avaliacao">
+                                            {$value.RATE} ({$value.nr_avc} Avaliações)
+                                            </small>
                                        </span>
 
                                     </div>
@@ -137,13 +141,13 @@
             <nav>
                 <ul class="pagination justify-content-center">
                     <li class="page-item ">
-                        <a class="page-link" href="" tabindex="-1" aria-disabled="true">Anterior</a>
+                        <a class="page-link" href=""><i class="fa fa-arrow-left"></i></a>
                     </li>
                     {loop="$pages"}
                     <li class="page-item"><a class="page-link" href="{$value.link}">{$value.page}</a></li>
                     {/loop}
                     <li class="page-item">
-                        <a class="page-link" href="#">Proximo</a>
+                        <a class="page-link" href=""><i class="fa fa-arrow-right"></i></a>
                     </li>
                 </ul>
             </nav>

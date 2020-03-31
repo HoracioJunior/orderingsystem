@@ -2,69 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79e2c214-2980-4ae1-b4b5-315b41479f2f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/gestor/novos-pedidos.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views-cache/carrinho.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views-cache/contacto.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views-cache/login.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Pedidos.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Pedidos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Produto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/dataTable/js/costumizadoDataTable2.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/assets/dataTable/js/costumizadoDataTable2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/vendors/addCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/vendors/addCart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/vendors/flutuante.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/vendors/flutuante.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/vendors/grid-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/vendors/grid-list.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/vendors/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/vendors/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/vendors/xhttp.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/vendors/xhttp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/cadastrar-item.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/cadastrar-item.5427530da476caf2197a65b50a817199.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/cadastrar-usuario.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/cadastrar.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/carrinho.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/categorias.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/categorias.5427530da476caf2197a65b50a817199.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/checkout.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/checkout_pickup.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/contacto.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/denied.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/depoimentos.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/detalhes.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/editar-item.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/editar-perfil.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/editar-perfil.5427530da476caf2197a65b50a817199.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/eliminar-conta.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/fab.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/footer.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views-cache/footer.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/footer.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/footer.5427530da476caf2197a65b50a817199.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/footer.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/header.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views-cache/header.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/header.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/header.5427530da476caf2197a65b50a817199.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/header.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/index.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views-cache/index.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/index.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/index.5427530da476caf2197a65b50a817199.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/index.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/list-usuarios.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/login.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/login.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/login.5427530da476caf2197a65b50a817199.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/menu.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views-cache/menu.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/menu.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/menu.5427530da476caf2197a65b50a817199.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/meu-perfil.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/minhas-ordens.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/mpesa.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/mudar-senha.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/mudar-senha.5427530da476caf2197a65b50a817199.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/mudar-senha.60e73f5b9cba30967bd9951fd407cd86.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/paypal.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/recuperar-senha.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/carrinho.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/carrinho.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/gestor/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/gestor/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/gestor/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/gestor/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rotas/cliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/cliente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rotas/funcoes.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/funcoes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rotas/gestor.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/gestor.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rotas/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/site.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -222,6 +174,7 @@
       <workItem from="1584197903441" duration="8226000" />
       <workItem from="1584311654203" duration="12953000" />
       <workItem from="1584503633177" duration="7595000" />
+      <workItem from="1584741129783" duration="11843000" />
     </task>
     <servers />
   </component>

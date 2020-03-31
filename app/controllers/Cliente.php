@@ -20,12 +20,10 @@ class Cliente extends Usuario
             if (password_verify($senha, $res[0]["senha_usuario"])) {
                 $_SESSION["usuario"] = $res[0];
                 $id = $_SESSION["usuario"]["id_usuario"];
-                $sessionId = mt_rand();
                 $con->query("insert into tb_logs (ipaddress,fk_id_usuario) VALUES (:ip, :id)", array(
                     ":ip" => $ipadd,
                     ":id" => $id
                 ));
-                header("Location: /admin");
             } else {
                 $msg = "Email ou senha do usuario forncedo estão errado";
                 Usuario::setLoginErro($msg);

@@ -79,10 +79,10 @@ $app->get('/logout', function () {
 $app->get('/menu', function () {
     $page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
 
-    //$produto = ProdutoC::listProduto();
     $pages = [];
-
     $produto = new ProdutoC();
+    $avaliar = new AvaliarC();
+
 
     $pagination = $produto->paginacao($page);
     for ($i = 1; $i <= $pagination["paginas"]; $i++) {
@@ -91,7 +91,6 @@ $app->get('/menu', function () {
             "page" => $i
         ]);
     }
-
     if (isset($_SESSION["usuario"])) {
         $dados = $_SESSION["usuario"];
         $page = new Page();
@@ -109,8 +108,8 @@ $app->get('/menu', function () {
             "dados" => $dados
         ));
     }
-
 });
+
 $app->get('/carrinho', function () {
     $page = new Page();
     $testemunhos = DepoimentoC::listarDepoimentos();
@@ -276,4 +275,8 @@ $app->post('/avaliar', function () {
     exit();
 });
 
+$app->get('/cadastrar-deliver', function () {
+    $page = new Page();
+    $page->setTpl("cadastrar-deliver");
 
+});

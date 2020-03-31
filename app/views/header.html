@@ -13,7 +13,9 @@
 	<link rel="stylesheet" href="/app/src/vendors/fontawesome/css/all.css">
 	<link rel="stylesheet" href="/app/src/vendors/owlcarousel/css/owl.carousel.min.css">
 	<link rel="stylesheet" href="/app/src/vendors/owlcarousel/css/owl.theme.default.min.css">
+	<script>
 
+	</script>
 </head>
 <body>
 <section class="preheader ">
@@ -30,14 +32,14 @@
 				</div>
 
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 section-btn">
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-6  my-account">
 						<a href="/cliente" class="float-right btn btn-secondary btn-header">
 							<i class="fa fa-user"></i>&nbsp;Minha Conta
 						</a>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6  my-account">
 						<a href="/login" class="float-right btn btn-secondary btn-header">
 							<i class="fa fa-sign-in-alt"></i>&nbsp;Iniciar Sessão
 						</a>
@@ -51,11 +53,11 @@
 	<nav class="navbar navbar-expand-lg  bgCabecalho">
 		<a class="navbar-brand" href="/">Order & Delivery</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
+			<i class="fa fa-hamburger"></i>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active">
+				<li class="nav-item">
 					<a class="nav-link" href="/">Inicio</a>
 				</li>
 				<li class="nav-item">
@@ -75,6 +77,9 @@
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="/cadastrar-usuario">Cadastra-se</a>
+				</li>
+				<li class="nav-item delivery-link">
+					<a class="nav-link " href="/cadastrar-deliver">Seja Delivery</a>
 				</li>
 
 

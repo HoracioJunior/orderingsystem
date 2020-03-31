@@ -1,4 +1,4 @@
-<section class="hero-section">
+<?php if(!class_exists('Rain\Tpl')){exit;}?><section class="hero-section">
     <div class="conteudo">
 
         <div >
@@ -34,25 +34,25 @@
                         </tr>
                         </thead>
                         <tbody>
-                        {loop="$lista"}
+                        <?php $counter1=-1;  if( isset($lista) && ( is_array($lista) || $lista instanceof Traversable ) && sizeof($lista) ) foreach( $lista as $key1 => $value1 ){ $counter1++; ?>
                         <tr>
-                            <th scope="row"><img src="/app/uploads/{$value.img_item}" alt=""></th>
-                            <td>{$value.nome_produto}</td>
-                            <td>{function="formatarPreco($value.preco_produto)"}</td>
+                            <th scope="row"><img src="/app/uploads/<?php echo htmlspecialchars( $value1["img_item"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" alt=""></th>
+                            <td><?php echo htmlspecialchars( $value1["nome_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                            <td><?php echo formatarPreco($value1["preco_produto"]); ?></td>
                             <td class="product-quantity">
                                 <div class="quantity buttons_added">
-                                    <input type="button" class="minus" value="-" onclick="window.location.href = '/carrinho/{$value.id_produto}/menos'">
-                                    <input type="number" size="4" class="input-text qty text" title="Qty" value="{$value.quantidade}" min="0" step="1">
-                                    <input type="button" class="plus" value="+" onclick="window.location.href = '/carrinho/{$value.id_produto}/add'">
+                                    <input type="button" class="minus" value="-" onclick="window.location.href = '/carrinho/<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/menos'">
+                                    <input type="number" size="4" class="input-text qty text" title="Qty" value="<?php echo htmlspecialchars( $value1["quantidade"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" min="0" step="1">
+                                    <input type="button" class="plus" value="+" onclick="window.location.href = '/carrinho/<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/add'">
                                 </div>
                             </td>
-                            <td>{function="formatarPreco($value.vlTotal)"}</td>
-                            <td><button class="btn btn-danger btn-sm" type="button" onclick="window.location.href = '/carrinho/{$value.id_produto}/deleteAll'">
+                            <td><?php echo formatarPreco($value1["vlTotal"]); ?></td>
+                            <td><button class="btn btn-danger btn-sm" type="button" onclick="window.location.href = '/carrinho/<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/deleteAll'">
                                  <i class="fas fa-trash" ></i>
                             </button>
                                </td>
                         </tr>
-               {/loop}
+               <?php } ?>
 
                         </tbody>
                     </table>
@@ -66,7 +66,7 @@
                 <form action="/next-step" method="post">
                 <div class="row subtotal">
                     <div class="col-6 sub">Subtotal:</div>
-                    <div class="col-6 sub text-right">{loop="$subtotal"}{function="formatarPreco($value.Subtotal)"}{/loop} MZN</div>
+                    <div class="col-6 sub text-right"><?php $counter1=-1;  if( isset($subtotal) && ( is_array($subtotal) || $subtotal instanceof Traversable ) && sizeof($subtotal) ) foreach( $subtotal as $key1 => $value1 ){ $counter1++; ?><?php echo formatarPreco($value1["Subtotal"]); ?><?php } ?> MZN</div>
                 </div>
                 <div class="row delivery-pickup">
                     <div class="col-12 ">
@@ -97,7 +97,7 @@
                 <hr>
                 <div class="row mb-3 total">
                     <div class="col-md-6">Total a Pagar:</div>
-                    <div class="col-md-6 text-right ">{loop="$subtotal"}{function="formatarPreco($value.Subtotal+150)"}{/loop} MZN</div>
+                    <div class="col-md-6 text-right "><?php $counter1=-1;  if( isset($subtotal) && ( is_array($subtotal) || $subtotal instanceof Traversable ) && sizeof($subtotal) ) foreach( $subtotal as $key1 => $value1 ){ $counter1++; ?><?php echo formatarPreco($value1["Subtotal"]+150); ?><?php } ?> MZN</div>
                 </div>
 
                 <div class="row mb-3 total">
@@ -114,5 +114,5 @@
         </div>
     </div>
 </section>
-{include="testemunhos"}
+<?php require $this->checkTemplate("testemunhos");?>
 

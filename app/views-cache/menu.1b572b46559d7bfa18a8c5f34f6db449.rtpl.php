@@ -55,7 +55,7 @@
                             <h5 class="card-title"><?php echo htmlspecialchars( $value1["nome_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h5>
                             <p class="card-text"><small><?php echo htmlspecialchars( $value1["descricao_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?></small></p>
 
-                            <div class="row">
+                            <div class="row btn-preco">
                                 <div class="col-md-6"><span class="preco text-muted"><?php echo formatarPreco($value1["preco_produto"]); ?> MZN</span></div>
                                 <div class="col-md-6">
 
@@ -81,7 +81,9 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 float-left">
-                                    <span>4.5 (89 Avaliações)</span>
+                                   
+                                    <span><?php echo htmlspecialchars( $value1["RATE"], ENT_COMPAT, 'UTF-8', FALSE ); ?> (<?php echo htmlspecialchars( $value1["nr_avc"], ENT_COMPAT, 'UTF-8', FALSE ); ?> Avaliações)</span>
+                                   
                                 </div>
                             </div>
 
@@ -108,7 +110,9 @@
                                     <div class="col-8 mt-2" id="">
                                        <span class="estrelas" data-toggle="modal" onclick="showModal(<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>)" data-target="#myModal">
                                            <i class="rate"></i><span class="result">0 </span>
-                                            <small class="avaliacao"> 4.5 (89 Avaliações)</small>
+                                            <small class="avaliacao">
+                                            <?php echo htmlspecialchars( $value1["RATE"], ENT_COMPAT, 'UTF-8', FALSE ); ?> (<?php echo htmlspecialchars( $value1["nr_avc"], ENT_COMPAT, 'UTF-8', FALSE ); ?> Avaliações)
+                                            </small>
                                        </span>
 
                                     </div>
@@ -137,13 +141,13 @@
             <nav>
                 <ul class="pagination justify-content-center">
                     <li class="page-item ">
-                        <a class="page-link" href="" tabindex="-1" aria-disabled="true">Anterior</a>
+                        <a class="page-link" href=""><i class="fa fa-arrow-left"></i></a>
                     </li>
                     <?php $counter1=-1;  if( isset($pages) && ( is_array($pages) || $pages instanceof Traversable ) && sizeof($pages) ) foreach( $pages as $key1 => $value1 ){ $counter1++; ?>
                     <li class="page-item"><a class="page-link" href="<?php echo htmlspecialchars( $value1["link"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><?php echo htmlspecialchars( $value1["page"], ENT_COMPAT, 'UTF-8', FALSE ); ?></a></li>
                     <?php } ?>
                     <li class="page-item">
-                        <a class="page-link" href="#">Proximo</a>
+                        <a class="page-link" href=""><i class="fa fa-arrow-right"></i></a>
                     </li>
                 </ul>
             </nav>

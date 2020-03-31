@@ -95,6 +95,7 @@ $app->get('/gestor/menu/menu-itens', function() {
     ));
 
 });
+
 $app->get('/gestor/menu/:idProduto/eliminar-item', function($idCategoria) {
     UsuarioC::verficarSessao(2);
     ProdutoC::deleteById($idCategoria);

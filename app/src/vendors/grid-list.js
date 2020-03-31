@@ -25,3 +25,13 @@ function mostrarList() {
 	listmenu.classList.remove("esconder");
 	gridmenu.classList.add("esconder");
 }
+
+function mostrar(id) {
+	if (id===0){
+		document.getElementById("select").style.display='block';
+		document.getElementById("taxa-delivery").style.display='flex';
+	}else {
+		document.getElementById("select").style.display='none';
+		document.getElementById("taxa-delivery").style.display='none';
+	}
+}

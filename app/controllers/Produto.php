@@ -36,8 +36,11 @@ class Produto
     }
     public static function  listProduto(){
         $con= new Conexao();
-        return $con ->select("SELECT * FROM tb_produto");
+        return $con ->select("SELECT a.id_produto, a.nome_produto,a.descricao_produto,a.preco_produto, a.img_item,a.produto_status, 
+(SELECT ROUND(AVG(r.qtd_estrelas),1) FROM tb_rating r WHERE r.fk_id_produto =a.id_produto)as RATE,(SELECT COUNT(r.id_rating) FROM tb_rating r WHERE r.fk_id_produto = a.id_produto) as nr_avc
+FROM tb_produto a");
     }
+
     public static function  selectProdutoById(int $id){
         $conn = new Conexao();
         return $conn ->select("SELECT * FROM tb_produto where id_produto = :id", array(
@@ -81,20 +84,18 @@ class Produto
         }
     }
 
-    public static function rating($id){
-        $conn = new Conexao();
-        $resultado = $conn ->select("SELECT fk_id_produto,COUNT(fk_id_produto) as qtd, 
-                                    FORMAT( AVG(qtd_estrelas),1) as media 
-                                    FROM tb_rating where fk_id_produto =:id  GROUP BY fk_id_produto",
-            array(":id"=>$id)
-        );
-        return $resultado;
-    }
+
+    
     public function  paginacao($page=1,$itensPerPage =6){
         $con= new Conexao();
         $start = ($page-1)* $itensPerPage;
 
-        $result= $con ->select("SELECT * FROM `tb_produto` LIMIT $start,$itensPerPage ");
+        $result= $con ->select("SELECT a.id_produto, a.nome_produto,a.descricao_produto,a.preco_produto, a.img_item,a.produto_status, 
+            (SELECT ROUND(AVG(r.qtd_estrelas),1) FROM tb_rating r WHERE r.fk_id_produto =a.id_produto)as RATE,
+            (SELECT COUNT(r.id_rating) FROM tb_rating r WHERE r.fk_id_produto = a.id_produto) as nr_avc
+            FROM tb_produto a LIMIT $start,$itensPerPage ");
+
+        // $result= $con ->select("SELECT * FROM `tb_produto` LIMIT $start,$itensPerPage ");
         $contador = $con->select("SELECT COUNT(*) as nrTotal FROM `tb_produto`");
 
         return[

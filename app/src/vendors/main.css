@@ -121,6 +121,11 @@ nav .ml-auto{
     border-bottom: 2px solid #fff;
     border-top: 2px solid #fff;
 }
+.delivery-link{
+    background-color: #0c5460;
+    border-radius: 5px;
+}
+
 #header{
  position: relative;
  top: 0;
@@ -754,27 +759,6 @@ td.product-quantity div.quantity {
 /*=================FAB========================================*/
 
 /*=================FIM FAB========================================*/
-/* Tablet Layout: 768px. */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-
-}
-
-/* Wide Mobile Layout: 480px. */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-
-}
-/* Mobile Layout: 320px. */
-@media only screen and (max-width: 480px) {
-
-    div.quantity input.plus, div.quantity input.minus {
-        display: none;
-    }
-    .switch-menu{
-        display: none !important;
-    }
-
-}
-
 
 .pos_rel{position:relative; float:left;}
 .counter {
@@ -844,3 +828,95 @@ address {
     font-weight: 300;
     line-height: 1.4;
 }
+
+/*================MIDIA Queries========================================*/
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+}
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 480px) {
+    .navbar-toggler{
+        background-color: #0c5460 !important;
+        color: #ffffff !important;
+    }
+
+    div.quantity input.plus, div.quantity input.minus {
+        display: none;
+    }
+    .switch-menu{
+        display: none !important;
+    }
+
+    .section-btn .my-account{
+        display: flex !important;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .hero-section{
+        height: 300px;
+        width: 100%;
+    }
+    .conteudo {
+        padding: 20px 20px;
+
+    }
+    .conteudo div h1{
+        font-style: italic;
+        font-weight: bold;
+        font-family: 'Droid Serif';
+    }
+    .conteudo div h6{
+        font-family: 'Noto Color Emoji';
+    }
+
+    .formulario{
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+
+    .search-input{
+        flex-direction: row;
+        margin-right: 10px;
+        width: 100% !important;
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+    .searchbar{
+        margin-bottom: auto;
+        margin-top: auto;
+        height: 60px;
+    }
+    .bnt-search{
+        background-color: #008F95 !important;
+        border:none !important;
+
+    }
+    .searchbar  button{
+        justify-content: center;
+        margin-right: 20%;
+        margin-left: 15%;
+        flex-basis: 100%;
+    }
+    /*====================================Card Product*/
+    .card-title{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .preco{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .btn-preco{
+    flex-direction: column !important;
+        flex-wrap: nowrap;
+        flex-basis: max-content;
+    }
+}
+
