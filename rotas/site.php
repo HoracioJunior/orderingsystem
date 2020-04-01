@@ -275,8 +275,3 @@ $app->post('/avaliar', function () {
     exit();
 });
 
-$app->get('/cadastrar-deliver', function () {
-    $page = new Page();
-    $page->setTpl("cadastrar-deliver");
-
-});

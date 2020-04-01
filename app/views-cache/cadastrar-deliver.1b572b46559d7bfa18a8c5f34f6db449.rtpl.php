@@ -7,7 +7,7 @@
 		<div class="row mb-2 ml-1">
             <h5 class="subtitulo">Dados Da Empresa</h5>
         </div>
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form action="/cadastrar-deliver" method="POST" enctype="multipart/form-data">
 		<div class="row mb-2">
 			<div class="col-md-6">
                 <label for="nome_empresa">Nome da Empresa<strong class="text-danger">*</strong></label>
@@ -107,19 +107,19 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <label for="senha">Palavra-Pass<strong class="text-danger">*</strong></label>
+                <label for="acesso_senha">Palavra-Pass<strong class="text-danger">*</strong></label>
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fa fa-key"></i></span>
                     </div>
-                    <input type="password" name="senha" id="senha" class="form-control rounded-2" placeholder="infrome a senha" required>
+                    <input type="password" name="acesso_senha" id="acesso_senha" class="form-control rounded-2" placeholder="infrome a senha" required>
                     <div class="invalid-feedback">
                         informe a senha
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <label for="senha">Confirmar Palavra-Pass<strong class="text-danger">*</strong></label>
+                <label for="c_senha">Confirmar Palavra-Pass<strong class="text-danger">*</strong></label>
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fa fa-key"></i></span>
@@ -137,6 +137,11 @@
                <label for="termos" class="custom-control-label">Concordo com os <a href="/termos">Termos e Condições de Uso<b class="text-danger">*</b></a> </label>
             </div>
 		</div>
+            <div class="row mb-2">
+                <div class="input-group">
+                    <button type="submit" class="btn btn-secondary bnt-search">Cadastrar</button>
+                </div>
+            </div>
 	</form>
 	</div>
 </section>

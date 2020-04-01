@@ -31,7 +31,8 @@ class Produto
             Produto::setSucesso($sucesso);
 
         }else{
-            echo "tas fudido";
+            $erro="Nao foi possivela Adicionar o Item";
+            Produto::setErro($erro);
         }
     }
     public static function  listProduto(){
@@ -126,6 +127,30 @@ FROM tb_produto a");
     {
 
         $_SESSION["sucessoProduto"] = NULL;
+
+    }
+    public static function setErro($msg)
+    {
+
+        $_SESSION["erroProduto"] = $msg;
+
+    }
+
+    public static function getErro()
+    {
+
+        $msg = (isset($_SESSION["erroProduto"]) && $_SESSION["erroProduto"]) ? $_SESSION["erroProduto"] : '';
+
+        Produto::clearErro();
+
+        return $msg;
+
+    }
+
+    public static function clearErro()
+    {
+
+        $_SESSION["erroProduto"] = NULL;
 
     }
 }
