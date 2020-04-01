@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79e2c214-2980-4ae1-b4b5-315b41479f2f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/Deliver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/Deliver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/uploads/alvara/5e8409b39253f.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/uploads/alvara/5e840e06dbca7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/uploads/alvara/5e840e8dca86a.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/confirmacao.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rotas/deliver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Produto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/vendors/addCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/vendors/addCart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/cadastrar-deliver.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/cadastrar-deliver.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/cadastrar-deliver.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cadastrar-deliver.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rotas/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/site.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/uploads/alvara/5e8409b39253f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/uploads/alvara/5e840e06dbca7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/uploads/alvara/5e840e8dca86a.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +162,7 @@
       <workItem from="1584311654203" duration="12953000" />
       <workItem from="1584503633177" duration="7595000" />
       <workItem from="1584741129783" duration="11843000" />
-      <workItem from="1585694424500" duration="10287000" />
+      <workItem from="1585694424500" duration="10616000" />
     </task>
     <servers />
   </component>
