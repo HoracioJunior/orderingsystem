@@ -2,6 +2,8 @@
 
 
 namespace controllers;
+use http\Client\Request;
+use http\Client\Response;
 use models\Carrinho as CarrinhoM;
 use models\Conexao;
 
@@ -188,5 +190,13 @@ public function listCart()
             echo "LINHA: ".$e->getLine()."\n";
         }
     }
+
+    /*public function addTest(Request $request, Response $response) : Response{
+        if ($request->getHeader('X-Requested-With') === 'XMLHttpRequest') {
+            return $response;
+        } else {
+            return $response->withRedirect($request->getHeader('Referer'));
+        }
+    }*/
 
 }

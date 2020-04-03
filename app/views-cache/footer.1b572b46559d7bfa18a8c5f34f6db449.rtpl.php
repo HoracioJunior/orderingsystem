@@ -73,6 +73,7 @@
 </footer>
 
 <script src="/app/src/vendors/jquery/jquery.min.js" ></script>
+<script src="/app/src/vendors/sweetAlert/sweetalert2.all.min.js" ></script>
 <script src="/app/src/vendors/bootstrap/js/bootstrap.js"></script>
 <script src="/app/src/vendors/datatables/jquery.dataTables.min.js"></script>
 <script src="/app/src/vendors/datatables/dataTables.bootstrap.min.js"></script>

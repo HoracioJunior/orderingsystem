@@ -177,6 +177,14 @@ class Usuario
         return $result[0];
     }
 
+    public  function logs()
+    {
+        $conn = new Conexao();
+        $result = $conn->select("SELECT a.id_logs, a.ipaddress, a.inicio_sessao,a.fim_sessao, a.fk_id_usuario, b.nome_usuario, b.fk_id_nivel_acesso 
+                                FROM tb_logs a INNER JOIN tb_usuarios b ON b.id_usuario = a.fk_id_usuario");
+        return $result;
+    }
+
     //Seccao de erros
     public static function setExiste($msg)
     {

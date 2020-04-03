@@ -169,13 +169,22 @@ $app->get('/carrinho/:idProduto/deleteAll', function ($idProduto) {
     $carrinho->deleteAll($idProduto);
 
 });
-$app->post('/carrinho/adicionar', function () {
+/*$app->post('/carrinho/adicionar', function () {
     $produtoId = $_POST["id_produto"];
     $carrinho = new CarrinhoC();
     $carrinho->addProduct($produtoId);
     header("Location: /carrinho");
     exit();
+});*/
+$app->post('/carrinho/adicionar', function () {
+    $produtoId = $_POST["id_produto"];
+    $carrinho = new CarrinhoC();
+    $carrinho->addProduct($produtoId);
+    exit();
 });
+
+/*$app->post('/carrinho/adicionar', 'CarrinhoC::addTest')->setName('adicionar');*/
+
 $app->post('/depoimentos', function () {
     UsuarioC::verficarSessao(3);
     $depoimentoM = new DepoimentoM();

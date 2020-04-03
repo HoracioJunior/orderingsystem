@@ -52,13 +52,11 @@ $app->get('/admin', function() {
     UsuarioC::verficarSessao(1);
         $pageAdmin = new PageAdmin();
         $pageAdmin->setTpl("index",array(
-            "usuario"=>$opt= $_SESSION["usuario"],
-            "totalUsers"=>UsuarioC::countUsers()
+            "usuario"=>$opt= $_SESSION["usuario"]
         ));
 
-
-
 });
+
 
 $app->get('/admin/usuario/cadastrar-usuario', function() {
     UsuarioC::verficarSessao(1);
@@ -110,13 +108,35 @@ $app->get('/admin/usuarios/list-usuarios/:id_usuario/desbloquear', function($id_
 $app->get('/admin/perfil/editar-perfil', function() {
     UsuarioC::verficarSessao(1);
     $pageAdmin = new PageAdmin();
-    $nivelUsuario = UsuarioC::listNiveis();
     $dados = $_SESSION["usuario"];
     $pageAdmin->setTpl("editar-perfil", array(
         "dados"=>$dados
     ));
 
 });
+
+
+/*$app->get('/admin/perfil/mudar-senha', function() {
+    UsuarioC::verficarSessao(1);
+    $pageAdmin = new PageAdmin();
+    $dados = $_SESSION["usuario"];
+    $pageAdmin->setTpl("mudar-senha", array(
+        "dados"=>$dados,
+        "feedbacks"=>UsuarioC::getFeedback(),
+        "errorfeedbacks"=>UsuarioC::getErrorFeedback()
+    ));
+});*/
+$app->get('/admin/minha-conta', function() {
+    UsuarioC::verficarSessao(1);
+    $pageAdmin = new PageAdmin();
+    $dados = $_SESSION["usuario"];
+    $pageAdmin->setTpl("perfil", array(
+        "dados"=>$dados,
+        "feedbacks"=>UsuarioC::getFeedback(),
+        "errorfeedbacks"=>UsuarioC::getErrorFeedback()
+    ));
+});
+
 $app->post('/admin/perfil/editar-perfil', function() {
     UsuarioC::verficarSessao(1);
     $UsuarioM = new UsuarioM();
@@ -127,21 +147,8 @@ $app->post('/admin/perfil/editar-perfil', function() {
     $UsuarioM->setIdUsuario($_POST["id_usuario"]);
     $userC= new UsuarioC();
     $userC->updatePerfil($UsuarioM);
-    header("Location: /admin/perfil/editar-perfil");
+    header("Location: /admin/minha-conta");
     exit();
-
-});
-
-
-$app->get('/admin/perfil/mudar-senha', function() {
-    UsuarioC::verficarSessao(1);
-    $pageAdmin = new PageAdmin();
-    $dados = $_SESSION["usuario"];
-    $pageAdmin->setTpl("mudar-senha", array(
-        "dados"=>$dados,
-        "feedbacks"=>UsuarioC::getFeedback(),
-        "errorfeedbacks"=>UsuarioC::getErrorFeedback()
-    ));
 
 });
 $app->post('/admin/perfil/mudar-senha', function() {
@@ -150,9 +157,24 @@ $app->post('/admin/perfil/mudar-senha', function() {
     $userM ->setSenhaUsuario($_POST["senha_nova"]);
     $userM -> setIdUsuario($_POST["id_usuario"]);
     UsuarioC::changeSenha($userM,$_POST["senha_antiga"]);
-    header("Location: /admin/perfil/mudar-senha");
+    header("Location: /admin/minha-conta");
     exit();
 
+});
+
+$app->get('/admin/acessos-de-usuarios', function (){
+    UsuarioC::verficarSessao(1);
+    $usuario = new UsuarioC();
+    $logs = $usuario->logs();
+    $pageAdmin = new PageAdmin();
+    $pageAdmin->setTpl("logs", array(
+        "logs"=>$logs
+    ));
+});
+$app->get('/admin/manutencao-do-sistema', function (){
+    UsuarioC::verficarSessao(1);
+    $pageAdmin = new PageAdmin();
+    $pageAdmin->setTpl("manutencao");
 });
 /*===========================================FIM DAS ROTAS USUARIOS========================================*/
 

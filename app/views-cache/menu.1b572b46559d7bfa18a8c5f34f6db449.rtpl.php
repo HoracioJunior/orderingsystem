@@ -62,7 +62,7 @@
                                     <?php if( $value1["produto_status"]=='indisponivel' ){ ?>
                                     <button class="btn btn-danger disabled float-right">Indisponível</button>
                                     <?php }else{ ?>
-                                    <form action="/carrinho/adicionar" id="form-adiconar" method="post">
+                                    <form  class="form-adiconar" method="post">
                                         <input type="hidden" name="id_produto" value="<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                                         <button type="submit" class="btn btn-outline-primary btn-addcart">Peça agora</button>
                                     </form>
@@ -92,6 +92,7 @@
                 </div>
                 <?php } ?>
             </div>
+
         </div>
 
 
@@ -120,7 +121,7 @@
                                         <?php if( $value1["produto_status"]=='indisponivel' ){ ?>
                                         <button class="btn btn-danger disabled float-right btn-sm">Indisponível</button>
                                         <?php }else{ ?>
-                                        <form action="/carrinho/adicionar" method="post">
+                                        <form class="form-adiconar" method="post">
                                             <input type="hidden" id="campo_<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" name="id_produto" value="<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                                             <button type="submit" class="btn btn-outline-primary btn-addcart btn-sm">Peça agora</button>
                                         </form>
@@ -187,5 +188,5 @@
 
         </div>
     </div>
-</div>
 
+</div>

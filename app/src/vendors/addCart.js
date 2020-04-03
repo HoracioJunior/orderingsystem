@@ -1,15 +1,21 @@
-/*window.onload = function () {
 
-  var btn_carrinho = document.querySelector("#btn-carrinho");
-   var form_adicionar = document.querySelector("#form-adicionar");
-
-    form_adicionar.onsubmit = function (event) {
-        event.preventDefault();
-        //var form = new FormData(form_adicionar);
-        console.log("heiiiiiii");
-    }
-   fetch("http://ordering.store/menu").
-   then(resp=>resp.json()).then(data=>console.log(data));
-
-}*/
+$('.form-adiconar').submit(function (e) {
+    e.preventDefault();
+    $.ajax({
+        url: '/carrinho/adicionar',
+        type: 'POST',
+        data: $(this).serialize(),
+        success: function () {
+            Swal.fire({
+                timer: 2500,
+                icon: 'success',
+                title: 'O Item foi adicionado ao Carrinho',
+                showConfirmButton: false
+            })
+        },
+        error: function () {
+            console.log('it failed!');
+        }
+    });
+});
 
