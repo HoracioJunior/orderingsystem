@@ -1,4 +1,4 @@
-<!-- Content Wrapper. Contains page content -->
+<?php if(!class_exists('Rain\Tpl')){exit;}?><!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -25,11 +25,11 @@
                 <form action="/gestor/menu/editar-item" method="post" enctype="multipart/form-data">
                     <div class="row row-formatacao">
                         <div class="col-md-4 col-formatacao">
-                            <input type="hidden" name="id_produto" value="{$produto.id_produto}">
+                            <input type="hidden" name="id_produto" value="<?php echo htmlspecialchars( $produto["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                             <label >Nome do Item</label>
                             <div class="input-group">
                                 <span class="input-group-addon" ><i class="fa fa-barcode"></i></span>
-                                <input type="text" value="{$produto.nome_produto}" class="form-control" placeholder="Nome do Item" name="nome_produto" aria-describedby="basic-addon1">
+                                <input type="text" value="<?php echo htmlspecialchars( $produto["nome_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="form-control" placeholder="Nome do Item" name="nome_produto" aria-describedby="basic-addon1">
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -38,9 +38,9 @@
                                 <span class="input-group-addon" ><i class="fa fa-align-justify"></i></span>
                                 <select class="form-control" name="fk_categoria">
                                     <option>==Escolha a Categoria==</option>
-                                    {loop="$categoria"}
-                                    <option value="{$value.id_produto_ctg}">{$value.nome_categoria}</option>
-                                    {/loop}
+                                    <?php $counter1=-1;  if( isset($categoria) && ( is_array($categoria) || $categoria instanceof Traversable ) && sizeof($categoria) ) foreach( $categoria as $key1 => $value1 ){ $counter1++; ?>
+                                    <option value="<?php echo htmlspecialchars( $value1["id_produto_ctg"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><?php echo htmlspecialchars( $value1["nome_categoria"], ENT_COMPAT, 'UTF-8', FALSE ); ?></option>
+                                    <?php } ?>
                                 </select>
                             </div>
                         </div>
@@ -48,7 +48,7 @@
                             <label >Preço do Item</label>
                             <div class="input-group">
                                 <span class="input-group-addon" ><i class="fa fa-money-bill-wave"></i></span>
-                                <input type="text" value="{$produto.preco_produto}" class="form-control" name="preco_produto" placeholder="preço do item" aria-describedby="basic-addon1">
+                                <input type="text" value="<?php echo htmlspecialchars( $produto["preco_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="form-control" name="preco_produto" placeholder="preço do item" aria-describedby="basic-addon1">
                             </div>
                         </div>
                     </div>
@@ -56,14 +56,14 @@
                         <div class="col-md-4">
                             <label >Descrição do Item</label>
                             <div class="input-group">
-                                <textarea value="{$produto.nome_produto}" class="form-control" rows="2" cols="45" name="descricao_produto"></textarea>
+                                <textarea value="<?php echo htmlspecialchars( $produto["nome_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="form-control" rows="2" cols="45" name="descricao_produto"></textarea>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <label >Foto do item</label>
                             <div class="input-group">
                                 <span class="input-group-addon" id="basic-addon1 "><i class="fa fa-camera"></i></span>
-                                <input type="file" value="{$produto.img_item}" class="form-control" name="img" placeholder="Imagem ou Foto do produto" aria-describedby="basic-addon1">
+                                <input type="file" value="<?php echo htmlspecialchars( $produto["img_item"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="form-control" name="img" placeholder="Imagem ou Foto do produto" aria-describedby="basic-addon1">
                             </div>
                         </div>
 

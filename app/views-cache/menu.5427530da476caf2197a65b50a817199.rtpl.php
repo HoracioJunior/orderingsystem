@@ -1,4 +1,4 @@
-<!-- Content Wrapper. Contains page content -->
+<?php if(!class_exists('Rain\Tpl')){exit;}?><!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -7,7 +7,7 @@
             <small>Lista de Itens do Cardapio</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="/gestor/menu/menu-itens"><i class="fa fa-tachometer-alt"></i> Cardapio</a></li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Cardapio</a></li>
             <li class="active">Lista de Itens</li>
         </ol>
     </section>
@@ -16,14 +16,14 @@
     <section class="content">
 
         <div class="box box-primary">
-                {if="$sucessoDelete != ''"}
+                <?php if( $sucessoDelete != '' ){ ?>
                 <div class="alert alert-success" role="alert">
-                    <b>{$sucessoDelete}</b>
+                    <b><?php echo htmlspecialchars( $sucessoDelete, ENT_COMPAT, 'UTF-8', FALSE ); ?></b>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                {/if}
+                <?php } ?>
             <div class="box-body">
                 <table id="tabela" class="table  table-responsive table-striped table-bordered">
                     <thead class="px-10">
@@ -37,22 +37,22 @@
                     </tr>
                     </thead>
                     <tbody>
-                    {loop="$produto"}
+                    <?php $counter1=-1;  if( isset($produto) && ( is_array($produto) || $produto instanceof Traversable ) && sizeof($produto) ) foreach( $produto as $key1 => $value1 ){ $counter1++; ?>
                     <tr>
-                        <th >{$value.id_produto}</th>
+                        <th ><?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?></th>
                         <td>
-                            <img src="/app/uploads/{$value.img_item}" style="width: 150px; height: 100px;" alt="imagem do produto">
+                            <img src="/app/uploads/<?php echo htmlspecialchars( $value1["img_item"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" style="width: 150px; height: 100px;" alt="imagem do produto">
                         </td>
-                        <td>{$value.nome_produto}</td>
-                        <td>{$value.descricao_produto}</td>
-                        <td>{$value.preco_produto}</td>
+                        <td><?php echo htmlspecialchars( $value1["nome_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                        <td><?php echo htmlspecialchars( $value1["descricao_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                        <td><?php echo htmlspecialchars( $value1["preco_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                         <td>
-                            <a href="/gestor/menu/{$value.id_produto}/editar-item"  >Editar <i class="fa fa-edit "></i>
+                            <a href="/gestor/menu/<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/editar-item"  >Editar <i class="fa fa-edit "></i>
                             </a>
-                            <a href="/gestor/menu/{$value.id_produto}/eliminar-item" class="text-danger ml-2">Eliminar <i class="fa fa-trash"></i></a>
+                            <a href="/gestor/menu/<?php echo htmlspecialchars( $value1["id_produto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/eliminar-item" class="text-danger ml-2">Eliminar <i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
-                    {/loop}
+                    <?php } ?>
                     </tbody>
                 </table>
             </div>

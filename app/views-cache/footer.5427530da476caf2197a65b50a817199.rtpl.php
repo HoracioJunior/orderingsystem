@@ -1,57 +1,103 @@
-<?php if(!class_exists('Rain\Tpl')){exit;}?><div class="footer">
-    <div class="footer-inner">
-        <div class="footer-content">
-						<span class="bigger-120">
-							<span class="blue bolder">FastFood</span>
-							 &copy; 2020
-						</span>
-
-            &nbsp; &nbsp;
-        </div>
+<?php if(!class_exists('Rain\Tpl')){exit;}?><footer class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+        Anything you want
     </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+</footer>
+
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+        <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+        <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <!-- Home tab content -->
+        <div class="tab-pane active" id="control-sidebar-home-tab">
+            <h3 class="control-sidebar-heading">Recent Activity</h3>
+            <ul class="control-sidebar-menu">
+                <li>
+                    <a href="javascript:;">
+                        <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+                        <div class="menu-info">
+                            <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                            <p>Will be 23 on April 24th</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <!-- /.control-sidebar-menu -->
+
+            <h3 class="control-sidebar-heading">Tasks Progress</h3>
+            <ul class="control-sidebar-menu">
+                <li>
+                    <a href="javascript:;">
+                        <h4 class="control-sidebar-subheading">
+                            Custom Template Design
+                            <span class="pull-right-container">
+                  <span class="label label-danger pull-right">70%</span>
+                </span>
+                        </h4>
+
+                        <div class="progress progress-xxs">
+                            <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <!-- /.control-sidebar-menu -->
+
+        </div>
+        <!-- /.tab-pane -->
+        <!-- Stats tab content -->
+        <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+        <!-- /.tab-pane -->
+        <!-- Settings tab content -->
+        <div class="tab-pane" id="control-sidebar-settings-tab">
+            <form method="post">
+                <h3 class="control-sidebar-heading">General Settings</h3>
+
+                <div class="form-group">
+                    <label class="control-sidebar-subheading">
+                        Report panel usage
+                        <input type="checkbox" class="pull-right" checked>
+                    </label>
+
+                    <p>
+                        Some information about this general settings option
+                    </p>
+                </div>
+                <!-- /.form-group -->
+            </form>
+        </div>
+        <!-- /.tab-pane -->
+    </div>
+</aside>
+<!-- /.control-sidebar -->
+<!-- Add the sidebar's background. This div must be placed
+     immediately after the control sidebar -->
+<div class="control-sidebar-bg"></div>
 </div>
+<!-- ./wrapper -->
 
-<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
-    <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
-</a>
-</div><!-- /.main-container -->
+<!-- REQUIRED JS SCRIPTS -->
 
-<script src="/app/src/assets/js/jquery-2.1.4.min.js"></script>
-<script type="text/javascript">
-    if('ontouchstart' in document.documentElement) document.write("<script src='/app/src/assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
-</script>
-<script src="/app/src/assets/js/bootstrap.min.js"></script>
-<script src="/app/src/assets/js/jquery-ui.custom.min.js"></script>
-<script src="/app/src/assets/js/jquery.ui.touch-punch.min.js"></script>
-<script src="/app/src/assets/js/jquery.easypiechart.min.js"></script>
-<script src="/app/src/assets/js/jquery.sparkline.index.min.js"></script>
-<script src="/app/src/assets/js/jquery.flot.min.js"></script>
-<script src="/app/src/assets/js/jquery.flot.pie.min.js"></script>
-<script src="/app/src/assets/js/jquery.flot.resize.min.js"></script>
-<!-- ace scripts -->
-<script src="/app/src/assets/js/ace-elements.min.js"></script>
-<script src="/app/src/assets/js/ace.min.js"></script>
-<script src="/app/src/assets/charts/Chart.js"></script>
-<script src="/app/src/assets/charts/customCharts.js"></script>
-<!-- dataTable Files-->
-<script src="/app/src/assets/dataTable/js/jquery.dataTables.min.js"></script>
-<script src="/app/src/assets/dataTable/js/dataTables.bootstrap.min.js"></script>
-<script src="/app/src/assets/dataTable/js/buttons.bootstrap.min.js"></script>
-<script src="/app/src/assets/dataTable/js/dataTables.buttons.min.js"></script>
-<script src="/app/src/assets/dataTable/js/buttons.flash.min.js"></script>
-<script src="/app/src/assets/dataTable/js/jszip.min.js"></script>
-<script src="/app/src/assets/dataTable/js/pdfmake.min.js"></script>
-<script src="/app/src/assets/dataTable/js/vfs_fonts.js"></script>
-<script src="/app/src/assets/dataTable/js/buttons.html5.min.js"></script>
-<script src="/app/src/assets/dataTable/js/buttons.colVis.min.js"></script>
-<script src="/app/src/assets/dataTable/js/buttons.print.min.js"></script>
-<!--<script src="/app/src/assets/dataTable/js/costumizadoDataTable.js"></script>
-<script src="/app/src/assets/dataTable/js/costumizadoDataTable2.js"></script>-->
+<!-- jQuery 2.2.3 -->
+<script src="/app/src/admin/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="/app/src/admin/bootstrap/js/bootstrap.min.js"></script>
+<script src="/app/src/admin/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="/app/src/admin/plugins/datatables/dataTables.bootstrap.min.js"></script>
+<script src="/app/src/admin/plugins/datatables/costumizado.js"></script>
+<!-- AdminLTE App -->
+<script src="/app/src/admin/dist/js/app.min.js"></script>
 
-
-<script>
-    $(document).ready(function() {
-        $('#tabela').DataTable()});
-</script>
 </body>
 </html>
+

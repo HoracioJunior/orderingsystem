@@ -1,4 +1,4 @@
-<!-- Content Wrapper. Contains page content -->
+<?php if(!class_exists('Rain\Tpl')){exit;}?><!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -29,17 +29,17 @@
                     </tr>
                     </thead>
                     <tbody>
-                    {loop="$pedido"}
+                    <?php $counter1=-1;  if( isset($pedido) && ( is_array($pedido) || $pedido instanceof Traversable ) && sizeof($pedido) ) foreach( $pedido as $key1 => $value1 ){ $counter1++; ?>
                     <tr>
-                        <td >{$value.id_pedidos}</td>
-                        <td>{$value.nome_usuario} {$value.apelido_usuario}</td>
-                        <td>{$value.total_pedido}</td>
-                        <td>{$value.data_pedido}</td>
+                        <td ><?php echo htmlspecialchars( $value1["id_pedidos"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                        <td><?php echo htmlspecialchars( $value1["nome_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?> <?php echo htmlspecialchars( $value1["apelido_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                        <td><?php echo htmlspecialchars( $value1["total_pedido"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                        <td><?php echo htmlspecialchars( $value1["data_pedido"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                         <td>
                             <a href="" class="btn btn-primary btn-sm" >Detalhes</a>
                         </td>
                     </tr>
-                    {/loop}
+                    <?php } ?>
                     </tbody>
                 </table>
             </div>

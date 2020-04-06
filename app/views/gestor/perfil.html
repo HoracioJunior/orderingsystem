@@ -3,12 +3,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            User Profile
+            Perfil do Usuário
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-tachometer-alt"></i> Home</a></li>
-            <li><a href="#">Examples</a></li>
-            <li class="active">User profile</li>
+            <li><a href="/gestor"><i class="fa fa-tachometer-alt"></i> Inicio</a></li>
+            <li><a href="/gestor/minha-conta">Minha Conta</a></li>
+            <li class="active">Perfil</li>
         </ol>
     </section>
 
@@ -24,8 +24,8 @@
                         <img class="profile-user-img img-responsive img-circle" src="/app/src/admin/dist/img/user1-128x128.jpg" alt="User profile picture">
                         <h3 class="profile-username text-center">{$dados.nome_usuario} {$dados.apelido_usuario}</h3>
                         <p class="text-muted text-center">
-                            {if="($dados.fk_id_nivel_acesso) == 1"}
-                            Administrador
+                            {if="($dados.fk_id_nivel_acesso) == 2"}
+                            Gerente
                             {/if}
                         </p>
                     </div>
@@ -48,33 +48,33 @@
                             <form action="/admin/perfil/editar-perfil" method="post">
                                 <div class="row row-formatacao">
                                     <div class="col-md-6 col-formatacao">
-                                        <label for="">Nome do Usuario</label>
+                                        <label>Nome do Usuario</label>
                                         <div class="input-group">
                                             <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
                                             <input type="text" value="{$dados.nome_usuario}" class="form-control" placeholder="nome do usuario" name="nome_usuario" aria-describedby="basic-addon1">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="">Apelido do Usuario</label>
+                                        <label >Apelido do Usuario</label>
                                         <div class="input-group">
                                             <span class="input-group-addon" id="basic-addon2"><i class="fa fa-user"></i></span>
                                             <input type="text" value="{$dados.apelido_usuario}" class="form-control" name="apelido_usuario" placeholder="apelido do usuario" aria-describedby="basic-addon2">
                                         </div>
                                     </div>
-
                                 </div>
+
                                 <div class="row row-formatacao">
                                     <div class="col-md-6">
-                                        <label for="">E-mail do Usuario</label>
+                                        <label>E-mail do Usuario</label>
                                         <div class="input-group">
-                                            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-envelope"></i></span>
+                                            <span class="input-group-addon" ><i class="fa fa-envelope"></i></span>
                                             <input type="email" value="{$dados.email_usuario}" class="form-control" name="email_usuario" placeholder="email do usuario" aria-describedby="basic-addon1">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="">Numero de Celular do Usuario</label>
+                                        <label>Numero de Celular do Usuario</label>
                                         <div class="input-group">
-                                            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-phone"></i></span>
+                                            <span class="input-group-addon" ><i class="fa fa-phone"></i></span>
                                             <input type="text" value="{$dados.celular_usuario}" class="form-control" name="celular_usuario" placeholder="senha do usuario" aria-describedby="basic-addon1">
                                         </div>
                                     </div>

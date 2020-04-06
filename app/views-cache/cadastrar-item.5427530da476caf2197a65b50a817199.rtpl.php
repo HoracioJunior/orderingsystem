@@ -1,4 +1,4 @@
-
+<?php if(!class_exists('Rain\Tpl')){exit;}?>
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -23,14 +23,14 @@
             <div class="box-body">
                 <!-- form inicio-->
                 <form action="/gestor/menu/cadastrar-item" method="post" enctype="multipart/form-data">
-                    {if="$sucessoProduto != ''"}
+                    <?php if( $sucessoProduto != '' ){ ?>
                     <div class="alert alert-success" role="alert">
-                        <b>{$sucessoProduto}</b>
+                        <b><?php echo htmlspecialchars( $sucessoProduto, ENT_COMPAT, 'UTF-8', FALSE ); ?></b>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    {/if}
+                    <?php } ?>
                     <div class="row row-formatacao">
                         <div class="col-md-6 col-formatacao">
                             <label >Nome do Item</label>
@@ -45,9 +45,9 @@
                                 <span class="input-group-addon" ><i class="fa fa-align-justify"></i></span>
                                 <select class="form-control" name="fk_categoria">
                                     <option>==Escolha a Categoria==</option>
-                                    {loop="$categoria"}
-                                    <option value="{$value.id_produto_ctg}">{$value.nome_categoria}</option>
-                                    {/loop}
+                                    <?php $counter1=-1;  if( isset($categoria) && ( is_array($categoria) || $categoria instanceof Traversable ) && sizeof($categoria) ) foreach( $categoria as $key1 => $value1 ){ $counter1++; ?>
+                                    <option value="<?php echo htmlspecialchars( $value1["id_produto_ctg"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><?php echo htmlspecialchars( $value1["nome_categoria"], ENT_COMPAT, 'UTF-8', FALSE ); ?></option>
+                                    <?php } ?>
                                 </select>
                             </div>
                         </div>

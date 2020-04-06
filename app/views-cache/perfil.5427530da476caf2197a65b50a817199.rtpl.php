@@ -1,14 +1,14 @@
-<!-- Content Wrapper. Contains page content -->
+<?php if(!class_exists('Rain\Tpl')){exit;}?><!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            User Profile
+            Perfil do Usuário
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-tachometer-alt"></i> Home</a></li>
-            <li><a href="#">Examples</a></li>
-            <li class="active">User profile</li>
+            <li><a href="/gestor"><i class="fa fa-tachometer-alt"></i> Inicio</a></li>
+            <li><a href="/gestor/minha-conta">Minha Conta</a></li>
+            <li class="active">Perfil</li>
         </ol>
     </section>
 
@@ -22,11 +22,11 @@
                 <div class="box box-primary">
                     <div class="box-body box-profile">
                         <img class="profile-user-img img-responsive img-circle" src="/app/src/admin/dist/img/user1-128x128.jpg" alt="User profile picture">
-                        <h3 class="profile-username text-center">{$dados.nome_usuario} {$dados.apelido_usuario}</h3>
+                        <h3 class="profile-username text-center"><?php echo htmlspecialchars( $dados["nome_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?> <?php echo htmlspecialchars( $dados["apelido_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h3>
                         <p class="text-muted text-center">
-                            {if="($dados.fk_id_nivel_acesso) == 1"}
-                            Administrador
-                            {/if}
+                            <?php if( ($dados["fk_id_nivel_acesso"]) == 2 ){ ?>
+                            Gerente
+                            <?php } ?>
                         </p>
                     </div>
                     <!-- /.box-body -->
@@ -48,37 +48,37 @@
                             <form action="/admin/perfil/editar-perfil" method="post">
                                 <div class="row row-formatacao">
                                     <div class="col-md-6 col-formatacao">
-                                        <label for="">Nome do Usuario</label>
+                                        <label>Nome do Usuario</label>
                                         <div class="input-group">
                                             <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
-                                            <input type="text" value="{$dados.nome_usuario}" class="form-control" placeholder="nome do usuario" name="nome_usuario" aria-describedby="basic-addon1">
+                                            <input type="text" value="<?php echo htmlspecialchars( $dados["nome_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="form-control" placeholder="nome do usuario" name="nome_usuario" aria-describedby="basic-addon1">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="">Apelido do Usuario</label>
+                                        <label >Apelido do Usuario</label>
                                         <div class="input-group">
                                             <span class="input-group-addon" id="basic-addon2"><i class="fa fa-user"></i></span>
-                                            <input type="text" value="{$dados.apelido_usuario}" class="form-control" name="apelido_usuario" placeholder="apelido do usuario" aria-describedby="basic-addon2">
+                                            <input type="text" value="<?php echo htmlspecialchars( $dados["apelido_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="form-control" name="apelido_usuario" placeholder="apelido do usuario" aria-describedby="basic-addon2">
                                         </div>
                                     </div>
-
                                 </div>
+
                                 <div class="row row-formatacao">
                                     <div class="col-md-6">
-                                        <label for="">E-mail do Usuario</label>
+                                        <label>E-mail do Usuario</label>
                                         <div class="input-group">
-                                            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-envelope"></i></span>
-                                            <input type="email" value="{$dados.email_usuario}" class="form-control" name="email_usuario" placeholder="email do usuario" aria-describedby="basic-addon1">
+                                            <span class="input-group-addon" ><i class="fa fa-envelope"></i></span>
+                                            <input type="email" value="<?php echo htmlspecialchars( $dados["email_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="form-control" name="email_usuario" placeholder="email do usuario" aria-describedby="basic-addon1">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="">Numero de Celular do Usuario</label>
+                                        <label>Numero de Celular do Usuario</label>
                                         <div class="input-group">
-                                            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-phone"></i></span>
-                                            <input type="text" value="{$dados.celular_usuario}" class="form-control" name="celular_usuario" placeholder="senha do usuario" aria-describedby="basic-addon1">
+                                            <span class="input-group-addon" ><i class="fa fa-phone"></i></span>
+                                            <input type="text" value="<?php echo htmlspecialchars( $dados["celular_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="form-control" name="celular_usuario" placeholder="senha do usuario" aria-describedby="basic-addon1">
                                         </div>
                                     </div>
-                                    <input type="hidden" value="{$dados.id_usuario}" name="id_usuario">
+                                    <input type="hidden" value="<?php echo htmlspecialchars( $dados["id_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" name="id_usuario">
                                 </div>
                                 <div class="row ">
                                     <div class="col-md-6 ">
@@ -102,7 +102,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <input type="hidden" value="{$dados.id_usuario}" name="id_usuario">
+                                        <input type="hidden" value="<?php echo htmlspecialchars( $dados["id_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" name="id_usuario">
                                         <label >Nova Senha</label>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-key"></i></span>
@@ -138,22 +138,22 @@
             <!-- /.col -->
         </div>
         <!-- /.row -->
-        {if="$feedbacks != ''"}
+        <?php if( $feedbacks != '' ){ ?>
         <div class="alert alert-success" role="alert">
-            <b>{$feedbacks}</b>
+            <b><?php echo htmlspecialchars( $feedbacks, ENT_COMPAT, 'UTF-8', FALSE ); ?></b>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        {/if}
-        {if="$errorfeedbacks != ''"}
+        <?php } ?>
+        <?php if( $errorfeedbacks != '' ){ ?>
         <div class="alert alert-danger" role="alert">
-            <b>{$errorfeedbacks}</b>
+            <b><?php echo htmlspecialchars( $errorfeedbacks, ENT_COMPAT, 'UTF-8', FALSE ); ?></b>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        {/if}
+        <?php } ?>
     </section>
     <!-- /.content -->
 </div>

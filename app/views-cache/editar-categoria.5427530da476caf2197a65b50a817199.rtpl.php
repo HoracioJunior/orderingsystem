@@ -1,4 +1,4 @@
-<!-- Content Wrapper. Contains page content -->
+<?php if(!class_exists('Rain\Tpl')){exit;}?><!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -29,8 +29,8 @@
                                     <label for="">Nome da Categoria</label>
                                     <div class="input-group">
                                         <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
-                                        <input type="text" value="{$categoria.nome_categoria}" class="form-control" placeholder="nome da categoria" name="nome_categoria" >
-                                        <input type="hidden" value="{$categoria.id_produto_ctg}" name="id_categoria">
+                                        <input type="text" value="<?php echo htmlspecialchars( $categoria["nome_categoria"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="form-control" placeholder="nome da categoria" name="nome_categoria" >
+                                        <input type="hidden" value="<?php echo htmlspecialchars( $categoria["id_produto_ctg"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" name="id_categoria">
                                     </div>
                                 </div>
                             </div>

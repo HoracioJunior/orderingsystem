@@ -53,7 +53,7 @@
 	<nav class="navbar navbar-expand-lg  bgCabecalho">
 		<a class="navbar-brand" href="/">Order & Delivery</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-			<i class="fa fa-hamburger"></i>
+			<i class="fa fa-bars"></i>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav ml-auto">

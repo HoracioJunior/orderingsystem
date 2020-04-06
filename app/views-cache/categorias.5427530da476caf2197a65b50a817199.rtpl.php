@@ -1,14 +1,14 @@
-<!-- Content Wrapper. Contains page content -->
+<?php if(!class_exists('Rain\Tpl')){exit;}?><!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Categorias
-            <small>Categorias do Cardapio</small>
+            Page Header
+            <small>Optional description</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-tachometer-alt"></i> Cardapio</a></li>
-            <li class="active">Categorias</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+            <li class="active">Here</li>
         </ol>
     </section>
 
@@ -27,23 +27,23 @@
                         </button>
                     </di>
                     <div class="col-md-7">
-                        {if="$sucesso != ''"}
+                        <?php if( $sucesso != '' ){ ?>
                         <div class="alert alert-success" role="alert">
-                            <b>{$sucesso}</b>
+                            <b><?php echo htmlspecialchars( $sucesso, ENT_COMPAT, 'UTF-8', FALSE ); ?></b>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        {/if}
+                        <?php } ?>
 
-                        {if="$existe != ''"}
+                        <?php if( $existe != '' ){ ?>
                         <div class="alert alert-danger" role="alert">
-                            <b>{$existe}</b>
+                            <b><?php echo htmlspecialchars( $existe, ENT_COMPAT, 'UTF-8', FALSE ); ?></b>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        {/if}
+                        <?php } ?>
                     </div>
                 </div>
 
@@ -60,18 +60,18 @@
                         </tr>
                         </thead>
                         <tbody>
-                        {loop="$categoria"}
+                        <?php $counter1=-1;  if( isset($categoria) && ( is_array($categoria) || $categoria instanceof Traversable ) && sizeof($categoria) ) foreach( $categoria as $key1 => $value1 ){ $counter1++; ?>
                         <tr>
-                            <th >{$value.id_produto_ctg}</th>
-                            <td>{$value.nome_categoria}</td>
-                            <td>{$value.data_cadastro}</td>
+                            <th ><?php echo htmlspecialchars( $value1["id_produto_ctg"], ENT_COMPAT, 'UTF-8', FALSE ); ?></th>
+                            <td><?php echo htmlspecialchars( $value1["nome_categoria"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                            <td><?php echo htmlspecialchars( $value1["data_cadastro"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                             <td>
-                                <a href="/gestor/categoria/{$value.id_produto_ctg}/editar-categoria"  >Editar <i class="fa fa-edit "></i>
+                                <a href="/gestor/categoria/<?php echo htmlspecialchars( $value1["id_produto_ctg"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/editar-categoria"  >Editar <i class="fa fa-edit "></i>
                                 </a>
-                                <a href="/gestor/categoria/{$value.id_produto_ctg}/eliminar-categoria" class="text-danger ml-2">Eliminar <i class="fa fa-trash"></i></a>
+                                <a href="/gestor/categoria/<?php echo htmlspecialchars( $value1["id_produto_ctg"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/eliminar-categoria" class="text-danger ml-2">Eliminar <i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
-                        {/loop}
+                        <?php } ?>
                         </tbody>
                     </table>
                 </div>

@@ -8,7 +8,6 @@ use  controllers\Gestor;
 use Rain\Tpl;
 
 
-/*========================================Rotas de Usuarios=====================================*/
 $app->get('/gestor/login', function() {
     $pageGestor = new PageGestor([
         "header" => false,
@@ -16,8 +15,6 @@ $app->get('/gestor/login', function() {
     $pageGestor->setTpl("login",array(
         "erroLogin" => UsuarioC::getLoginErro()
     ));
-
-
 });
 $app->post('/gestor/login', function() {
     function get_client_ip() {
@@ -42,7 +39,6 @@ $app->post('/gestor/login', function() {
     Gestor::iniciar_sessao($_POST["username"], $_POST["userpass"],$ipaddress);
     header("Location: /gestor");
     exit;
-
 });
 
 $app->get('/gestor/logout', function() {
@@ -58,19 +54,17 @@ $app->get('/gestor', function() {
         "usuario"=>$opt= $_SESSION["usuario"],
         "totalUsers"=>UsuarioC::countUsers()
     ));
-
-
-
 });
-$app->get('/gestor/perfil/editar-perfil', function() {
+
+$app->get('/gestor/minha-conta', function() {
     UsuarioC::verficarSessao(2);
     $pageGestor = new PageGestor();
-    $nivelUsuario = UsuarioC::listNiveis();
     $dados = $_SESSION["usuario"];
-    $pageGestor->setTpl("editar-perfil", array(
-        "dados"=>$dados
+    $pageGestor->setTpl("perfil", array(
+        "dados"=>$dados,
+        "feedbacks"=>UsuarioC::getFeedback(),
+        "errorfeedbacks"=>UsuarioC::getErrorFeedback()
     ));
-
 });
 $app->post('/gestor/perfil/editar-perfil', function() {
     UsuarioC::verficarSessao(2);
@@ -84,21 +78,8 @@ $app->post('/gestor/perfil/editar-perfil', function() {
     $userC->updatePerfil($UsuarioM);
     header("Location: /gestor/perfil/editar-perfil");
     exit();
-
 });
 
-
-$app->get('/gestor/perfil/mudar-senha', function() {
-    UsuarioC::verficarSessao(2);
-    $pageGestor = new PageGestor();
-    $dados = $_SESSION["usuario"];
-    $pageGestor->setTpl("mudar-senha", array(
-        "dados"=>$dados,
-        "feedbacks"=>UsuarioC::getFeedback(),
-        "errorfeedbacks"=>UsuarioC::getErrorFeedback()
-    ));
-
-});
 $app->post('/gestor/perfil/mudar-senha', function() {
     UsuarioC::verficarSessao(2);
     $userM = new UsuarioM();
@@ -107,19 +88,8 @@ $app->post('/gestor/perfil/mudar-senha', function() {
     UsuarioC::changeSenha($userM,$_POST["senha_antiga"]);
     header("Location: /gestor/perfil/mudar-senha");
     exit();
-
 });
 
-$app->get('/gestor/perfil/editar-perfil', function() {
-    UsuarioC::verficarSessao(2);
-    $pageGestor = new PageGestor();
-    $nivelUsuario = UsuarioC::listNiveis();
-    $dados = $_SESSION["usuario"];
-    $pageGestor->setTpl("editar-perfil", array(
-        "dados"=>$dados
-    ));
-
-});
 $app->post('/gestor/perfil/editar-perfil', function() {
     UsuarioC::verficarSessao(2);
     $UsuarioM = new UsuarioM();
@@ -132,11 +102,27 @@ $app->post('/gestor/perfil/editar-perfil', function() {
     $userC->updatePerfil($UsuarioM);
     header("Location: /gestor/perfil/editar-perfil");
     exit();
-
 });
 
-
-$app->get('/gestor/perfil/mudar-senha', function() {
+$app->post('/gestor/perfil/mudar-senha', function() {
+    UsuarioC::verficarSessao(2);
+    $userM = new UsuarioM();
+    $userM ->setSenhaUsuario($_POST["senha_nova"]);
+    $userM -> setIdUsuario($_POST["id_usuario"]);
+    UsuarioC::changeSenha($userM,$_POST["senha_antiga"]);
+    header("Location: /gestor/perfil/mudar-senha");
+    exit();
+});
+/*$app->get('/gestor/perfil/editar-perfil', function() {
+    UsuarioC::verficarSessao(2);
+    $pageGestor = new PageGestor();
+    $nivelUsuario = UsuarioC::listNiveis();
+    $dados = $_SESSION["usuario"];
+    $pageGestor->setTpl("editar-perfil", array(
+        "dados"=>$dados
+    ));
+});*/
+/*$app->get('/gestor/perfil/mudar-senha', function() {
     UsuarioC::verficarSessao(2);
     $pageGestor = new PageGestor();
     $dados = $_SESSION["usuario"];
@@ -146,29 +132,41 @@ $app->get('/gestor/perfil/mudar-senha', function() {
         "errorfeedbacks"=>UsuarioC::getErrorFeedback()
     ));
 
-});
-$app->post('/gestor/perfil/mudar-senha', function() {
+});*/
+/*$app->get('/gestor/perfil/mudar-senha', function() {
     UsuarioC::verficarSessao(2);
-    $userM = new UsuarioM();
-    $userM ->setSenhaUsuario($_POST["senha_nova"]);
-    $userM -> setIdUsuario($_POST["id_usuario"]);
-    UsuarioC::changeSenha($userM,$_POST["senha_antiga"]);
-    header("Location: /gestor/perfil/mudar-senha");
-    exit();
+    $pageGestor = new PageGestor();
+    $dados = $_SESSION["usuario"];
+    $pageGestor->setTpl("mudar-senha", array(
+        "dados"=>$dados,
+        "feedbacks"=>UsuarioC::getFeedback(),
+        "errorfeedbacks"=>UsuarioC::getErrorFeedback()
+    ));
 
-});
+});*/
+/*$app->get('/gestor/perfil/editar-perfil', function() {
+    UsuarioC::verficarSessao(2);
+    $pageGestor = new PageGestor();
+    $nivelUsuario = UsuarioC::listNiveis();
+    $dados = $_SESSION["usuario"];
+    $pageGestor->setTpl("editar-perfil", array(
+        "dados"=>$dados
+    ));
+
+});*/
+
 $app->get('/gestor/pedidos/novos-pedidos', function() {
     UsuarioC::verficarSessao(2);
     $page = new PageGestor();
-
     $pedido = new PedidoC();
     $resultado = $pedido->novosPedidos();
-
     $page->setTpl("novos-pedidos",array(
         "pedido"=>$resultado
     ));
-
 });
-/*===========================================FIM DAS ROTAS USUARIOS========================================*/
 
-
+$app->get('/gestor/fechar-e-abrir-sistema', function() {
+    UsuarioC::verficarSessao(2);
+    $page = new PageGestor();
+    $page->setTpl("openClose");
+});
