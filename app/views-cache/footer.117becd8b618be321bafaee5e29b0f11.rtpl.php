@@ -90,11 +90,13 @@
 
 <!-- jQuery 2.2.3 -->
 <script src="/app/src/admin/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="/app/src/vendors/sweetAlert/sweetalert2.all.min.js" ></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="/app/src/admin/bootstrap/js/bootstrap.min.js"></script>
 <script src="/app/src/admin/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="/app/src/admin/plugins/datatables/dataTables.bootstrap.min.js"></script>
 <script src="/app/src/admin/plugins/datatables/costumizado.js"></script>
+<script src="/app/src/admin/js/manutencao.js"></script>
 <!-- AdminLTE App -->
 <script src="/app/src/admin/dist/js/app.min.js"></script>
 

@@ -37,6 +37,7 @@
                         <td><?php echo htmlspecialchars( $value1["data_pedido"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                         <td>
                             <a href="" class="btn btn-primary btn-sm" >Detalhes</a>
+                            <a href="" class="btn btn-success btn-sm" >Despachar</a>
                         </td>
                     </tr>
                     <?php } ?>

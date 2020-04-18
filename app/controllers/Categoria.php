@@ -16,7 +16,7 @@ class Categoria
         {
             $erro = "A Categoria que tentou adicionar ja existe. Não foi possivel Adicionar!";
             Categoria::setExiste($erro);
-            header("Location: /admin/menu/categorias");
+            header("Location: /gestor/menu/categorias");
             exit();
 
         }  else{
@@ -26,7 +26,7 @@ class Categoria
             ));
             $sucesso = "A Categoria foi adicionada com sucesso";
             Categoria::setSucesso($sucesso);
-            header("Location: /admin/menu/categorias");
+            header("Location: /gestor/menu/categorias");
             exit();
         }
 

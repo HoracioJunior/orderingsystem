@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/app/src/admin/bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="/app/src/admin/fontawesome/css/all.css">
-    <link rel="stylesheet" href="/app/src/assets/css/mine.css"/>
+    <link rel="stylesheet" href="/app/src/admin/css/mine.css"/>
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->

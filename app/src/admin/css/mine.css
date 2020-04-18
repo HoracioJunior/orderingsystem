@@ -1,0 +1,21 @@
+form .row-formatacao{
+ margin-bottom: 20px !important;
+}
+.buttons-html5{
+ background-color: #1b6d70 !important;
+ border-color: #1b6d70 !important;
+ padding: 5px;
+ margin: 5px;
+ color: #ffffff;
+ border-radius: 3px;
+}
+.dataTables_length{
+}
+
+.formulario{
+ padding-right: 30%;
+ padding-left: 30%;
+}
+.excutar{
+  padding-top: 15px !important;
+ }

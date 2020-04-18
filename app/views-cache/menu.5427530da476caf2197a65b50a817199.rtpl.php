@@ -7,7 +7,7 @@
             <small>Lista de Itens do Cardapio</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Cardapio</a></li>
+            <li><a href="/gestor/menu/menu-itens"><i class="fa fa-tachometer-alt"></i> Cardapio</a></li>
             <li class="active">Lista de Itens</li>
         </ol>
     </section>

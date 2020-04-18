@@ -2,6 +2,7 @@
 use models\pages\PageAdmin;
 use models\Usuario as UsuarioM;
 use controllers\Usuario as UsuarioC;
+use controllers\Helper;
 use Rain\Tpl;
 
 
@@ -50,11 +51,18 @@ $app->get('/admin/logout', function() {
 
 $app->get('/admin', function() {
     UsuarioC::verficarSessao(1);
+    $usuario = new UsuarioC();
+    $helper = new Helper();
+    $logs = $usuario->logs();
         $pageAdmin = new PageAdmin();
         $pageAdmin->setTpl("index",array(
-            "usuario"=>$opt= $_SESSION["usuario"]
+            "usuario"=>$opt= $_SESSION["usuario"],
+            "logs"=>$logs,
+            "users"=>$helper->AllUsers(),
+            "acess"=>$helper->acess(),
+            "delivers"=>$helper->delivers(),
+            "online"=>$helper->usersOnline(),
         ));
-
 });
 
 
@@ -175,6 +183,15 @@ $app->get('/admin/manutencao-do-sistema', function (){
     UsuarioC::verficarSessao(1);
     $pageAdmin = new PageAdmin();
     $pageAdmin->setTpl("manutencao");
+});
+$app->post('/admin/manutencao', function (){
+    UsuarioC::verficarSessao(1);
+
+    $status =  $_POST["manutencao"];
+    $helper = new Helper();
+    $helper->updateStutus((int)$status);
+
+    exit();
 });
 /*===========================================FIM DAS ROTAS USUARIOS========================================*/
 

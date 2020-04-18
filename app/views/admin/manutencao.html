@@ -16,7 +16,27 @@
     <!-- Main content -->
     <section class="content">
 
-        <!-- Your Page Content Here -->
+        <div class="box box-success">
+            <div class="box-header ">
+                <h3 class="box-title">Activar e Desativar modo Manutenção do Sistema</h3>
+            </div>
+            <div class="box-body">
+                <form  class="manutencao" method="post">
+                    <div class="formulario">
+                        <div class="form-group">
+                            <label for="">Selecionar</label>
+                            <select name="manutencao" id="" class="form-control">
+                                <option value="1">Activar</option>
+                                <option value="2">Desactivar</option>
+                            </select>
+                            <div class="form-group excutar">
+                                <button class="btn btn-block btn-success btn-flat" type="submit">Executar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
 
     </section>
     <!-- /.content -->

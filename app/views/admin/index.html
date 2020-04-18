@@ -20,15 +20,15 @@
                 <!-- small box -->
                 <div class="small-box bg-yellow">
                     <div class="inner">
-                        <h3>44</h3>
+                        <h3>{loop="$users"}{$value.total}{/loop}</h3>
 
-                        <p>User Registrations</p>
+                        <p>Usuarios cadstrados</p>
                     </div>
                     <div class="icon">
-                        <i class="fa fa-user-plus"></i>
+                        <i class="fa fa-users-cog"></i>
                     </div>
-                    <a href="#" class="small-box-footer">
-                        More info <i class="fa fa-arrow-circle-right"></i>
+                    <a href="/admin/usuarios/list-usuarios" class="small-box-footer">
+                        Mais informação <i class="fa fa-arrow-circle-right"></i>
                     </a>
                 </div>
             </div>
@@ -36,15 +36,15 @@
                 <!-- small box -->
                 <div class="small-box bg-danger">
                     <div class="inner">
-                        <h3>44</h3>
+                        <h3>{loop="$acess"}{$value.total}{/loop}</h3>
 
-                        <p>User Registrations</p>
+                        <p>Numero de Acessos</p>
                     </div>
                     <div class="icon">
-                        <i class="fa fa-user-plus"></i>
+                        <i class="fa fa-file-alt"></i>
                     </div>
-                    <a href="#" class="small-box-footer">
-                        More info <i class="fa fa-arrow-circle-right"></i>
+                    <a href="/admin/acessos-de-usuarios" class="small-box-footer">
+                        Mais informação <i class="fa fa-arrow-circle-right"></i>
                     </a>
                 </div>
             </div>
@@ -52,15 +52,15 @@
                 <!-- small box -->
                 <div class="small-box bg-info">
                     <div class="inner">
-                        <h3>44</h3>
+                        <h3>{loop="$delivers"}{$value.total}{/loop}</h3>
 
-                        <p>User Registrations</p>
+                        <p>Entregadores(Delivers)</p>
                     </div>
                     <div class="icon">
                         <i class="fa fa-user-plus"></i>
                     </div>
                     <a href="#" class="small-box-footer">
-                        More info <i class="fa fa-arrow-circle-right"></i>
+                        Mais informação <i class="fa fa-arrow-circle-right"></i>
                     </a>
                 </div>
             </div>
@@ -68,20 +68,65 @@
                 <!-- small box -->
                 <div class="small-box bg-green">
                     <div class="inner">
-                        <h3>53<sup style="font-size: 20px">%</sup></h3>
+                        <h3>{loop="$online"}{$value.total}{/loop}</h3>
 
-                        <p>Bounce Rate</p>
+                        <p>Usuarios Online</p>
                     </div>
                     <div class="icon">
-                        <i class="ion ion-stats-bars"></i>
+                        <i class="fa fa-users"></i>
                     </div>
                     <a href="#" class="small-box-footer">
-                        More info <i class="fa fa-arrow-circle-right"></i>
+                        Mais informação <i class="fa fa-arrow-circle-right"></i>
                     </a>
                 </div>
             </div>
-        </div><!-- /.row --><!-- /.row -->
+        </div><!-- /.row -->
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">Lista de Acessos</h3>
+            </div>
+            <div class="box-body">
+                <div class="tabela">
+                    <table id="tabela" class="table table-responsive  table-striped table-bordered" style="width:100%">
+                        <thead class="px-10">
+                        <tr >
+                            <th scope="col">#Cod</th>
+                            <th scope="col">IP ADDRESS</th>
+                            <th scope="col">Inicio de Sessao</th>
+                            <th scope="col">Fim de Sessao</th>
+                            <th scope="col">Nome do Usuário</th>
+                            <th scope="col">Permissão</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {loop="$logs"}
+                        <tr>
+                            <th>{$value.id_logs}</th>
+                            <td>{$value.ipaddress}</td>
+                            <td>{$value.inicio_sessao}</td>
+                            <td>{$value.fim_sessao}</td>
+                            <td>{$value.nome_usuario}</td>
+                            <td>
+                                {if="($value.fk_id_nivel_acesso) ==1"}
+                                Administrador
+                                {elseif="($value.fk_id_nivel_acesso) == 2"}
+                                Gestor
+                                {elseif="($value.fk_id_nivel_acesso) == 3"}
+                                Cliente
+                                {else}
+                                Deliver
+                                {/if}
+                            </td>
+
+                        </tr>
+                        {/loop}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- /.content -->
 </div>
+
 <!-- /.content-wrapper -->

@@ -21,7 +21,7 @@
                 <!-- small box -->
                 <div class="small-box bg-yellow">
                     <div class="inner">
-                        <h3>20</h3>
+                        <h3>{loop="$clientes"}{$value.total}{/loop}</h3>
 
                         <p>Meus Clientes</p>
                     </div>
@@ -37,14 +37,14 @@
                 <!-- small box -->
                 <div class="small-box bg-danger">
                     <div class="inner">
-                        <h3>25</h3>
+                        <h3>{loop="$orders"}{$value.total}{/loop}</h3>
 
                         <p>Novos Pedidos</p>
                     </div>
                     <div class="icon">
                         <i class="fa fa-cart-plus"></i>
                     </div>
-                    <a href="#" class="small-box-footer">
+                    <a href="/gestor/pedidos/novos-pedidos" class="small-box-footer">
                         Mais informação <i class="fa fa-arrow-circle-right"></i>
                     </a>
                 </div>
@@ -64,6 +64,36 @@
                         More info <i class="fa fa-arrow-circle-right"></i>
                     </a>
                 </div>
+            </div>
+        </div>
+        <div class="box box-primary">
+
+            <div class="box-body">
+                <table id="tabela" class="table  table-responsive table-striped table-bordered">
+                    <thead class="px-10">
+                    <tr >
+                        <th scope="col">#Cod</th>
+                        <th scope="col">Nome do Cliente</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Data e Hora</th>
+                        <th scope="col">Acções</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {loop="$pedido"}
+                    <tr>
+                        <td >{$value.id_pedidos}</td>
+                        <td>{$value.nome_usuario} {$value.apelido_usuario}</td>
+                        <td>{$value.total_pedido}</td>
+                        <td>{$value.data_pedido}</td>
+                        <td>
+                            <a href="" class="btn btn-primary btn-sm" >Detalhes</a>
+                            <a href="" class="btn btn-success btn-sm" >Despachar</a>
+                        </td>
+                    </tr>
+                    {/loop}
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>

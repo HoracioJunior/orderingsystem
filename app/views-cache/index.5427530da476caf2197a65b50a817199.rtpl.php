@@ -21,7 +21,7 @@
                 <!-- small box -->
                 <div class="small-box bg-yellow">
                     <div class="inner">
-                        <h3>20</h3>
+                        <h3><?php $counter1=-1;  if( isset($clientes) && ( is_array($clientes) || $clientes instanceof Traversable ) && sizeof($clientes) ) foreach( $clientes as $key1 => $value1 ){ $counter1++; ?><?php echo htmlspecialchars( $value1["total"], ENT_COMPAT, 'UTF-8', FALSE ); ?><?php } ?></h3>
 
                         <p>Meus Clientes</p>
                     </div>
@@ -37,14 +37,14 @@
                 <!-- small box -->
                 <div class="small-box bg-danger">
                     <div class="inner">
-                        <h3>25</h3>
+                        <h3><?php $counter1=-1;  if( isset($orders) && ( is_array($orders) || $orders instanceof Traversable ) && sizeof($orders) ) foreach( $orders as $key1 => $value1 ){ $counter1++; ?><?php echo htmlspecialchars( $value1["total"], ENT_COMPAT, 'UTF-8', FALSE ); ?><?php } ?></h3>
 
                         <p>Novos Pedidos</p>
                     </div>
                     <div class="icon">
                         <i class="fa fa-cart-plus"></i>
                     </div>
-                    <a href="#" class="small-box-footer">
+                    <a href="/gestor/pedidos/novos-pedidos" class="small-box-footer">
                         Mais informação <i class="fa fa-arrow-circle-right"></i>
                     </a>
                 </div>
@@ -64,6 +64,36 @@
                         More info <i class="fa fa-arrow-circle-right"></i>
                     </a>
                 </div>
+            </div>
+        </div>
+        <div class="box box-primary">
+
+            <div class="box-body">
+                <table id="tabela" class="table  table-responsive table-striped table-bordered">
+                    <thead class="px-10">
+                    <tr >
+                        <th scope="col">#Cod</th>
+                        <th scope="col">Nome do Cliente</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Data e Hora</th>
+                        <th scope="col">Acções</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php $counter1=-1;  if( isset($pedido) && ( is_array($pedido) || $pedido instanceof Traversable ) && sizeof($pedido) ) foreach( $pedido as $key1 => $value1 ){ $counter1++; ?>
+                    <tr>
+                        <td ><?php echo htmlspecialchars( $value1["id_pedidos"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                        <td><?php echo htmlspecialchars( $value1["nome_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?> <?php echo htmlspecialchars( $value1["apelido_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                        <td><?php echo htmlspecialchars( $value1["total_pedido"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                        <td><?php echo htmlspecialchars( $value1["data_pedido"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                        <td>
+                            <a href="" class="btn btn-primary btn-sm" >Detalhes</a>
+                            <a href="" class="btn btn-success btn-sm" >Despachar</a>
+                        </td>
+                    </tr>
+                    <?php } ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>

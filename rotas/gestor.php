@@ -5,6 +5,7 @@ use controllers\Usuario as UsuarioC;
 use controllers\Pedidos as PedidoC;
 use models\Pedidos as PedidosM;
 use  controllers\Gestor;
+use controllers\Helper;
 use Rain\Tpl;
 
 
@@ -50,9 +51,13 @@ $app->get('/gestor/logout', function() {
 $app->get('/gestor', function() {
     UsuarioC::verficarSessao(2);
     $pageGestor = new PageGestor();
+    $pedido = new PedidoC();
+    $helper = new Helper();
     $pageGestor->setTpl("index",array(
         "usuario"=>$opt= $_SESSION["usuario"],
-        "totalUsers"=>UsuarioC::countUsers()
+        "pedido"=>$pedido->novosPedidos(),
+        "clientes"=>$helper->Clientes(),
+        "orders"=>$helper->newOrders()
     ));
 });
 
@@ -169,4 +174,21 @@ $app->get('/gestor/fechar-e-abrir-sistema', function() {
     UsuarioC::verficarSessao(2);
     $page = new PageGestor();
     $page->setTpl("openClose");
+});
+$app->get('/gestor/relatorio/gerar-relatorio', function() {
+    UsuarioC::verficarSessao(2);
+    $page = new PageGestor();
+    $page->setTpl("relatorio");
+});
+$app->post('/gestor/relatorio/gerar', function() {
+    UsuarioC::verficarSessao(2);
+    $tipo = $_POST["tipo"];
+    $inicio = $_POST["inicio"];
+    $fim = $_POST["fim"];
+
+    var_dump($tipo);
+    var_dump($inicio);
+    var_dump($fim);
+
+    exit();
 });

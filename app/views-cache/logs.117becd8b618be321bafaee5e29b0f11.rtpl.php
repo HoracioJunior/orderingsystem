@@ -9,7 +9,7 @@
             <small>Lista de Acessos</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="/admin"><i class="fa fa-dashboard"></i>Página Inicial</a></li>
+            <li><a href="/admin"><i class="fa fa-tachometer-alt"></i>Página Inicial</a></li>
             <li class="active">Lista de Acessos</li>
         </ol>
     </section>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/app/src/admin/bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="/app/src/admin/fontawesome/css/all.css">
-    <link rel="stylesheet" href="/app/src/assets/css/mine.css"/>
+    <link rel="stylesheet" href="/app/src/admin/css/mine.css"/>
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
@@ -26,7 +26,7 @@
     <header class="main-header">
 
         <!-- Logo -->
-        <a href="/admin" class="logo">
+        <a href="/gestor" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>O</b>SY</span>
             <!-- logo for regular state and mobile devices -->
@@ -66,10 +66,10 @@
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="/admin/minha-conta" class="btn btn-default btn-flat">Perfil</a>
+                                    <a href="/gestor/minha-conta" class="btn btn-default btn-flat">Perfil</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="/admin/logout" class="btn btn-default btn-flat">Terminar Sessão</a>
+                                    <a href="/gestor/logout" class="btn btn-default btn-flat">Terminar Sessão</a>
                                 </div>
                             </li>
                         </ul>

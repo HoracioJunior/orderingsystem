@@ -2,35 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79e2c214-2980-4ae1-b4b5-315b41479f2f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views-cache/cadastrar-item.5427530da476caf2197a65b50a817199.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views-cache/categorias.5427530da476caf2197a65b50a817199.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views-cache/editar-categoria.5427530da476caf2197a65b50a817199.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views-cache/editar-item.5427530da476caf2197a65b50a817199.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views-cache/menu.5427530da476caf2197a65b50a817199.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views-cache/novos-pedidos.5427530da476caf2197a65b50a817199.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views-cache/openClose.5427530da476caf2197a65b50a817199.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views-cache/perfil.5427530da476caf2197a65b50a817199.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/gestor/openClose.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/gestor/perfil.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/Helper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/admin/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/admin/css/mine.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/admin/js/manutencao.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/uploads/5e99ea80a75c2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views-cache/relatorio.5427530da476caf2197a65b50a817199.rtpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/gestor/relatorio.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/footer.5427530da476caf2197a65b50a817199.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/footer.5427530da476caf2197a65b50a817199.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views-cache/header.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/header.1b572b46559d7bfa18a8c5f34f6db449.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Categoria.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Categoria.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/categorias.5427530da476caf2197a65b50a817199.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/categorias.5427530da476caf2197a65b50a817199.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/footer.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/footer.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/header.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/header.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views-cache/header.5427530da476caf2197a65b50a817199.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/header.5427530da476caf2197a65b50a817199.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/index.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/index.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views-cache/index.5427530da476caf2197a65b50a817199.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/index.5427530da476caf2197a65b50a817199.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/list-usuarios.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/list-usuarios.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/logs.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/logs.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/manutencao.117becd8b618be321bafaee5e29b0f11.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/manutencao.117becd8b618be321bafaee5e29b0f11.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/menu.5427530da476caf2197a65b50a817199.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/menu.5427530da476caf2197a65b50a817199.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/novos-pedidos.5427530da476caf2197a65b50a817199.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/novos-pedidos.5427530da476caf2197a65b50a817199.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views-cache/openClose.5427530da476caf2197a65b50a817199.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views-cache/openClose.5427530da476caf2197a65b50a817199.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/perfil.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/perfil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/gestor/cadastrar-item.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/gestor/cadastrar-item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/gestor/categorias.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/gestor/categorias.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/gestor/editar-categoria.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/gestor/editar-categoria.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/gestor/editar-item.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/gestor/editar-item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/gestor/editar-perfil.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/gestor/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/gestor/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/manutencao.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/manutencao.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/draft.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/gestor/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/gestor/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/gestor/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/gestor/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/gestor/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/gestor/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/gestor/mudar-senha.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/gestor/novos-pedidos.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/gestor/novos-pedidos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/gestor/openClose.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/gestor/openClose.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rotas/administrador.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/administrador.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rotas/gestor.php" beforeDir="false" afterPath="$PROJECT_DIR$/rotas/gestor.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,24 +110,25 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/views/gestor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/admin/css" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.MySQL" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\ordering\app\views\gestor" />
-      <recent name="C:\wamp64\www\ordering\app\views" />
-      <recent name="C:\wamp64\www\ordering\app\src\assets\charts" />
-      <recent name="C:\wamp64\www\ordering\app\src\img\steps" />
-      <recent name="C:\wamp64\www\ordering\app\src\img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ordering\app\src\admin" />
       <recent name="C:\wamp64\www\ordering\app\src\vendors" />
       <recent name="C:\wamp64\www\ordering\rotas" />
       <recent name="C:\wamp64\www\ordering\app\src\assets\css" />
       <recent name="C:\wamp64\www\ordering" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ordering\app\src\admin\css" />
+      <recent name="C:\wamp64\www\ordering\app\views\gestor" />
+      <recent name="C:\wamp64\www\ordering\app\views" />
+      <recent name="C:\wamp64\www\ordering\app\src\assets\charts" />
+      <recent name="C:\wamp64\www\ordering\app\src\img\steps" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -192,7 +195,8 @@
       <workItem from="1585694424500" duration="10616000" />
       <workItem from="1585747072703" duration="16389000" />
       <workItem from="1585880537079" duration="9870000" />
-      <workItem from="1586127947554" duration="8803000" />
+      <workItem from="1586127947554" duration="9132000" />
+      <workItem from="1587091691199" duration="17124000" />
     </task>
     <servers />
   </component>
@@ -211,10 +215,10 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="232" y="43" key="#SQL_Dialects/0.0.1280.760@0.0.1280.760" timestamp="1583730132499" />
-    <state x="188" y="43" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585708107405">
+    <state x="188" y="43" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587095903856">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="188" y="43" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1585708107405" />
+    <state x="188" y="43" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1587095903856" />
     <state x="427" y="97" key="#com.intellij.ide.util.MemberChooser" timestamp="1585698938213">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
@@ -223,10 +227,10 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="289" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.760@0.0.1280.760" timestamp="1583811230925" />
-    <state x="370" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1584198339591">
+    <state x="370" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1587095721435">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="370" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.760@0.0.1280.760" timestamp="1584198339591" />
+    <state x="370" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.760@0.0.1280.760" timestamp="1587095721435" />
     <state width="937" height="190" key="GridCell.Tab.0.bottom" timestamp="1583733082042">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
@@ -243,10 +247,10 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state width="937" height="190" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1583733082042" />
-    <state x="431" y="197" key="NewPhpClassDialog" timestamp="1585887185069">
+    <state x="431" y="197" key="NewPhpClassDialog" timestamp="1587092727206">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="431" y="197" key="NewPhpClassDialog/0.0.1280.760@0.0.1280.760" timestamp="1585887185069" />
+    <state x="431" y="197" key="NewPhpClassDialog/0.0.1280.760@0.0.1280.760" timestamp="1587092727206" />
     <state x="454" y="305" key="NewPhpFileDialog" timestamp="1585699216042">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
